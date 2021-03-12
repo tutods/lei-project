@@ -1,0 +1,55 @@
+% ==> Import Chapter <== %
+\newcommand\addChapter[1]{%
+	\input{chapters/#1}
+	\newpage
+}
+
+% ==> Import SubChapter <== %
+\newcommand\addSubChapter[1]{\input{chapters/subchapters/#1}}
+
+% ==> Add Section without number to Table of Contents <== %
+\newcommand\tocSec[1]{%
+	\section*{#1}%
+	\addcontentsline{toc}{section}{#1}
+}
+
+% ==> Add SubSection without number to Table of Contents <== %
+\newcommand\tocSubSec[1]{%
+\subsection*{#1}%
+\addcontentsline{toc}{subsection}{#1}
+}
+
+% ==> Command to add Image with Caption (w/ color option) <== %
+\newcommand\figureCColor[4]{%
+	\begin{center}
+		\captionsetup{type=figure,hypcap=true,labelfont={color=#4},font={color=#4}}
+		\includegraphics[width=#1\textwidth]{#2}
+		\caption{#3}
+	\end{center}
+}
+
+% ==> Command to add Image with Caption <== %
+\newcommand\figureFrame[3]{%
+	\begin{center}
+		\captionsetup{type=figure,hypcap=true}
+		\includegraphics[width=#1\textwidth]{#2}
+		\caption{#3}
+	\end{center}
+}
+
+% ==> Command to add PDF with Caption <== %
+\newcommand\pdfFrame[4]{%
+	\begin{center}
+		\captionsetup{type=figure,hypcap=true}
+		\includegraphics[page=#4,width=#1\textwidth, trim=1cm 2cm 0cm 3cm, clip]{#2}
+		\caption{#3}
+	\end{center}
+}
+
+% ==> Custom Paragraph <== %
+\newcommand{\paragraphBreak}[1]{\paragraph{#1}\mbox{}\\}
+\newcommand{\paragraphBreakNoNum}[1]{\paragraph*{#1}\mbox{}\\}
+
+
+%\renewcommand{\acrshort}[1]{\underline{\glsxtrshort{#1}}}
+%\newcommand{\Glsunder}[1]{\underline{\Gls{#1}}}

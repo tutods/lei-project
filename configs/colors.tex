@@ -1,5 +1,20 @@
-\definecolor{codegreen}{rgb}{0,0.6,0}
-\definecolor{codegray}{rgb}{0.5,0.5,0.5}
-\definecolor{codepurple}{rgb}{0.58,0,0.82}
-\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 \definecolor{estg}{HTML}{ca4d24}
+
+% ==> Code Colors <== %
+\definecolor{editorGray}{rgb}{0.95, 0.95, 0.95}
+\definecolor{editorOcher}{rgb}{1, 0.5, 0}
+\definecolor{editorGreen}{rgb}{0, 0.5, 0}
+
+
+% ==> Color Box <== %
+\newtcolorbox{mybox}[3][]
+{
+	colframe = #2!100,
+	colback  = #2!10,
+	coltitle = white!100,
+	title    = {#3},
+	fontupper= {\fontsize{10}{11}\selectfont\fontspec{PortoSans-Light.otf}[Path=fonts/portosans/]},
+	fonttitle= {\fontsize{11}{12}\selectfont\fontspec{PortoSans-Bold.otf}[Path=fonts/portosans/]},
+	top=3pt,
+	#1
+}

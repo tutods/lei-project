@@ -28,6 +28,19 @@
 \makeglossaries
 \glsenablehyper
 \loadglsentries{glossary}
+
+% ==> Bibliography <== %
+\usepackage[
+	backend=biber,
+	style=numeric,
+	sorting=nty]{biblatex}
+\nocite{*}
+\addbibresource{bibliography.bib}
+\defbibfilter{papers}{
+  type=article or
+  type=book
+}
+
 % ==> Links <== %
 \usepackage{url}
 \usepackage{hyperref}

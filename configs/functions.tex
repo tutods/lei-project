@@ -7,6 +7,12 @@
 % ==> Import SubChapter <== %
 \newcommand\addSubChapter[1]{\input{chapters/subchapters/#1}}
 
+% ==> Add Chapter without number to Table of Contents <== %
+\newcommand\tocChap[1]{%
+	\chapter*{#1}%
+	\addcontentsline{toc}{chapter}{#1}
+}
+
 % ==> Add Section without number to Table of Contents <== %
 \newcommand\tocSec[1]{%
 	\section*{#1}%

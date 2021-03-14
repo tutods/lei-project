@@ -339,3 +339,10 @@ tmtags
 *.code-workspace
 
 # End of https://www.toptal.com/developers/gitignore/api/textmate,latex,macos,vscode
+
+__latexindent_temp.tex
+*/**/__latexindent_temp.tex
+*/__latexindent_temp.tex
+__latexindent_temp.pdf
+*.ist
+.ist

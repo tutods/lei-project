@@ -1,0 +1,28 @@
+% ==> Packages <== %
+\usepackage{csquotes}
+
+\usepackage[
+	backend=biber,
+	style=numeric,
+	sorting=nty]{biblatex}
+
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+
+\usepackage[acronym]{glossaries-extra}
+
+% ==> Bibliography <== %
+\addbibresource{configs/references/bibliography.bib}
+
+\nocite{*} % Print all bibliography references without cite
+
+\defbibfilter{papers}{
+  type=article or
+  type=book
+}
+
+% ==> Glossary <== %
+\makeglossaries
+
+\glsenablehyper
+
+\loadglsentries{glossary}

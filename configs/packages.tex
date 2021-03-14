@@ -16,30 +16,11 @@
 \usepackage{fancyhdr}
 \setlength{\headheight}{15.89pt}
 
-
 % ==> Ident First Paragraph <== %
 \usepackage{indentfirst}
 
 % ==> Multiples page numbering <== %
 \usepackage{enumerate}
-
-% ==> Glossary <== %
-\usepackage[acronym]{glossaries-extra}
-\makeglossaries
-\glsenablehyper
-\loadglsentries{glossary}
-
-% ==> Bibliography <== %
-\usepackage[
-	backend=biber,
-	style=numeric,
-	sorting=nty]{biblatex}
-\nocite{*}
-\addbibresource{bibliography.bib}
-\defbibfilter{papers}{
-  type=article or
-  type=book
-}
 
 % ==> Links <== %
 \usepackage{url}

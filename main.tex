@@ -1,4 +1,3 @@
-% !TEX program = xelatex
 \documentclass[a4paper, twoside, 12pt]{report}
 
 % ==> Configs: packages, paths, captions, ... <== %
@@ -27,13 +26,15 @@
 
 % ==> List of Images <== %
 \listoffigures
-%\newpage
+\addcontentsline{toc}{chapter}{Lista de Figuras}
+\newpage
 
 %\listoftables
-\newpage
+% \newpage
 
 % ==> List of Code Listings <== %
 \lstlistoflistings
+\addcontentsline{toc}{chapter}{Lista de Excertos de Código}
 \newpage
 
 % ==> Acronyms <== %

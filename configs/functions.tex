@@ -1,7 +1,10 @@
 % ==> Add Chapter without number to Table of Contents <== %
 \newcommand\tocChap[1]{%
-	\chapter*{#1}%
+	\phantomsection
 	\addcontentsline{toc}{chapter}{#1}
+	\chapter*{#1}
+
+	\chaptermark{#1}
 }
 
 % ==> Add Section without number to Table of Contents <== %
@@ -57,3 +60,6 @@
 \newcommand{\glsShortUnder}[1]{\underline{\gls{#1}}}
 \newcommand{\Glsunder}[1]{\underline{\Gls{#1}}}
 \newcommand{\glslinkUnder}[2]{\underline{\glslink{#1}{#2}}}
+
+% ==> Remover Chapter N from \leftmark <== %
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}

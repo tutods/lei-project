@@ -1,0 +1,198 @@
+\section{React}
+
+\begin{minipage}[t]{.3\textwidth}
+	% ==> Figure Frame Function <== %
+	\figureFrame{.75}{react.png}{\textbf{React} \textemdash~logo}
+\end{minipage}
+\begin{minipage}[t]{.7\textwidth}
+	\minipagerestore
+	Existem quem considere que o \textbf{React} é uma \textit{framework} de \textbf{JavaScript}, porém e, ao mesmo tempo, há quem a considere como uma biblioteca de \textbf{JavaScript} baseada em componentes, sendo este o termo correto.
+
+	Os principais objetivos desta biblioteca são essencialmente:
+
+	\begin{itemize}
+		\item Fácil Aprendizagem;
+		\item Rápidez;
+		\item Escalável.
+	\end{itemize}
+\end{minipage}
+
+
+\subsection{Criação do Projeto}
+
+A criação de um projeto \textbf{React} pode ser realizada de duas formas, manualmente ou recorrendo ao \texttt{create-react-app}, porém será possível analisar abaixo como proceder à criação de ambas as formas.
+
+Para a criação de um projeto \textbf{React} manualmente é necessário adicionar todos os \textit{\glslinkUnder{packages}{packages}} ao ficheiro \texttt{package.json}, para isso os passos a seguir são:
+
+\begin{enumerate}
+	\item Criação da pasta para o projeto;
+	\item Aceder à pasta criada anteriormente via terminal e executar o comando \texttt{npm init -y} ou \texttt{yarn init -y} {\scriptsize (caso seja utilizado \textbf{Yarn} como \textit{package manager})};
+	\item Adicionar todos os \textit{\glslinkUnder{packages}{packages}} necessários, sendo eles {\scriptsize (por norma)}:
+	\begin{itemize}
+		\item \textbf{React} \textemdash~\texttt{npm i react} ou \texttt{yarn add react};
+		\item \textbf{React Dom} \textemdash~\texttt{npm i react-dom} ou \texttt{yarn add react-dom};
+		\item \textbf{React Scripts} \textemdash~\texttt{npm i react-scripts} ou \texttt{yarn add react-scripts}.
+	\end{itemize}
+	\item Após a instalação dos \textit{\glslinkUnder{packages}{packages}} é necessário proceder à criação dos \textit{\glslinkUnder{scripts}{scripts}}, para issó é necessário adicionar o seguinte código no ficheiro \texttt{package.json}:
+
+	\begin{listing}
+		\begin{minted}{json}
+			"scripts": {
+				"start": "react-scripts start",
+				"build": "react-scripts build",
+				"test": "react-scripts test",
+				"eject": "react-scripts eject"
+			},
+		\end{minted}
+		\caption{Scripts para a execução do projeto em \textbf{React}}
+	\end{listing}
+
+	\item Posto isto é necessário criar todos os ficheiros necessários para a aplicação funcionar. Sendo eles:
+	\begin{itemize}
+		\item \texttt{index.html} {\scriptsize (na pasta \texttt{public})}
+		\item \texttt{index.css} {\scriptsize (na pasta \texttt{src})}
+		\item \texttt{index.jsx} {\scriptsize (na pasta \texttt{src})}
+		\item \texttt{App.jsx} {\scriptsize (na pasta \texttt{src})}
+		\item \texttt{App.css} {\scriptsize (na pasta \texttt{src})}
+	\end{itemize}
+
+	\vspace{0.25cm}
+	\begin{mybox}{estg}{Nota}
+		Estes ficheiros é possível encontrar em anexo, mais precisamente em \underline{\textbf{\hyperref[reactFiles]{ficheiros React}}}.
+
+
+		É ainda importante referir que estes ficheiros são apenas a base para colocar um projeto \textbf{React} a funcionar.
+	\end{mybox}
+\end{enumerate}
+
+Porém como é possível analisar este processo é um pouco mais trabalhoso e implica que o programador saiba quais as dependências que necessita, para isso é possível usar o \texttt{create-react-app} que é o método recomendado pelo \textbf{React}\footnote{\textbf{Documentação:} \href{https://reactjs.org/docs/create-a-new-react-app.html}{``Create a new React App''}} para criar um projeto.
+
+Os passos para a criação de um projeto seguindo este método são bastante simples e práticos, permitindo ainda ao programador definir se pretende usar ou não algum \textit{template}, como por exemplo \textbf{TypeScript}. Os passos que se seguem demonstram a criação de um projeto \textbf{React} através desta``ferramenta'':
+
+\begin{enumerate}
+	\item Em primeiro lugar é necessário instalar o \texttt{create-react-app}, isto pode ser realizado de duas formas de acordo com o \textit{package manager} utilizado:
+	\begin{itemize}
+		\item \textbf{Com Yarn:} ~\texttt{yarn global add create-react-app}
+		\item \textbf{Com NPM:} ~\texttt{npm install -g create-react-app}
+	\end{itemize}
+	\item Após a instalação é agora possível criar agora o projeto, para tal:
+	\begin{itemize}
+		\item \textbf{Com Yarn:} ~\texttt{yarn create react-app <project-name> [<options>]}
+		\item \textbf{Com NPX:} ~\texttt{npx create-react-app <project-name> [<options>]}
+		\item \textbf{Com NPM:} ~\texttt{npm init react-app <project-name> [<options>]}
+	\end{itemize}
+\end{enumerate}
+
+Com isto é possível aceder à pasta do projeto (sendo a pasta o nome do projeto \textemdash~ \texttt{<project-name>}) e verificar que todos os \textit{\underline{\glslink{packages}{packages}}} foram adicionados, bem como os ficheiros base, inclusive o logo do \textbf{React} que irá aparecer como animação ao executar o projeto {\scriptsize (ver figura abaixo)}.
+
+\figureFrame{.75}{react-page.png}{Página inicial do \textbf{React} após a execução do projeto}
+
+\subsubsection{Opções Adicionais \footnote{\textbf{Nota:} as opções referidas são apresentadas acima como \texttt{[<options>]}.}}
+
+Na criação de um projeto \textbf{React} através do \texttt{create-react-app} é possível especificar o \textit{template} a usar , não sendo de uso obrigatório. Neste \textit{template} é possível especificar, por exemplo, para ao gerar o projeto \textbf{React} gerar com \textbf{TypeScript} e não \textbf{JavaScript}.
+
+Além do \textit{template} é ainda possível especificar o \textit{package manager} utilizado, recorrendo à opção \texttt{--use-npm}, isto para usar o \textbf{NPM} como \textit{package manager}\footnote{No caso de possuir o \textbf{Yarn} instalado.}.
+
+\subsection{Estrutura de Pastas}
+
+A estrutura de pastas para um projeto \textbf{React} pode variar de projeto para projeto, ou da forma como o programador prefere organizar os mais diversos ficheiros do projeto. Porém e, tal como é possível analisar na figura que se segue, é comum encontrar a seguinte estrutura de pastas.
+
+{
+	\centering
+	\tikzstyle{every node}=[draw=black,thick,anchor=west]
+	\tikzstyle{selected}=[draw=estg,fill=estg!50]
+	\tikzstyle{optional}=[dashed,fill=gray!50]
+
+	\begin{tikzpicture}[%
+	grow via three points={one child at (0.5,-0.7) and
+	two children at (0.5,-0.7) and (0.5,-1.4)},
+	edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
+	\node {Raíz do Projeto}
+		child { node [selected] {src}
+			child { node {assets}}
+			child { node {components}}
+			child { node {controllers}}
+			child { node {hooks}}
+		}
+		child [missing] {}
+		child [missing] {}
+		child [missing] {}
+		child [missing] {}
+		child [missing] {}
+		child { node {public}};
+	\end{tikzpicture}
+	\captionof{figure}{\textbf{React} \textemdash~possível estrutura de pastas}
+}
+
+Importante referir que a pasta \texttt{src/} será a pasta principal, uma vez irá conter todos os componentes, \textit{assets} e outros ficheiros importantes para o projeto.
+
+\vspace{0.25cm}
+\begin{mybox}{estg}{Nota}
+	É importante relembrar que consoante o uso de \textbf{TypeScript} ou \textbf{JavaScript} será possível encontrar ficheiros \texttt{.tsx}, \texttt{.ts}, \texttt{.jsx} ou \texttt{js}.
+
+	Além da extensão dos ficheiros será possível encontrar na raíz do projeto um ficheiro de configuração, podendo ser:
+	\begin{itemize}
+		\item \texttt{tsconfig.json} \textemdash~a quando a utilização de \textbf{TypeScript};
+		\item \texttt{jsconfig.json} \textemdash~a quando a utilização de \textbf{JavaScript}.
+	\end{itemize}
+\end{mybox}
+
+É importante referir que seguindo o método de criação do projeto \textbf{React} com o \texttt{create-react-app}, a estrutura de pastas e os ficheiros criados inicialmente será a seguinte:
+
+{
+	\centering
+	\tikzstyle{every node}=[draw=black,thick,anchor=west]
+	\tikzstyle{selected}=[draw=estg,fill=estg!50]
+	\tikzstyle{optional}=[dashed,fill=gray!50]
+
+	\begin{tikzpicture}[%
+	grow via three points={one child at (0.5,-0.7) and
+	two children at (0.5,-0.7) and (0.5,-1.4)},
+	edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
+	\node {Raíz do Projeto}
+		child { node [selected] {src}
+			child { node {App.css}}
+			child { node {App.js}}
+			child { node {App.test.js}}
+			child { node {index.css}}
+			child { node {index.js}}
+			child { node {logo.svg}}
+		}
+		child [missing] {}
+		child [missing] {}
+		child [missing] {}
+		child [missing] {}
+		child [missing] {}
+		child [missing] {}
+		child [missing] {}
+		child { node {public}
+			child { node {index.html}}
+			child { node {favicon.ico}}
+		}
+		child [missing] {}
+		child [missing] {};
+	\end{tikzpicture}
+	\captionof{figure}{\textbf{React} \textemdash~estrutura de pastas e ficheiros gerados pelo \texttt{create-react-app}}
+}
+
+\subsection{Execução do Projeto}
+
+Após a criação do projeto é agora possível executar o mesmo, para tal é possível utilizar os \textit{\glslinkUnder{scripts}{scripts}} presentes no ficheiro \texttt{package.json}, para isso basta utilizar um dos comandos que se segue de acordo com o \textit{package manager} em uso:
+
+\begin{itemize}
+	\item \textbf{Yarn:} ~\texttt{yarn start};
+	\item \textbf{NPM:} ~\texttt{npm start}
+\end{itemize}
+
+Se tudo correr como esperado será apresentado a seguinte mensagem no terminal:
+
+\figureFrame{.75}{react-start.png}{Projeto \textbf{React} executado com sucesso}
+
+\begin{mybox}{estg}{Nota}
+	De notar que os comandos apresentados são para executar o projeto em modo de desenvolvimento, caso seja pretendido realizar o \textit{build} para colocar o projeto em produção os comandos a executar são:
+
+	\begin{itemize}
+		\item \textbf{Com Yarn:} ~\texttt{yarn build};
+		\item \textbf{Com NPM:} ~\texttt{npm run build}.
+	\end{itemize}
+\end{mybox}

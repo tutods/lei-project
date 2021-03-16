@@ -1,12 +1,3 @@
-% ==> Import Chapter <== %
-\newcommand\addChapter[1]{%
-	\input{chapters/#1}
-	\newpage
-}
-
-% ==> Import SubChapter <== %
-\newcommand\addSubChapter[1]{\input{chapters/subchapters/#1}}
-
 % ==> Add Chapter without number to Table of Contents <== %
 \newcommand\tocChap[1]{%
 	\chapter*{#1}%
@@ -56,6 +47,13 @@
 \newcommand{\paragraphBreak}[1]{\paragraph{#1}\mbox{}\\}
 \newcommand{\paragraphBreakNoNum}[1]{\paragraph*{#1}\mbox{}\\}
 
+% ==> Indentation in Minipage <== %
+\newcommand{\minipagerestore}{
+	\setlength{\parindent}{20pt}
+	\setlength{\parskip}{0.35em}
+}
 
-%\renewcommand{\acrshort}[1]{\underline{\glsxtrshort{#1}}}
-%\newcommand{\Glsunder}[1]{\underline{\Gls{#1}}}
+% ==> Custom GLS Commands <== %
+\newcommand{\glsShortUnder}[1]{\underline{\gls{#1}}}
+\newcommand{\Glsunder}[1]{\underline{\Gls{#1}}}
+\newcommand{\glslinkUnder}[2]{\underline{\glslink{#1}{#2}}}

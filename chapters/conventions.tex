@@ -1,8 +1,10 @@
 \tocChap{Convenções e Nomenclatura}
 
-Ao longo deste relatório, optou-se por seguir um conjunto de convenções de forma a facilitar a interpretação do texto, exemplos e exercertos de código apresentados.
+Ao longo deste relatório, optou-se por seguir um conjunto de convenções de forma a facilitar a interpretação do texto, exemplos e excertos de código apresentados.
 
 Desta forma textos em \textit{itálico} terão como objetivo representar estrangeirismos, já textos em \textbf{negrito} terão como objetivo realçar termos com maior relevância ou mesmo nomes de empresas, marcas, etc..
+
+Já em casos de textos \underline{sublinhados}, por norma, referem-se a ligações no documento, por exemplo a ligação para uma determinada definição no glossário.
 
 Além disso, sempre que seja pretendido realçar uma nota será utilizado o exemplo abaixo.
 
@@ -18,10 +20,13 @@ Já para apresentar excertos de código ao longo deste relatório, optou-se por 
 
 \vspace{0.01cm}
 
-\begin{lstlisting}[language=Javascript]
-// Excerto de Código de Excemplo
-console.log("Hello World");
-\end{lstlisting}
+\begin{longlisting}
+	\begin{minted}{js}
+		// Exemplo de Excerto de Código
+		console.log("Hello World");
+	\end{minted}
+	\caption{Demonstração de excerto de código}
+\end{longlisting}
 
 \vspace{0.1cm}
 
@@ -29,5 +34,5 @@ No que toca a nomenclatura e, tal como será possível analisar ao longo deste d
 
 \begin{itemize}
 	\item \textbf{Componentes React:} nomes em \textit{\textbf{Pascal Case}}, ou seja, a primeira letra do identificador e a primeira letra de cada palavra são escritas em maiúsculas;
-	\item \textbf{Interfaces:} seguem novamente o \textit{naming convention \textbf{Pascal Case}} e começam pela letra \textbf{I} que representa interface;
+	\item \textbf{Interfaces:} seguem novamente o \textit{naming convention \textbf{Pascal Case}} e começam pela letra \textbf{I}, que representa interface;
 \end{itemize}

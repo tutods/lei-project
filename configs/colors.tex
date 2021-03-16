@@ -1,10 +1,6 @@
 \definecolor{estg}{HTML}{ca4d24}
-
-% ==> Code Colors <== %
-\definecolor{editorGray}{rgb}{0.95, 0.95, 0.95}
-\definecolor{editorOcher}{rgb}{1, 0.5, 0}
-\definecolor{editorGreen}{rgb}{0, 0.5, 0}
-
+\definecolor{lightgray}{rgb}{0.95, 0.95, 0.95}
+\definecolor{darkgray}{rgb}{0.4, 0.4, 0.4}
 
 % ==> Color Box <== %
 \newtcolorbox{mybox}[3][]
@@ -13,8 +9,8 @@
 	colback  = #2!10,
 	coltitle = white!100,
 	title    = {#3},
-	fontupper= {\fontsize{10}{11}\selectfont\fontspec{PortoSans-Light.otf}[Path=fonts/portosans/]},
-	fonttitle= {\fontsize{11}{12}\selectfont\fontspec{PortoSans-Bold.otf}[Path=fonts/portosans/]},
+	fontupper= {\fontsize{10}{11}\selectfont},
+	fonttitle= {\fontspec{PortoSans-Bold.otf}[Path=fonts/portosans/]\fontsize{11}{12}\selectfont},
 	top=3pt,
 	#1
 }

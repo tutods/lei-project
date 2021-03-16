@@ -7,10 +7,13 @@
 \usepackage{lastpage}
 
 % ==> Colors <== %
-\usepackage{tcolorbox, color, xcolor}
+\usepackage{tcolorbox, color}
+\usepackage{xcolor}
+\tcbuselibrary{breakable}
 
 % ==> Tikz <== %
-% \usepackage{tikz}
+\usepackage{tikz}
+\usetikzlibrary{trees}
 
 % ==> Header & Footer <== %
 \usepackage{fancyhdr}
@@ -35,7 +38,11 @@
 
 % ==> More SubSections <== %
 \usepackage{titlesec}
-\setcounter{secnumdepth}{5}
 \setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
 
-\usepackage{setspace}
+% ==>
+% \usepackage{setspace}
+
+% ==> Remove Footnote in Titles from TOC <== %
+\usepackage[stable]{footmisc}

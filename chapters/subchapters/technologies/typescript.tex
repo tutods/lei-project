@@ -16,6 +16,21 @@
 	}{}
 \end{minipage}
 
+{
+\renewcommand{\arraystretch}{1.25}
+\begin{table}[h]
+	\begin{tabularx}{\textwidth}{ |X|X| }
+		\rowcolor{estg}	{\color[HTML]{FFFFFF} \textbf{TypeScript}} & {\color[HTML]{FFFFFF} \textbf{JavaScript}} \\
+		Linguagem orientada a objetos & Linguagem de Scripting \\\hline
+		Possui tipagem estática & Não possui tipagem \\\hline
+		Suporte a módulos & Sem suporte a módulos\\\hline
+		Possui suporte a a parâmetros opcionais em funções & Não suporta a definição de parâmetros opcionais em funções \\\hline
+	\end{tabularx}
+
+	\caption{Principais diferenças entre \textbf{TypeScript} e \textbf{JavaScript}}
+\end{table}
+}
+
 Devido a esta tipagem que é adicionada, o código torna-se mais facilmente interpretado, facilitando também o processo de \textit{debug}, bem como as validações realizadas no processo de \textit{build}. O excerto de código abaixo, retirado do \href{https://www.typescriptlang.org}{\textit{website} oficial}, tem como objetivo demonstrar a validação que é realizada pelo \textbf{TypeScript}.
 
 \begin{longlisting}

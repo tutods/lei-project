@@ -1,0 +1,108 @@
+{
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnPaste": true,
+		"editor.formatOnType": true,
+		"editor.tabSize": 4,
+		"editor.detectIndentation": false,
+		"editor.insertSpaces": false,
+		"editor.formatOnSave": true
+	},
+	"javascript.suggest.enabled": true,
+	"javascript.updateImportsOnFileMove.enabled": "never",
+	"javascript.suggest.autoImports": true,
+	"[typescript]": {
+		"editor.formatOnPaste": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.tabSize": 4,
+		"editor.detectIndentation": false,
+		"editor.formatOnType": false,
+		"editor.formatOnSave": true
+	},
+	"[typescriptreact]": {
+		"editor.formatOnPaste": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.tabSize": 4,
+		"editor.detectIndentation": false,
+		"editor.formatOnType": false,
+		"editor.formatOnSave": true
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnPaste": true,
+		"editor.formatOnType": true,
+		"editor.tabSize": 4,
+		"editor.detectIndentation": false,
+		"editor.insertSpaces": false,
+		"editor.formatOnSave": true
+	},
+	"typescript.suggest.enabled": true,
+	"typescript.autoClosingTags": true,
+	"typescript.preferences.quoteStyle": "single",
+	"typescript.updateImportsOnFileMove.enabled": "never",
+	"typescript.tsserver.log": "verbose",
+	"typescript.suggest.autoImports": true,
+	"eslint.validate": [
+		"javascript",
+		"typescript"
+	],
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features",
+		"editor.formatOnPaste": true,
+		"editor.formatOnType": true
+	},
+	"html.autoClosingTags": true,
+	"html.format.indentInnerHtml": true,
+	"[sass]": {
+		"editor.formatOnSave": false,
+		"editor.formatOnPaste": true,
+		"editor.insertSpaces": true,
+		"editor.detectIndentation": true,
+		"editor.autoIndent": "full",
+		"editor.tabSize": 4,
+		"editor.quickSuggestions": {
+			"other": true,
+			"comments": false,
+			"strings": true
+		}
+	},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features",
+		"editor.formatOnPaste": true,
+		"editor.formatOnType": true,
+		"editor.tabSize": 4,
+		"editor.detectIndentation": false,
+		"editor.insertSpaces": false
+	},
+	"emmet.syntaxProfiles": {
+		"javascript": "jsx"
+	},
+	"emmet.includeLanguages": {
+		"javascript": "javascriptreact"
+	},
+	"files.associations": {
+		".stylelintrc": "json",
+		".prettierrc": "json"
+	},
+	"editor.wordWrapColumn": 80,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true,
+		"source.organizeImports": true
+	},
+	"editor.insertSpaces": false,
+	"editor.autoIndent": "full",
+	"editor.wordWrap": "on",
+	"editor.autoClosingBrackets": "always",
+	"editor.autoClosingQuotes": "always",
+	"editor.tabSize": 4,
+	"editor.tabCompletion": "on",
+	"editor.minimap.enabled": false,
+	"editor.quickSuggestionsDelay": 0,
+	"editor.snippetSuggestions": "top",
+	"editor.formatOnSave": true,
+	"editor.quickSuggestions": {
+		"other": true,
+		"comments": true,
+		"strings": true
+	}
+}

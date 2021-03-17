@@ -40,9 +40,9 @@
 	baselinestretch=1.2,
 	fontsize=\footnotesize,
 	linenos,
-	tabsize=1,
+	tabsize=2
 }
-% Create a new environment for breaking code listings across pages.
-\newenvironment{longlisting}{\captionsetup{type=listing}}{}
-
 \usemintedstyle{colorful}
+
+% Create a new environment for breaking code listings across pages.
+\newenvironment{longlisting}{\captionsetup{type=listing, skip=0pt}}{}

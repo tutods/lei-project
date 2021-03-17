@@ -1,0 +1,25 @@
+{
+	"compilerOptions": {
+		"target": "es2017",
+		"module": "commonjs",
+		"lib": [
+			"es2017",
+			"ES5"
+		],
+		"outDir": "build",
+		"rootDir": "src",
+		"strict": true,
+		"noImplicitAny": true,
+		"strictPropertyInitialization": false,
+		"baseUrl": "./",
+		"paths": {
+			"@components/*": [
+				"src/components/*"
+			]
+		},
+		"forceConsistentCasingInFileNames": true
+	},
+	"include": [
+		"./src/**/*"
+	]
+}

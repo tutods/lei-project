@@ -1,0 +1,70 @@
+\section{TypeScript}
+
+\begin{minipage}[t]{.3\textwidth}
+	% ==> Figure Frame Function <== %
+	\figureFrame{.5}{typescript.png}{\textbf{TypeScript} \textemdash~logo}
+\end{minipage}
+\begin{minipage}[t]{.7\textwidth}
+	\minipagerestore
+
+	O \textbf{TypeScript} é uma das tecnologias que é possível encontrar neste projeto tanto em \textit{front-end} como \textit{back-end}.
+
+	O \textbf{TypeScript}, segundo a própria \textbf{Microsoft} (detentora do \textbf{TypeScript}, é nada mais nada menos do que \textbf{JavaScript}, porém com a adição de tipos.
+
+	\epigraph{
+		\textit{``TypeScript extends JavaScript by adding types.''}
+	}{}
+\end{minipage}
+
+Devido a esta tipagem que é adicionada, o código torna-se mais facilmente interpretado, facilitando também o processo de \textit{debug}, bem como as validações realizadas no processo de \textit{build}. O excerto de código abaixo, retirado do \href{https://www.typescriptlang.org}{\textit{website} oficial}, tem como objetivo demonstrar a validação que é realizada pelo \textbf{TypeScript}.
+
+\begin{longlisting}
+	\begin{minted}[highlightlines={7},highlightcolor=red!35]{js}
+		const user = {
+			firstName: "Angela",
+			lastName: "Davis",
+			role: "Professor"
+		}
+
+		console.log(user.name)
+	\end{minted}
+
+	\caption{Excerto de código com validação \textbf{TypeScript}}
+\end{longlisting}
+
+No caso, a linha 7 (assinalada com a cor vermelha), irá causar a mensagem de erro abaixo que indica que a propriedade \texttt{name} não existe no objeto \texttt{user}.
+
+\begin{errorbox}{Erro Apresentado}
+	Property \texttt{'name'} does not exist on type '\mintinline{js}{{ firstName: string; lastName: string; role: string; }}'.
+\end{errorbox}
+
+\subsection{Instalação}
+
+A instalação do \textbf{TypeScript} pode ser realizada das seguintes maneiras:
+
+\begin{itemize}
+	\item Globalmente:
+	\begin{itemize}
+		\item \textbf{Com Yarn:} ~\texttt{yarn global add typescript}
+		\item \textbf{Com NPM:} ~\texttt{npm i -G typescript}
+	\end{itemize}
+	\item Por Projeto:
+	\begin{itemize}
+		\item \textbf{Com Yarn:} ~\texttt{yarn add -D typescript}
+		\item \textbf{Com NPM:} ~\texttt{npm i -D typescript}
+	\end{itemize}
+\end{itemize}
+
+A maneira mais comum é a instalação por projeto, visto que desta forma sempre que existir um \textit{clone} do projeto e sejam instaladas as dependências\footnote{Recorrendo a \texttt{yarn install} ou \texttt{npm install}.}, o \textbf{TypeScript} será também instalado e pronto a ser utilizado.
+
+O uso de \textbf{TypeScript} pode implicar, em alguns casos, a instalação dos tipos (\texttt{@types}), por exemplo, no caso do \textbf{React} é necessário instalar os tipos recorrendo a \texttt{yarn add -D @types/react} ou \texttt{npm i -D @types/react}.
+
+\begin{mybox}{estg}{Nota}
+	Como é possível analisar nos comandos de instalação do \textbf{TypeScript} por projeto, como na instalação dos tipos (\texttt{@types}), é usada a opção \texttt{-D} (tanto no uso do \textbf{Yarn} como do \textbf{NPM}), isto deve-se porque o \textbf{TypeScript} apenas será utilizado em desenvolvimento, uma vez que feito o \textit{build} do projeto todo o código \textbf{TypeScript} é transformado em \textbf{JavaScript}.
+\end{mybox}
+
+\subsection{Configuração}
+
+O \textbf{TypeScript} permite que o programador realizar determinadas configurações no seu projeto recorrendo a um ficheiro, no caso o ficheiro \texttt{tsconfig.json},\footnote{\textbf{\href{https://www.typescriptlang.org/tsconfig}{Documentação Oficial}}} neste ficheiro, tal como é possível \hyperrefUnder{tsconfigExample}{encontrar em anexo}, é possível definir desde configurações relacionadas com a estrutura de pastas do projeto, bem como definir \textit{paths} para ajudar a manter as importações realizadas mais ``enxutas''.
+
+No \hyperrefUnder{tsconfigExample}{exemplo em anexo} é possível analisar que foi criado um \textit{path} para a pasta \texttt{components}, desta forma sempre que seja realizada a importação de um componente é possível utilizar o \textit{path} \texttt{@components/} seguido do nome do componente.

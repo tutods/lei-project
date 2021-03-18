@@ -1,8 +1,7 @@
 \section{React}
 
 \begin{minipage}[t]{.3\textwidth}
-	% ==> Figure Frame Function <== %
-	\figureFrame{.75}{react.png}{\textbf{React} \textemdash~logo}
+	\figureFrame{1}{react.png}{\textbf{React} \textemdash~logo}
 \end{minipage}
 \begin{minipage}[t]{.7\textwidth}
 	\minipagerestore
@@ -17,6 +16,9 @@
 	\end{itemize}
 \end{minipage}
 
+\vspace{0.2cm}
+
+Importante referir que em 2020, segundo o \href{https://insights.stackoverflow.com/survey/2020#technology-most-loved-dreaded-and-wanted-web-frameworks-loved2}{StackOverflow}, o \textbf{React} ficou em segundo lugar nas \textit{frameworks} preferidas dos programadores e em primeiro lugar nas mais procuradas.
 
 \subsection{Criação do Projeto}
 
@@ -86,7 +88,7 @@ Com isto é possível aceder à pasta do projeto (sendo a pasta o nome do projet
 
 \figureFrame{.75}{react-page.png}{Página inicial do \textbf{React} após a execução do projeto}
 
-\subsubsection{Opções Adicionais \footnote{\textbf{Nota:} as opções referidas são apresentadas acima como \texttt{[<options>]}.}}
+\subsubsection{Opções Adicionais}
 
 Na criação de um projeto \textbf{React} através do \texttt{create-react-app} é possível especificar o \textit{template} a usar , não sendo de uso obrigatório. Neste \textit{template} é possível especificar, por exemplo, para ao gerar o projeto \textbf{React} gerar com \textbf{TypeScript} e não \textbf{JavaScript}. Outro \textit{template} comum é o da criação de projetos \glsShortUnder{pwa} (\texttt{--template cra-template-pwa} ou ~\texttt{--template cra-template-pwa-typescript}).
 
@@ -96,32 +98,7 @@ Além do \textit{template} é ainda possível especificar o \textit{package mana
 
 A estrutura de pastas para um projeto \textbf{React} pode variar de projeto para projeto, ou da forma como o programador prefere organizar os mais diversos ficheiros do projeto. Porém e, tal como é possível analisar na figura que se segue, é comum encontrar a seguinte estrutura de pastas.
 
-{
-	\centering
-	\tikzstyle{every node}=[draw=black,thick,anchor=west]
-	\tikzstyle{selected}=[draw=estg,fill=estg!50]
-	\tikzstyle{optional}=[dashed,fill=gray!50]
-
-	\begin{tikzpicture}[%
-	grow via three points={one child at (0.5,-0.7) and
-	two children at (0.5,-0.7) and (0.5,-1.4)},
-	edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
-	\node {Raíz do Projeto}
-		child { node [selected] {src}
-			child { node {assets}}
-			child { node {components}}
-			child { node {controllers}}
-			child { node {hooks}}
-		}
-		child [missing] {}
-		child [missing] {}
-		child [missing] {}
-		child [missing] {}
-		child [missing] {}
-		child { node {public}};
-	\end{tikzpicture}
-	\captionof{figure}{\textbf{React} \textemdash~possível estrutura de pastas}
-}
+\input{chapters/subchapters/technologies/react/dir-example.tex}
 
 Importante referir que a pasta \texttt{src/} será a pasta principal, uma vez irá conter todos os componentes, \textit{assets} e outros ficheiros importantes para o projeto.
 
@@ -138,41 +115,7 @@ Importante referir que a pasta \texttt{src/} será a pasta principal, uma vez ir
 
 É importante referir que seguindo o método de criação do projeto \textbf{React} com o \texttt{create-react-app}, a estrutura de pastas e os ficheiros criados inicialmente será a seguinte:
 
-{
-	\centering
-	\tikzstyle{every node}=[draw=black,thick,anchor=west]
-	\tikzstyle{selected}=[draw=estg,fill=estg!50]
-	\tikzstyle{optional}=[dashed,fill=gray!50]
-
-	\begin{tikzpicture}[%
-	grow via three points={one child at (0.5,-0.7) and
-	two children at (0.5,-0.7) and (0.5,-1.4)},
-	edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
-	\node {Raíz do Projeto}
-		child { node [selected] {src}
-			child { node {App.css}}
-			child { node {App.js}}
-			child { node {App.test.js}}
-			child { node {index.css}}
-			child { node {index.js}}
-			child { node {logo.svg}}
-		}
-		child [missing] {}
-		child [missing] {}
-		child [missing] {}
-		child [missing] {}
-		child [missing] {}
-		child [missing] {}
-		child [missing] {}
-		child { node {public}
-			child { node {index.html}}
-			child { node {favicon.ico}}
-		}
-		child [missing] {}
-		child [missing] {};
-	\end{tikzpicture}
-	\captionof{figure}{\textbf{React} \textemdash~estrutura de pastas e ficheiros gerados pelo \texttt{create-react-app}}
-}
+\input{chapters/subchapters/technologies/react/generated-dir.tex}
 
 \subsection{Execução do Projeto}
 
@@ -185,7 +128,7 @@ Após a criação do projeto é agora possível executar o mesmo, para tal é po
 
 Se tudo correr como esperado será apresentado a seguinte mensagem no terminal:
 
-\figureFrame{.75}{react-start.png}{Projeto \textbf{React} executado com sucesso}
+\figureFrame{.5}{react-start.png}{Projeto \textbf{React} executado com sucesso}
 
 \begin{mybox}{estg}{Nota}
 	De notar que os comandos apresentados são para executar o projeto em modo de desenvolvimento, caso seja pretendido realizar o \textit{build} para colocar o projeto em produção os comandos a executar são:

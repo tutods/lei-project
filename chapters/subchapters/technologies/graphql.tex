@@ -1,0 +1,27 @@
+\section{GraphQL}
+
+\begin{minipage}[t]{.3\textwidth}
+	\figureFrame{.5}{graphql.png}{\textbf{GraphQL} \textemdash~logo}
+\end{minipage}
+\begin{minipage}[t]{.7\textwidth}
+	\minipagerestore
+	\textbf{GraphQL} é uma \textit{query language open source} criada pelo \textbf{Facebook} tendo como principais objetivos tornar as \acrshortplUnder{api} mais rápidas, flexíveis e intuitivas. Além disso o \textbf{GraphQL} traz consigo um \glsShortUnder{ide}, chamado \textbf{\href{https://github.com/graphql/graphiql}{GraphiQL}}, que permite testar \textit{queries} e analisar o seu resultado no próprio \textit{browser}.
+\end{minipage}
+
+\begin{minipage}[t]{.45\textwidth}
+	\begin{longlisting}
+		\inputminted{text}{code/graphql/example-query.graphql}
+		\caption{\textbf{GraphQL} \textemdash~Exemplo de \textit{query}}
+	\end{longlisting}
+\end{minipage}
+\begin{minipage}[t]{.55\textwidth}
+	\minipagerestore
+	O excerto de código ao lado apresenta um exemplo de \textit{query} retirada da \href{https://graphql.org/learn/queries/}{documentação oficial},onde é possível analisar, de uma forma muito abstrata, que é pedido o nome do herói, bem como o nome dos seus amigos (\texttt{friends}).
+
+	O resultado deste \textit{query} é apresentado no excerto de código abaixo, sendo que este é apresentado no formato de um objeto \textbf{JSON}, contento o elemento \texttt{data}, elemento este que por sua vez possui os resultados obtidos.
+\end{minipage}
+
+\begin{longlisting}
+	\inputminted{json}{code/graphql/example-result.json}
+	\caption{\textbf{GraphQL} \textemdash~Exemplo de resposta à \textit{query} realizada}
+\end{longlisting}

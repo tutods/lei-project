@@ -12,18 +12,14 @@
 
 \figureFrame{1}{graphiql.jpg}{Demonstração do \textbf{GraphiQL}}
 
-\begin{minipage}[t]{.45\textwidth}
-	\begin{longlisting}
-		\inputminted{text}{code/graphql/example-query.graphql}
-		\caption{\textbf{GraphQL} \textemdash~Exemplo de \textit{query}}
-	\end{longlisting}
-\end{minipage}
-\begin{minipage}[t]{.55\textwidth}
-	\minipagerestore
-	O excerto de código ao lado apresenta um exemplo de \textit{query} retirada da \href{https://graphql.org/learn/queries/}{documentação oficial},onde é possível analisar, de uma forma muito abstrata, que é pedido o nome do herói, bem como o nome dos seus amigos (\texttt{friends}).
+O excerto de código abaixo apresenta um exemplo de \textit{query} retirada da \href{https://graphql.org/learn/queries/}{documentação oficial},onde é possível analisar, de uma forma muito abstrata, que é pedido o nome do herói, bem como o nome dos seus amigos (\texttt{friends}).
 
-	O resultado deste \textit{query} é apresentado no excerto de código abaixo, sendo que este é apresentado no formato de um objeto \textbf{JSON}, contento o elemento \texttt{data}, elemento este que por sua vez possui os resultados obtidos.
-\end{minipage}
+\begin{longlisting}
+	\inputminted{text}{code/graphql/example-query.graphql}
+	\caption{\textbf{GraphQL} \textemdash~Exemplo de \textit{query}}
+\end{longlisting}
+
+O resultado desta \textit{query} é apresentado no excerto de código abaixo, sendo que este é apresentado no formato de um objeto \textbf{JSON}, contento o elemento \texttt{data}, elemento este que por sua vez possui os resultados obtidos.
 
 \begin{longlisting}
 	\inputminted{json}{code/graphql/example-result.json}

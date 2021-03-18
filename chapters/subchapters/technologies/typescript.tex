@@ -13,32 +13,15 @@
 
 	\begin{quotebox}
 		``TypeScript extends JavaScript by adding types.''
-
 		\tcblower
-
 		Retirado do \href{https://www.typescriptlang.org}{\textit{website} oficial}
 	\end{quotebox}
 
 \end{minipage}
 
-\vspace{0.1cm}
+\vspace{0.2cm}
 
 Em 2020, o \textbf{TypeScript} ficou em segundo lugar das linguagens preferidas, estando em primeiro lugar \textbf{Rust}, e em quarto lugar das linguagens mais procuradas, dados do \href{https://insights.stackoverflow.com/survey/2020#technology-most-loved-dreaded-and-wanted-languages-loved}{\textbf{StackOverflow}}.
-
-{
-\renewcommand{\arraystretch}{1.25}
-\begin{table}[h]
-	\begin{tabularx}{\textwidth}{ |X|X| }
-		\rowcolor{estg}	{\color[HTML]{FFFFFF} \textbf{TypeScript}} & {\color[HTML]{FFFFFF} \textbf{JavaScript}} \\
-		Linguagem orientada a objetos & Linguagem de \textit{Scripting} \\\hline
-		Possui tipagem estática & Não possui tipagem \\\hline
-		Suporte a módulos & Sem suporte a módulos\\\hline
-		Possui suporte a definição de parâmetros opcionais em funções & Não suporta a definição de parâmetros opcionais em funções \\\hline
-	\end{tabularx}
-
-	\caption{Principais diferenças entre \textbf{TypeScript} e \textbf{JavaScript}}
-\end{table}
-}
 
 Devido a esta tipagem que é adicionada, o código torna-se mais facilmente interpretado, facilitando também o processo de \textit{debug}, bem como as validações realizadas no processo de \textit{build}. O excerto de código abaixo, retirado do \href{https://www.typescriptlang.org}{\textit{website} oficial}, tem como objetivo demonstrar a validação que é realizada pelo \textbf{TypeScript}.
 
@@ -61,6 +44,22 @@ No caso, a linha 7 (assinalada com a cor vermelha), irá causar a mensagem de er
 \begin{errorbox}{Erro Apresentado}
 	Property \texttt{'name'} does not exist on type '\mintinline{js}{{ firstName: string; lastName: string; role: string; }}'.
 \end{errorbox}
+
+A tabela apresentada demonstra as principais diferenças entre o \textbf{TypeScript} e o \textbf{JavaScript}.
+
+\begin{table}[h!]
+	\renewcommand{\arraystretch}{1.25}
+	\begin{tabularx}{\textwidth}{ |X|X| }
+		\rowcolor{estg}	{\color[HTML]{FFFFFF} \textbf{TypeScript}} & {\color[HTML]{FFFFFF} \textbf{JavaScript}} \\
+		Linguagem orientada a objetos & Linguagem de \textit{Scripting} \\\hline
+		Possui tipagem estática & Não possui tipagem \\\hline
+		Suporte a módulos & Sem suporte a módulos\\\hline
+		Possui suporte a definição de parâmetros opcionais em funções & Não suporta a definição de parâmetros opcionais em funções \\\hline
+	\end{tabularx}
+
+	\caption{Principais diferenças entre \textbf{TypeScript} e \textbf{JavaScript}}
+\end{table}
+
 
 \subsection{Instalação}
 

@@ -1,0 +1,66 @@
+
+\subsection{Estrutura de Pastas}
+
+A estrutura de pastas para um projeto \textbf{React} pode variar de projeto para projeto, ou da forma como o programador prefere organizar os mais diversos ficheiros do projeto. Porém e, tal como é possível analisar na figura que se segue, é comum encontrar a seguinte estrutura de pastas.
+
+\begin{figure}
+\centering
+\begin{forest}
+	for tree={
+	  folder,
+	  font=\ttfamily,
+	  grow'=0
+	}
+	[{Raíz do Projeto}
+	   [{public}]
+	   [src
+		  [assets]
+		  [components]
+		  [controllers]
+		  [hooks]
+	   ]
+	]
+\end{forest}
+\caption{\textbf{React} \textemdash~possível estrutura de pastas}
+\end{figure}
+
+Importante referir que a pasta \texttt{src/} será a pasta principal, uma vez irá conter todos os componentes, \textit{assets} e outros ficheiros importantes para o projeto.
+
+É importante referir que seguindo o método de criação do projeto \textbf{React} com o \texttt{create-react-app}, a estrutura de pastas e os ficheiros criados inicialmente será a seguinte:
+
+\begin{figure}[h!]
+\centering
+\begin{forest}
+	for tree={
+		folder,
+		font=\ttfamily,
+		grow'=0
+	}
+	[{Raíz do Projeto}
+		[public
+			[index.html]
+			[favicon.ico]
+		]
+		[src
+			[App.css]
+			[App.js]
+			[App.test.js]
+			[index.css]
+			[index.js]
+			[logo.svg]
+		]
+	]
+\end{forest}
+\caption{\textbf{React} \textemdash~estrutura de pastas e ficheiros gerados pelo \texttt{create-react-app}}
+\end{figure}
+
+\vspace{0.25cm}
+\begin{mybox}{estg}{Nota}
+	É importante relembrar que consoante o uso de \textbf{TypeScript} ou \textbf{JavaScript} será possível encontrar ficheiros \texttt{.tsx} ou \texttt{.ts}, \texttt{.jsx} ou \texttt{js}.
+
+%	Além da extensão dos ficheiros será possível encontrar na raíz do projeto um ficheiro de configuração, podendo ser:
+%	\begin{itemize}
+%		\item \texttt{tsconfig.json} \textemdash~a quando a utilização de \textbf{TypeScript};
+%		\item \texttt{jsconfig.json} \textemdash~a quando a utilização de \textbf{JavaScript}.
+%	\end{itemize}
+\end{mybox}

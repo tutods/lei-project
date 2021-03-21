@@ -28,29 +28,4 @@ Por sua vez, o excerto de código que se segue apresenta o resultado desta \text
 	\caption{\textbf{GraphQL} \textemdash~Exemplo de resposta à \textit{query} realizada}
 \end{longlisting}
 
-\subsection{Instalação}
-
-A instalação do \textbf{GraphQL} pode ser realizada através do \textbf{NPM} ou do \textbf{Yarn}, para isso basta recorrer a um dos seguintes comandos:
-
-\begin{itemize}
-	\item \textbf{Com Yarn:} ~\texttt{yarn add graphql}
-	\item \textbf{Com NPM:} ~\texttt{npm install graphql}
-\end{itemize}
-
-Desta forma o \textbf{GraphQL} está disponível para utilizar ao longo do projeto recorrendo a uma das seguintes formas apresentadas abaixo.
-
-\begin{longlisting}
-	\begin{minted}{js}
-		const { graphql, buildSchema } = require('graphql');
-	\end{minted}
-
-	\caption{Importação do \textbf{GraphQL} em \textbf{JavaScript}}
-\end{longlisting}
-
-\begin{longlisting}
-	\begin{minted}{js}
-		import { graphql, buildSchema } from 'graphql';
-	\end{minted}
-
-	\caption{Importação do \textbf{GraphQL} em \textbf{TypeScript}}
-\end{longlisting}
+\input{chapters/subchapters/technologies/graphql/installation}

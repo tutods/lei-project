@@ -5,8 +5,8 @@
 \end{minipage}
 \begin{minipage}{.7\textwidth}
 	\minipagerestore
-	O \textbf{\glsShortUnder{sass}}, ou \underline{\acrlong{sass}} é um \textit{preprocessor} de \textbf{\glsShortUnder{css}}. Este \textit{preprocessor} conta com duas variantes, sendo elas:
-	
+	O \textbf{\glsShortUnder{sass}}, ou \underline{\glsxtrlong{sass}} é um \textit{preprocessor} de \textbf{\glsShortUnder{css}}, possuíndo duas variantes:
+
 	\begin{itemize}
 		\item \texttt{.sass} \textemdash~não necessita de \texttt{;} nem \verb|{}|, apenas que o código esteja corretamente indentado;
 		\item \texttt{.scss} \textemdash~esta variante necessita de \texttt{;} e \verb|{}|, bem como a correta indentação do código.
@@ -17,4 +17,22 @@ Durante a realização deste projeto será utilizada a variante sem \texttt{;} e
 
 \figureFrame{1}{sass-to-css.png}{Ficheiro \texttt{.sass} compilado para um ficheiro \texttt{.css}}
 
-A imagem anterior representa a transformação que é realizada após a compilação de um código \textbf{\glsShortUnder{sass}} (\texttt{.sass}), onde é possível analisar a declaração de uma variável (\verb|$darkColor|), bem como o seu uso. Além disso, como é possível analisar, o \textbf{\glsShortUnder{sass}} permite o use de \textit{nesting} % <== EXPLICAR MELHOR!!!!  
+A imagem anterior representa a transformação que é realizada após a compilação de um código \textbf{\glsShortUnder{sass}} (\texttt{.sass}), onde é possível analisar a declaração de uma variável (\verb|$darkColor|), bem como o seu uso. Além disso, como é possível analisar, o \textbf{\glsShortUnder{sass}} permite o uso de \textit{nesting} % <== EXPLICAR MELHOR!!!!
+
+
+As principais vantagens do uso \textbf{\glsShortUnder{sass}} passam desde a criação de \textit{mixins}, funções e ainda herança de estilos. Os excertos apresentados de seguida demonstram estas mesmas vantagens.
+
+\begin{longlisting}
+	\begin{minted}{sass}
+		=flex-settings($direction: row)
+			display: flex
+			flex-direction: $direction
+
+		.my-row
+			+flex-settings()
+
+		.my-column-row
+			+flex-settings(column)
+	\end{minted}
+	\caption{Definição e uso de \textit{mixins} no \textbf{Sass}}
+\end{longlisting}

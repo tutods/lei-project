@@ -1,9 +1,9 @@
 \section{NodeJS}
 
-\begin{minipage}[t]{.3\textwidth}
+\begin{minipage}{.3\textwidth}
 	\figureFrame{.5}{nodejs.png}{\textbf{NodeJS} \textemdash~logo}
 \end{minipage}
-\begin{minipage}[t]{.7\textwidth}
+\begin{minipage}{.7\textwidth}
 	\minipagerestore
 	\textbf{NodeJS} é um ambiente de execução \textbf{JavaScript}, \textit{open source}, que permite desenvolver aplicações do lado do servidor (\glslinkUnder{backend}{\textit{back-end}}). Desta forma é possível criar aplicações utilizando \textbf{JavaScript} que não necessitam de um \textit{browser} para a sua execução.
 
@@ -13,7 +13,7 @@
 
 A imagem que se segue representa a arquitetura do \textbf{NodeJS} em comparação com a arquitetura tradicional\footnote{\textbf{Imagem retirada de} \cite{caseByCaseNode}}.
 
-\figureFrame{1}{architecture.png}{Arquitetura do \textbf{NodeJS} em comparação com a arquitetura tradicional}
+\figureFrame{.65}{architecture.png}{Arquitetura do \textbf{NodeJS} em comparação com a arquitetura tradicional}
 
 Desta forma é possível analisar que no caso da arquitetura tradicional é criada uma nova \textit{thread} para cada pedido, já no \textbf{NodeJS}, apenas existe uma \textit{thread} que possui I/O não bloqueante, permitindo várias requisições simultâneas, ficando retidas no \textit{event-loop}.
 

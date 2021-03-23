@@ -17,22 +17,15 @@ Durante a realização deste projeto será utilizada a variante sem \texttt{;} e
 
 \figureFrame{1}{sass-to-css.png}{Ficheiro \texttt{.sass} compilado para um ficheiro \texttt{.css}}
 
-A imagem anterior representa a transformação que é realizada após a compilação de um código \textbf{\glsShortUnder{sass}} (\texttt{.sass}), onde é possível analisar a declaração de uma variável (\verb|$darkColor|), bem como o seu uso. Além disso, como é possível analisar, o \textbf{\glsShortUnder{sass}} permite o uso de \textit{nesting} % <== EXPLICAR MELHOR!!!!
+A imagem anterior representa a transformação que é realizada após a compilação de um código \textbf{\glsShortUnder{sass}} (\texttt{.sass}), onde é possível analisar a declaração de uma variável (\verb|$darkColor|), bem como o seu uso. Além disso, como é possível analisar, o \textbf{\glsShortUnder{sass}} permite o uso de \textit{nesting}, ou seja, ... TODO
 
+Os pontos que se seguem demonstram algumas das vantagens em utilizar \textbf{\glsShortUnder{sass}}, demonstrando com exemplos práticos.
 
-As principais vantagens do uso \textbf{\glsShortUnder{sass}} passam desde a criação de \textit{mixins}, funções e ainda herança de estilos. Os excertos apresentados de seguida demonstram estas mesmas vantagens.
+% ==> MIXINS <== %
+\input{chapters/subchapters/technologies/sass/mixins}
 
-\begin{longlisting}
-	\begin{minted}{sass}
-		=flex-settings($direction: row)
-			display: flex
-			flex-direction: $direction
+% ==> EXTENDS <== %
+\input{chapters/subchapters/technologies/sass/extends}
 
-		.my-row
-			+flex-settings()
-
-		.my-column-row
-			+flex-settings(column)
-	\end{minted}
-	\caption{Definição e uso de \textit{mixins} no \textbf{Sass}}
-\end{longlisting}
+% ==> VARIABLES <== %
+\input{chapters/subchapters/technologies/sass/variables}

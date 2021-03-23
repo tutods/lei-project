@@ -1,0 +1,9 @@
+=flex-settings($direction: row)
+    display: flex
+    flex-direction: $direction
+
+.my-row
+    +flex-settings()
+
+.my-column-row
+    +flex-settings(column)

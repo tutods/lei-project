@@ -1,0 +1,24 @@
+\tocSubSec{Instalação}
+
+A instalação do \textbf{TypeScript} pode ser realizada das seguintes maneiras:
+
+\begin{itemize}
+	\item Globalmente:
+	\begin{itemize}
+		\item \textbf{Com Yarn:} ~\texttt{yarn global add typescript}
+		\item \textbf{Com NPM:} ~\texttt{npm i -G typescript}
+	\end{itemize}
+	\item Por Projeto:
+	\begin{itemize}
+		\item \textbf{Com Yarn:} ~\texttt{yarn add -D typescript}
+		\item \textbf{Com NPM:} ~\texttt{npm i -D typescript}
+	\end{itemize}
+\end{itemize}
+
+A maneira mais comum é a instalação por projeto, visto que desta forma sempre que existir um \textit{clone} do projeto e sejam instaladas as dependências\footnote{Recorrendo a \texttt{yarn install} ou \texttt{npm install}.}, o \textbf{TypeScript} será também instalado e pronto a ser utilizado.
+
+O uso de \textbf{TypeScript} pode implicar, em alguns casos, a instalação dos tipos (\texttt{@types}), por exemplo, no caso do \textbf{React} é necessário instalar os tipos recorrendo a \texttt{yarn add -D @types/react} ou \texttt{npm i -D @types/react}.
+
+\begin{mybox}{estg}{Nota}
+	Como é possível analisar nos comandos de instalação do \textbf{TypeScript} por projeto, como na instalação dos tipos (\texttt{@types}), é usada a opção \texttt{-D} (tanto no uso do \textbf{Yarn} como do \textbf{NPM}), isto deve-se porque o \textbf{TypeScript} apenas será utilizado em desenvolvimento, uma vez que feito o \textit{build} do projeto todo o código \textbf{TypeScript} é transformado em \textbf{JavaScript}.
+\end{mybox}

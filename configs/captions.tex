@@ -1,5 +1,12 @@
 % ==> Package <== %
 \usepackage{caption}
+\usepackage{chngcntr}
+
+% ==> Change to sequential number <== %
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+
+% ==> Caption - General Settings <== %
 \captionsetup{justification=centering,font=small,labelfont={bf, it},labelsep=colon,textfont={it},margin=1.5cm}
 
 % ==> Captions <== %
@@ -10,7 +17,3 @@
 % \captionsetup[listing]{margin=-5cm}
 \renewcommand{\listingscaption}{Excerto de Código}
 \renewcommand{\listoflistingscaption}{Lista de Excertos de Código}
-
-% ==> Change to sequential number <== %
-\renewcommand{\thefigure}{\arabic{figure}}
-\renewcommand{\thetable}{\arabic{table}}

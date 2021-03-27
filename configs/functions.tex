@@ -10,18 +10,21 @@
 % ==> Add Section without number to Table of Contents <== %
 \newcommand\tocSec[1]{%
 	\section*{#1}%
+	\phantomsection
 	\addcontentsline{toc}{section}{#1}
 }
 
 % ==> Add SubSection without number to Table of Contents <== %
 \newcommand\tocSubSec[1]{%
-\subsection*{#1}%
-\addcontentsline{toc}{subsection}{#1}
+	\subsection*{#1}%
+	\phantomsection
+	\addcontentsline{toc}{subsection}{#1}
 }
 % ==> Add SubSubSection without number to Table of Contents <== %
 \newcommand\tocSubSubSec[1]{%
-\subsubsection*{#1}%
-\addcontentsline{toc}{subsubsection}{#1}
+	\subsubsection*{#1}%
+	\phantomsection
+	\addcontentsline{toc}{subsubsection}{#1}
 }
 
 % ==> Command to add Image with Caption (w/ color option) <== %

@@ -25,10 +25,13 @@ jobs:
       - name: Check out latest version of master bracnh
         uses: actions/checkout@v2
 
-      - name: Github Action for LaTex
+      - name: Build LaTex Project
         uses: xu-cheng/latex-action@v2
         with:
           root_file: main.tex
+          latexmk_use_lualatex: true
+          latexmk_shell_escape: true
+
 
       - name: Upload new version pdf
         uses: actions/upload-artifact@v2

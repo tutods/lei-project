@@ -53,7 +53,7 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@master
         with:
-          root_file: comutation-manuscript.tex
+          root_file: main.tex
   convert_via_pandoc:
     runs-on: ubuntu-latest
     steps:

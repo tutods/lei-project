@@ -2,13 +2,13 @@
 
 name: Build Latex pdf
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -23,13 +23,13 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Check out latest version of master bracnh
-      - uses: actions/checkout@v2
-      
+        uses: actions/checkout@v2
+
       - name: Github Action for LaTex
         uses: xu-cheng/latex-action@v2
         with:
           root_file: main.tex
-    
+
       - name: Upload new version pdf
         uses: actions/upload-artifact@v2
         with:

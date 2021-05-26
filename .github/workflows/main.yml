@@ -56,18 +56,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@master
         with:
           root_file: main.tex
 
-  convert_via_pandoc:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: mkdir output
-      - uses: docker://pandoc/core:2.9
+      - name: Create folder
+        run: mkdir output
+        uses: docker://pandoc/core:2.9
         with:
           args: >-
             -s comutation-main.tex
@@ -76,7 +73,9 @@ jobs:
             -o output/comutation-main.pdf
             --bibliography configs/references/bibliography.bib
             --csl nature-genetics.csl
-      - uses: actions/upload-artifact@master
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@master
         with:
           name: manuscript
           path: output

@@ -1,0 +1,47 @@
+\tocSec{\textbf{Yarn}}
+\label{yarnAttachments}
+
+\tocSubSec{Instalação}
+
+A instalação do \textbf{Yarn} requer que o \textbf{NodeJS} esteja já instalado no dispositivo em questão. É possível encontrar no anexo XPTO como realizar a instalação nos diversos sistemas operativos.
+
+\tocSubSec{Linux/Windows/macOS}
+
+O \textbf{Yarn} pode ser instalado em qualquer dos sistemas operativos recorrendo ao \textbf{\glsShortUnder{npm}}, bastando apenas executar o comando \verb|npm install --global yarn|.
+
+Com este comando o \textbf{Yarn} será instalado globalmente no dispositivo sendo possível verificar se a instalação foi bem sucedida recorrendo ao comando \verb|yarn --version|, apresentando assim a versão do \textbf{Yarn} instalada no dispositivo. 
+
+\tocSubSubSec{macOS}
+
+A instalação do \textbf{Yarn} no \textbf{macOS} pode ser realizada das seguintes formas:
+
+\begin{itemize}
+	\item \textbf{Via HomeBrew:} \verb|brew install yarn|;
+	\item \textbf{Via \textit{Script}:} \verb|curl -o- -L https://yarnpkg.com/install.sh | bash|; 
+\end{itemize}
+
+\begin{mybox}{estg}{Nota}
+	No caso da execução do \textbf{Yarn} apresentar \verb|yarn command not found|, significa que é necessário realizar a configuração do \textit{path}/caminho no \verb|.bash_profile|, \verb|.bashrc| ou \verb|.zshrc|.
+	
+	\vspace{5pt}
+	
+	Para definir o path basta adicionar a seguinte linha num dos ficheiros mencionados: \verb|export PATH="$PATH:$(yarn global bin)"|.
+\end{mybox}
+
+\tocSubSubSec{Linux}
+
+A instalação do \textbf{Yarn} no \textbf{Linux}\footnote{Os comandos apresentados são para distribuições com base \textbf{Debian}} pode ser realizada através dos Debian \textit{Packages}, para isso:
+
+\begin{itemize}
+	\item \verb|curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list|;
+	\item \verb|sudo apt update && sudo apt install yarn|.
+\end{itemize}
+
+\begin{mybox}{estg}{Nota}
+	No caso da execução do \textbf{Yarn} apresentar \verb|yarn command not found|, significa que é necessário realizar a configuração do \textit{path}/caminho no \verb|.bash_profile|, \verb|.bashrc| ou \verb|.zshrc|.
+	
+	\vspace{5pt}
+	
+	Para definir o path basta adicionar a seguinte linha num dos ficheiros mencionados: \verb|export PATH="$PATH:$(yarn global bin)"|.
+\end{mybox}

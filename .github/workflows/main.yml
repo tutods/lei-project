@@ -43,7 +43,14 @@
 #           path: main.pdf
 
 name: Build LaTeX document
-on: [push]
+
+on:
+  push:
+    branches: [master]
+
+  pull_request:
+    branches: [master]
+
 jobs:
   build_latex:
     runs-on: ubuntu-latest
@@ -54,6 +61,7 @@ jobs:
         uses: xu-cheng/latex-action@master
         with:
           root_file: main.tex
+
   convert_via_pandoc:
     runs-on: ubuntu-latest
     steps:
@@ -62,10 +70,10 @@ jobs:
       - uses: docker://pandoc/core:2.9
         with:
           args: >-
-            -s comutation-manuscript.tex
+            -s comutation-main.tex
             -f latex
             -t docx
-            -o output/comutation-manuscript.docx
+            -o output/comutation-main.pdf
             --bibliography configs/references/bibliography.bib
             --csl nature-genetics.csl
       - uses: actions/upload-artifact@master

@@ -5,11 +5,11 @@
 
 A instalação do \textbf{Yarn} requer que o \textbf{NodeJS} esteja já instalado no dispositivo em questão. É possível encontrar no \hyperrefUnder{nodeAttachments}{anexo relativo à instalação} nos diversos sistemas operativos.
 
-\tocSubSec{Linux/Windows/macOS}
+\tocSubSubSec{Linux/Windows/macOS}
 
 O \textbf{Yarn} pode ser instalado em qualquer dos sistemas operativos recorrendo ao \textbf{\glsShortUnder{npm}}, bastando apenas executar o comando \verb|npm install --global yarn|.
 
-Com este comando o \textbf{Yarn} será instalado globalmente no dispositivo sendo possível verificar se a instalação foi bem sucedida recorrendo ao comando \verb|yarn --version|, apresentando assim a versão do \textbf{Yarn} instalada no dispositivo. 
+Com este comando o \textbf{Yarn} será instalado globalmente no dispositivo sendo possível verificar se a instalação foi bem sucedida recorrendo ao comando \verb|yarn --version|, apresentando assim a versão do \textbf{Yarn} instalada no dispositivo.
 
 \tocSubSubSec{macOS}
 
@@ -17,14 +17,14 @@ A instalação do \textbf{Yarn} no \textbf{macOS} pode ser realizada das seguint
 
 \begin{itemize}
 	\item \textbf{Via HomeBrew:} \verb|brew install yarn|;
-	\item \textbf{Via \textit{Script}:} \verb|curl -o- -L https://yarnpkg.com/install.sh | bash|; 
+	\item \textbf{Via \textit{Script}:} \verb|curl -o- -L https://yarnpkg.com/install.sh | bash|;
 \end{itemize}
 
 \begin{mybox}{estg}{Nota}
 	No caso da execução do \textbf{Yarn} apresentar \verb|yarn command not found|, significa que é necessário realizar a configuração do \textit{path}/caminho no \verb|.bash_profile|, \verb|.bashrc| ou \verb|.zshrc|.
-	
+
 	\vspace{5pt}
-	
+
 	Para definir o path basta adicionar a seguinte linha num dos ficheiros mencionados: \verb|export PATH="$PATH:$(yarn global bin)"|.
 \end{mybox}
 
@@ -40,8 +40,8 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 
 \begin{mybox}{estg}{Nota}
 	No caso da execução do \textbf{Yarn} apresentar \verb|yarn command not found|, significa que é necessário realizar a configuração do \textit{path}/caminho no \verb|.bash_profile|, \verb|.bashrc| ou \verb|.zshrc|.
-	
+
 	\vspace{5pt}
-	
+
 	Para definir o path basta adicionar a seguinte linha num dos ficheiros mencionados: \verb|export PATH="$PATH:$(yarn global bin)"|.
 \end{mybox}

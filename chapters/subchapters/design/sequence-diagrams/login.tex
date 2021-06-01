@@ -1,0 +1,11 @@
+\subsection{Inicio de Sessão}
+
+\figureFrame{1}{sequence/login.png}{Diagrama de Sequência para o inicio de sessão}
+
+O inicio de sessão é semelhante em ambas as componentes do projeto, porém, no \textit{frontoffice} o atleta conta com a possiblidade de iniciar sessão recorrendo às redes sociias como \textbf{Facebook}, \textbf{Strava} e \textbf{Google}. Os \textit{mockups} que se seguem apresentam o ecrã de inicio de sessão do \textit{backoffice} e do \textit{frontoffice}.
+
+\figureFrame{.75}{login-backoffice.png}{Mockup do ecrã de inicio de sessão \textemdash~backoffice}
+
+\figureFrame{.75}{social-login-frontoffice.png}{Mockup do ecrã de inicio de sessão \textemdash~frontoffice}
+
+Importante referir que após a sessão ser iniciada com sucesso é recebido (na resposta da \glsShortUnder{api}) um \textit{token} \textbf{\glsShortUnder{jwt}}, sendo este guardado e utilizado nos pedidos que necessitam de autenticação.

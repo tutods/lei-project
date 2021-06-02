@@ -1,4 +1,5 @@
 \subsection{Inicio de Sessão}
+\label{loginSequenceDiagram}
 
 \figureFrame{1}{sequence/login.png}{Diagrama de Sequência para o inicio de sessão}
 
@@ -6,6 +7,8 @@ O inicio de sessão é semelhante em ambas as componentes do projeto, porém, no
 
 \figureFrame{.75}{login-backoffice.png}{Mockup do ecrã de inicio de sessão \textemdash~backoffice}
 
-\figureFrame{.75}{social-login-frontoffice.png}{Mockup do ecrã de inicio de sessão \textemdash~frontoffice}
+\figureFrame{.75}{social-login-frontoffice.png}{Mockup do ecrã de inicio de sessão com redes sociais \textemdash~frontoffice}
+
+\figureFrame{.75}{login-frontoffice.png}{Mockup do ecrã de inicio de sessão \textemdash~frontoffice}
 
 Importante referir que após a sessão ser iniciada com sucesso é recebido (na resposta da \glsShortUnder{api}) um \textit{token} \textbf{\glsShortUnder{jwt}}, sendo este guardado e utilizado nos pedidos que necessitam de autenticação. No caso dos dados não se encontrarem corretamente inseridos, será apresentada uma mensagem de erro, não sendo recibo qualquer \textit{token} na resposta.

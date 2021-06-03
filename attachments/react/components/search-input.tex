@@ -7,62 +7,15 @@ O componente \textbf{\textit{SearchInput}} é outro dos componentes que é visí
 De seguida é possível analisar o código produzido para este componente e, é possível notar que, em comparação aos componentes anteriores, este recebe menos propriedades, sendo a propriedade \mintinline{jsx}{onChange} responsável por executar a pesquisa sempre que existe uma alteração no valor do mesmo.
 
 \begin{longlisting}
-	\begin{minted}[]{jsx}
-		const SearchInput = ({
-			className,
-			onChange,
-			...attributes
-		}: ISearchInputProps) => {
-			return (
-				<label className={`${styles["root"] || ""} ${className || ""}`}>
-					<input type="text" {...attributes} onChange={onChange} />
+	\inputminted[]{jsx}{code/components/search-input.tsx}
 
-					<Icon name="search" width="20px" height="20px" />
-				</label>
-			);
-		};
-
-		export default SearchInput;
-	\end{minted}
 	\caption{Código do componente \textbf{SearchInput}}
 \end{longlisting}
 
 Para facilitiar a realização da pesquisa foi utilizado um \textit{\glslinkUnder{packages}{package}} adicional, o \textbf{\href{https://fusejs.io/}{Fuse.js}}. A utilização deste \textit{\glslinkUnder{packages}{package}} é bastante simples e pode ser analisada no excerto de código que se segue.
 
 \begin{longlisting}
-	\begin{minted}[]{jsx}
-		import SearchInput from "components/inputs/SearchInput/SearchInput";
-		import Fuse from "fuse.js";
-
-		// ...
-
-		const [data, setData] = useState(athletes);
-
-		// Search
-		const options = {
-			keys: ["name"]
-		};
-
-		const fuse = new Fuse(athletes, options);
-
-		const oneSearchChange = (evt: ChangeEvent<HTMLInputElement>) => {
-			if (evt.target.value !== "") {
-				setData(
-					fuse.search(evt.target.value).map((fuseItem) => fuseItem.item)
-				);
-			} else {
-				setData(athletesData);
-			}
-		};
-
-		return (
-			// ...
-			<SearchInput
-				placeholder="Pesquisa"
-				onChange={oneSearchChange}
-			/>
-		);
-	\end{minted}
+	\inputminted[]{jsx}{code/components/use-search-input.tsx}
 
 	\caption{Uso do componente \textbf{SearchInput} em conjunto com o \textit{package} \textbf{Fuse.js}}
 \end{longlisting}

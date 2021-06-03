@@ -5,7 +5,7 @@ O Componente \textbf{\textit{TextInput}} é um componente destinado a ser utiliz
 Para isto ser possível o componente recebe as propriedades apresentadas no excerto de código que se segue.
 
 \begin{longlisting}
-	\begin{minted}{js}
+	\begin{minted}{jsx}
 	const TextInput = ({
 		className,
 		disabled,
@@ -27,12 +27,12 @@ Para isto ser possível o componente recebe as propriedades apresentadas no exce
 	\caption{Propriedades recebidas no componente \textbf{TextInput}}
 \end{longlisting}
 
-Assim sendo e, apesar de algumas das propriedades não serem obrigatórias, as que tem mais impacto no aspeto visual do \textit{input} são a propriedade \texttt{rounded}, \texttt{multiline} and \texttt{modifier}.
+Assim sendo e, apesar de algumas das propriedades não serem obrigatórias, as que tem mais impacto no aspeto visual do \textit{input} são a propriedade \mintinline{js}{rounded}, \mintinline{js}{multiline} and \mintinline{js}{modifier}.
 
-A propriedade \texttt{rounded} tem como objetivo definir se o \textit{input} conta com bordas redondas ou não. No caso desta propriedade ser aplicada, o \textit{input} recebe uma \textit{class} de \textbf{\glsShortUnder{css}} adicional (de forma a ser estilizada posteriormente), o excerto de código que segue apresenta a aplicabilidade desta propriedade, bem como o estilo adicionado.
+A propriedade \mintinline{js}{rounded} tem como objetivo definir se o \textit{input} conta com bordas redondas ou não. No caso desta propriedade ser aplicada, o \textit{input} recebe uma \textit{class} de \textbf{\glsShortUnder{css}} adicional (de forma a ser estilizada posteriormente), o excerto de código que segue apresenta a aplicabilidade desta propriedade, bem como o estilo adicionado.
 
 \begin{longlisting}
-	\begin{minted}[]{js}
+	\begin{minted}{jsx}
 	// ...
 	<Tag
 		className={`${styles[`${modifier}-style`] || ''} ${
@@ -52,7 +52,7 @@ A propriedade \texttt{rounded} tem como objetivo definir se o \textit{input} con
 	// ...
 	\end{minted}
 
-	\caption{Propriedade \texttt{rounded} aplicada ao input}
+	\caption{Propriedade \mintinline{js}{rounded} aplicada ao input}
 \end{longlisting}
 
 \begin{longlisting}
@@ -61,10 +61,10 @@ A propriedade \texttt{rounded} tem como objetivo definir se o \textit{input} con
 		border-radius: $inputBorderRadius // 25px
 	\end{minted}
 
-	\caption{Estilo adicionado na class da propriedade \texttt{rounded}}
+	\caption{Estilo adicionado na class da propriedade \mintinline{js}{rounded}}
 \end{longlisting}
 
-Já no caso da propriedade \texttt{multiline}, esta destina-se a dizer se será apresentado um \textit{input} ou \textit{textarea}, para isso é utilizado o código abaixo:
+Já no caso da propriedade \mintinline{js}{multiline}, esta destina-se a dizer se será apresentado um \textit{input} ou \textit{textarea}, para isso é utilizado o código abaixo:
 
 \begin{longlisting}
 	\begin{minted}[highlightlines={3},highlightcolor=yellow!25]{js}

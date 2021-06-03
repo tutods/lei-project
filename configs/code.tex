@@ -1,36 +1,9 @@
 % ==> Packages <== %
-\usepackage{listings, capt-of}
-
+% \usepackage{listings, capt-of}
 \usepackage{minted}
+\usepackage{etoolbox,xpatch}
 
 % ==> Default Settings <== %
-% \lstdefinestyle{custom}{
-%     backgroundcolor=\color{editorGray},
-% 	identifierstyle=\color{black},
-% 	keywordstyle=\color{blue}\bfseries,
-% 	ndkeywordstyle=\color{editorGreen}\bfseries,
-% 	stringstyle=\color{editorBrown}\ttfamily,
-% 	commentstyle=\color{editorGreen}\ttfamily,
-%     basicstyle=\ttfamily\footnotesize,
-%     breakatwhitespace=false,
-%     breaklines=true,
-%     captionpos=b,
-%     keepspaces=true,
-%     numbers=left,
-%     numbersep=5pt,
-%     showspaces=false,
-%     showstringspaces=false,
-%     showtabs=false,
-%     tabsize=2,
-%     frame=lines,
-% 	alsodigit={.:;},
-% 	extendedchars=true,
-% 	framesep=10pt,
-% 	xleftmargin=10pt
-% }
-
-% \lstset{style=custom}
-
 \setminted{
     autogobble,
 	frame=lines,
@@ -42,6 +15,9 @@
 	linenos,
 	tabsize=2
 }
+
+\setmintedinline{fontsize=\normalsize}
+
 \usemintedstyle{colorful}
 
 % Create a new environment for breaking code listings across pages.

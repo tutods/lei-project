@@ -12,7 +12,7 @@ const options = {
 
 const fuse = new Fuse(athletes, options);
 
-const oneSearchChange = (evt: ChangeEvent<HTMLInputElement>) => {
+const onSearchChange = (evt: ChangeEvent<HTMLInputElement>) => {
 	if (evt.target.value !== '') {
 		setData(fuse.search(evt.target.value).map((fuseItem) => fuseItem.item));
 	} else {
@@ -22,5 +22,5 @@ const oneSearchChange = (evt: ChangeEvent<HTMLInputElement>) => {
 
 return (
 	// ...
-	<SearchInput placeholder='Pesquisa' onChange={oneSearchChange} />
+	<SearchInput placeholder='Pesquisa' onChange={onSearchChange} />
 );

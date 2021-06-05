@@ -21,4 +21,4 @@ No diagrama é apresentado o caso do pedido da lista de treinos, onde é enviado
 	\caption{Exemplo de pedido com o package \textbf{Axios} e autenticação por \textbf{HTTP Headers}}
 \end{longlisting}
 
-Assim, o \textit{token} \textbf{\glsShortUnder{jwt}} recebido é enviado para a \textbf{\glsShortUnder{api}}, onde será validado se este expirou ou não. No caso deste ter expirado, o cliente será redirecionado para a página de inicio de sessão com o erro \textit{HTTP} 401\footnote{\textbf{Erro HTTP 401 \textemdash} ~\textit{Unauthorized} (\href{https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status/401}{Mais Informações})} na resposta da \textbf{\glsShortUnder{api}}.
+Assim, o \textit{token} \textbf{\glsShortUnder{jwt}} recebido é enviado para a \textbf{\glsShortUnder{api}}, onde será validado se este expirou ou não. No caso deste ter expirado, o cliente será redirecionado para a página de inicio de sessão com o \textit{HTTP Status Code} 401\footnote{\textbf{HTTP Status Code 401 \textemdash} ~\textit{Unauthorized} (\href{https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status/401}{Mais Informações})} na resposta da \textbf{\glsShortUnder{api}}.

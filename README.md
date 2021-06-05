@@ -10,4 +10,5 @@ Before build this report you need install the packages bellow on your **Python**
 ```bash
 pip install Pygments
 pip install jsx-lexer
+pip install pygments-graphql
 ```

@@ -28,17 +28,8 @@
 % ==> Bibliography, Acronyms and Glossary <== %
 \input{configs/references/references.tex}
 
-% ==> Space between paragraphs <== %
-\setlength{\parskip}{0.75em}
-
-% ==> Paragraph Indentation <== %
-\setlength{\parindent}{20pt}
-
-% ==> Space between lines <== %
-\renewcommand{\baselinestretch}{1.15}
-
-% ==> Reduce space between chapter number and chapter title <== %
-\titleformat{\chapter}[display]{\fontspec{PortoSans-Bold.otf}[Path=fonts/portosans/]\Huge}{\chaptertitlename\ \thechapter}{-10pt}{\LARGE}
-
 % ==> Custom Column Type to Tables <== %
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+% ==> Not reset footnote number per chapter <== %
+\counterwithout{footnote}{chapter}

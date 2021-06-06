@@ -1,1 +1,69 @@
 \chapter{Resultados}
+
+Ao longo deste documento já foi possível encontrar algumas informações relativas aos resultados atingidos, bem como alguns dos componentes criados e apresentados durante os \hyperrefUnder{sequenceDiagrams}{diagramas de sequência}. Porém, neste ponto serão colocadas figuras da implementação dos diagramas e componentes apresentados anteriormente.
+
+\section{\textit{Backoffice}}
+
+A vertende de \textit{backoffice} foi a qual foi mais desenvolvida numa primeira fase, desta forma a figura que se segue apresenta as pastas \texttt{components} e \texttt{controllers}, sendo possível ter uma visão dos componentes que foram desenvolvidos.
+
+Importante referir que a pasta \texttt{components} contêm todos os componentes e, sempre que possível, organizados por categorias, ou seja, é criada uma pasta \texttt{inputs} para tudo o que são \texttt{inputs} personalizáveis (como \texttt{selects}, \texttt{checkboxes}, entre outros). No que toca à pasta \texttt{controllers} refere-se a páginas, páginas estas que podem conter rotas e/ou subrotas. Caso tenha subrotas, os ficheiros são colocados dentro da pasta da rota principal.
+
+\clearpage
+
+\begin{minipage}[t]{0.45\textwidth}
+	\figureFrame{1}{backoffice-components.png}{\textbf{\textit{Backoffice}:} pasta \texttt{components}}
+\end{minipage}
+\begin{minipage}[t]{0.45\textwidth}
+	\figureFrame{1}{backoffice-controllers.png}{\textbf{\textit{Backoffice}:} pasta \texttt{controllers}}
+\end{minipage}
+
+Como foi apresentado nos diagramas de sequência, a lista de atletas pode ser consulta de duas formas, em vista de lista e em mosaico, tal como é apresetando nas figuras que se seguem.
+
+\begin{minipage}[t]{0.45\textwidth}
+	\figureFrame{1}{backoffice-mosaic-athletes.png}{\textbf{\textit{Backoffice}:} vista em mosaico dos atletas}
+\end{minipage}
+\begin{minipage}[t]{0.45\textwidth}
+	\figureFrame{1}{backoffice-list-athletes.png}{\textbf{\textit{Backoffice}:} vista em lista dos atletas}
+\end{minipage}
+
+Ao clicar num atleta, o utilizador é redirecionado para o perfil do atleta, onde este conta com várias abas. Cada aba é uma subrota do perfil, alterando apenas o conteúdo de cada aba.
+
+\figureFrame{.75}{backoffice-athlete-profile.png}{\textbf{\textit{Backoffice}:} página de perfil do atleta}
+
+\section{\textit{Frontoffice}}
+
+Tal como acontece na vertente do \textit{backoffice}, a pasta de \texttt{components} é organizada por categoria e, na pasta \texttt{controllers} os ficheiros são organizados por rotas e subrotas, tal como no \textit{backoffice}. As figuras que se seguem apresentam os componentes e \textit{controllers} desenvolvidos até ao momento.
+
+\begin{minipage}[t]{0.45\textwidth}
+	\figureFrame{1}{frontoffice-components.png}{\textbf{\textit{Frontoffice}:} pasta \texttt{components}}
+\end{minipage}
+\begin{minipage}[t]{0.45\textwidth}
+	\figureFrame{1}{frontoffice-controllers.png}{\textbf{\textit{Frontoffice}:} pasta \texttt{controllers}}
+\end{minipage}
+
+A criação de conta do atleta no \textit{frontoffice} é composta essencialmente por 2 etapas, tal como foi apresentado anteriormente. Porém após esses dois passos de criação de conta, o atleta é enviado para um \textit{wizard}, algo semelhante a um formulário com multiplos passos, onde o atleta escolhe desde a modalidade, treinador e o preçário. As figuras que se seguem apresentam estes passos da criação de conta do atleta.
+
+\begin{minipage}[t]{0.45\textwidth}
+	\figureFrame{1}{frontoffice-register.png}{\textbf{\textit{Frontoffice}:} criação de conta do atleta}
+\end{minipage}
+\begin{minipage}[t]{0.45\textwidth}
+	\figureFrame{1}{frontoffice-complete-register.png}{\textbf{\textit{Frontoffice}:} finalização da criação de conta}
+\end{minipage}
+
+Após a conclusão dos passos anteriores é apresentado o \textit{wizard} com os múltiplos passos, de forma ao atleta realizar passo por passo facilmente.
+
+\begin{minipage}[t]{0.45\textwidth}
+	\figureFrame{1}{wizard-athlete.png}{\textbf{\textit{Frontoffice}:} passo inicial do \textit{wizard}}
+\end{minipage}
+\begin{minipage}[t]{0.45\textwidth}
+	\figureFrame{1}{wizard-athlete-personal-info.png}{\textbf{\textit{Frontoffice}:} informações pessoais e de pagamento do \textit{wizard}}
+\end{minipage}
+
+No final do \textit{wizard} é apresentado o resumo de todos os passos e ao concluir é dada a possibilidade do atleta conectar com o \textbf{Strava} através de um \textit{popup} apresentado.
+
+\begin{minipage}[t]{0.45\textwidth}
+	\figureFrame{1}{wizard-athlete-resume.png}{\textbf{\textit{Frontoffice}:} resumo do \textit{wizard}}
+\end{minipage}
+\begin{minipage}[t]{0.45\textwidth}
+	\figureFrame{1}{wizard-popup.png}{\textbf{\textit{Frontoffice}:} \textit{popup} apresentado no final do \textit{wizard}}
+\end{minipage}

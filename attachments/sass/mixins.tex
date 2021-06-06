@@ -1,0 +1,18 @@
+\tocSubSec{\textit{Mixins}}
+
+As \textit{mixins} no \textbf{\glsShortUnder{sass}} permitem reutilizar estilo, poupando tempo e aplicando o conceito de \textbf{DRY}, ou seja, \textit{Don't Repeat Yourself}. No excerto de código que se segue é possível analisar a definição de uma \textit{mixin}, bem como a utilização da mesma.
+
+\begin{longlisting}
+	\inputminted[highlightlines={6,9},highlightcolor=yellow!25]{sass}{code/sass/mixins.sass}
+	\caption{Definição e uso de \textit{mixins} no \textbf{Sass}}
+\end{longlisting}
+
+Tal como é possível analisar no excerto de código anterior, as \textit{mixins} podem receber parâmetros, sendo que estes parâmetros podem assumir um valor por defeito. Ou seja, a \textit{mixin} \verb|flex-settings| pode receber ou não a direção (\verb|direction|), sendo o valor por defeito \texttt{row}.
+
+Na linha 6 e 9 é possível analisar a utilização desta \textit{mixin}, bem como a alteração do valor do parâmetro \verb|direction| para \verb|column|.
+
+\begin{mybox}{estg}{Nota}
+	A declaração de uma \textit{mixin} em \textbf{\glsShortUnder{sass}} é realizada através do símbolo \verb|=|, seguido do nome da \textit{mixin} e entre parêntesis o(s) parâmetro(s). O uso desta é realizado através do símbolo \verb|+|, seguido do nome e parâmetros caso possua.
+
+	Caso seja usada a variante \verb|.scss|, a declaração de \textit{mixins} é feita através de \verb|@mixin| e o seu uso através de \verb|@include|.
+\end{mybox}

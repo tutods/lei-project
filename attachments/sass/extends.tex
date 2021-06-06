@@ -1,0 +1,58 @@
+\tocSubSec{Herança}
+
+No \textbf{\glsShortUnder{sass}} também é possível realizar herança, nesta caso herança de estilos. O excerto de código\footnote{Retirado da \href{https://sass-lang.com/documentation/at-rules/extend}{\textbf{documentação oficial}}.} que é apresentado de seguida demonstra a utilização da herança no \textbf{\glsShortUnder{sass}}.
+
+\begin{longlisting}
+	\inputminted{sass}{code/sass/extends.sass}
+	\caption{Demonstração de herança no \textbf{Sass}}
+\end{longlisting}
+
+No excerto de código abaixo é possível analisar o resultado final após este ser compilado para um ficheiro \textbf{\glsShortUnder{css}}.
+
+\begin{longlisting}
+\begin{minted}{css}
+	.error,
+	.error--serious {
+		border: 1px #f00;
+		background-color: #fdd;
+	}
+
+	.error--serious {
+		border-width: 3px;
+	}
+\end{minted}
+\caption{Código \textbf{CSS} resultante da compilação do excerto de código anterior}
+\end{longlisting}
+
+Além da herança através de \textit{class's} é possível recorrer a \textit{placeholders}. \textit{Placeholders} funcionam como uma \textit{class}, porém começa com \verb|%| e não são incluídos no código \textbf{\glsShortUnder{css}} resultante.
+
+\begin{longlisting}
+	\inputminted{sass}{code/sass/placeholders.sass}
+	\caption{Demonstração de \textit{placeholders} em \textbf{Sass}\footnote{Excerto de código retirado da \textbf{\href{https://sass-lang.com/documentation/style-rules/placeholder-selectors}{documentação oficial}}}}
+\end{longlisting}
+
+Sendo que após este código ser compilado, o \textit{placeholder} apresentado não estará no código \textbf{\glsShortUnder{css}} resultante, tal como é possível analisar abaixo.
+
+\begin{longlisting}
+	\begin{minted}{css}
+		.action-buttons, .reset-buttons {
+			box-sizing: border-box;
+			border-top: 1px rgba(0, 0, 0, 0.12) solid;
+			padding: 16px 0;
+			width: 100%;
+		}
+
+		.action-buttons:hover, .reset-buttons:hover {
+			border: 2px rgba(0, 0, 0, 0.5) solid;
+		}
+
+		.action-buttons {
+			color: #4285f4;
+		}
+
+		.reset-buttons {
+			color: #cddc39;
+		}
+	\end{minted}
+	\caption{Código \textbf{CSS} resultante da compilação do excerto de código com \textit{placeholder}}
+\end{longlisting}

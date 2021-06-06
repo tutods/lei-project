@@ -1,1 +1,21 @@
 \section{Perspetiva do Utilizador}
+
+Como é possível perceber pelo tópico anterior, existem essencilmente 2 tipos de utilizadores, os atletas e treinadores, onde se encaixa também o administrador ou administradores. Desta forma, a figura que se segue é um pequeno exemplo do fluxo destas duas vertentes. De referir que os atletas irão sempre executar ações na vertende de \textit{frontoffice} do projeto e, por sua vez, o administrador e treinadores irão executar na vertente de \textit{backoffice}.
+
+\figureFrame{.75}{beapt-actors.png}{Exemplo de utilização por parte dos atletas e treinadores}
+
+A lista que se segue apresenta, com mais detalhe, as funcionalidades que estão ao dispor para os atletas na vertente de \textit{frontoffice}:
+
+\begin{itemize}
+	\item Um local para a edição dos seus dados pessoais e biométricos, estando protegido por autenticação;
+	\item Um local onde é possível a consulta e carregamento de treinos realizados, bem como os treinos que lhe foram atribuídos;
+	\item Possibilidade de visualizar a sua evolução graficamente.
+\end{itemize}
+
+Por sua vez, já o treinador e administrador, contam com as seguintes funcionalidades na vertente de \textit{backoffice}:
+
+\begin{itemize}
+	\item Um local destinado à criação de treinos modelo, como um \textit{template}, com parâmetros genéricos, que posteriormente são atribuídos aos atletas;
+	\item Um local para a consulta de dados pessoais e biométricos dos atletas, sendo ainda possível a consulta de treinos realizados e por realizar;
+	\item Possibilidade de visualizar graficamente a evolução dos atletas.
+\end{itemize}

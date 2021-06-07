@@ -1,0 +1,77 @@
+% ==> Add Chapter without number to Table of Contents <== %
+\newcommand\tocChap[1]{%
+	\phantomsection
+	\addcontentsline{toc}{chapter}{#1}
+	\chapter*{#1}
+
+	\chaptermark{#1}
+}
+
+% ==> Add Section without number to Table of Contents <== %
+\newcommand\tocSec[1]{%
+	\section*{#1}%
+	\phantomsection
+	\addcontentsline{toc}{section}{#1}
+}
+
+% ==> Add SubSection without number to Table of Contents <== %
+\newcommand\tocSubSec[1]{%
+	\subsection*{#1}%
+	\phantomsection
+	\addcontentsline{toc}{subsection}{#1}
+}
+% ==> Add SubSubSection without number to Table of Contents <== %
+\newcommand\tocSubSubSec[1]{%
+	\subsubsection*{#1}%
+	\phantomsection
+	\addcontentsline{toc}{subsubsection}{#1}
+}
+
+% ==> Command to add Image with Caption (w/ color option) <== %
+\newcommand\figureCColor[4]{%
+	\begin{center}
+		\captionsetup{type=figure,hypcap=true,labelfont={color=#4},font={color=#4}}
+		\includegraphics[width=#1\textwidth]{#2}
+		\caption{#3}
+	\end{center}
+}
+
+% ==> Command to add Image with Caption <== %
+\newcommand\figureFrame[3]{%
+\begin{center}
+	\captionsetup{type=figure,hypcap=true}
+	\includegraphics[width=#1\textwidth]{#2}
+	\caption{#3}
+\end{center}
+}
+
+% ==> Command to add PDF with Caption <== %
+\newcommand\pdfFrame[4]{%
+	\begin{center}
+		\captionsetup{type=figure,hypcap=true}
+		\includegraphics[page=#4,width=#1\textwidth, trim=1cm 2cm 0cm 3cm, clip]{#2}
+		\caption{#3}
+	\end{center}
+}
+
+% ==> Custom Paragraph <== %
+\newcommand{\paragraphBreak}[1]{\paragraph{#1}\mbox{}\\}
+\newcommand{\paragraphBreakNoNum}[1]{\paragraph*{#1}\mbox{}\\}
+
+% ==> Indentation in Minipage <== %
+\newcommand{\minipagerestore}{
+	\setlength{\parindent}{20pt}
+	\setlength{\parskip}{0.75em}
+}
+
+% ==> Custom GLS Commands <== %
+\newcommand{\glsShortUnder}[1]{\underline{\gls{#1}}}
+\newcommand{\Glsunder}[1]{\underline{\Gls{#1}}}
+\newcommand{\glslinkUnder}[2]{\underline{\glslink{#1}{#2}}}
+\newcommand{\acrshortplUnder}[1]{\underline{\glsxtrshortpl{#1}}} % Plural Acronym
+
+% ==> Remover Chapter N from \leftmark <== %
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+
+% ==> Links <== %
+\newcommand{\hyperrefUnder}[2]{\underline{\hyperref[#1]{#2}}}

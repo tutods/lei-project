@@ -1,0 +1,83 @@
+\tocSubSec{Criação do Projeto}
+
+A criação de um projeto \textbf{React} pode ser realizada de duas formas, manualmente ou recorrendo ao \texttt{create-react-app}, porém será possível analisar abaixo como proceder à criação de ambas as formas.
+
+Para a criação de um projeto \textbf{React} manualmente é necessário adicionar todos os \textit{\glslinkUnder{packages}{packages}} ao ficheiro \texttt{package.json}, para isso os passos a seguir são:
+
+\begin{enumerate}
+	\item Criação da pasta para o projeto;
+	\item Aceder à pasta criada anteriormente via terminal e executar o comando \texttt{npm init -y} ou \texttt{yarn init -y} {\scriptsize (caso seja utilizado \textbf{Yarn} como \textit{package manager})};
+	\item Adicionar todos os \textit{\glslinkUnder{packages}{packages}} necessários, sendo eles {\scriptsize (por norma)}:
+	\begin{itemize}
+		\item \textbf{React} \textemdash~\texttt{npm i react} ou \texttt{yarn add react};
+		\item \textbf{React Dom} \textemdash~\texttt{npm i react-dom} ou \texttt{yarn add react-dom};
+		\item \textbf{React Scripts} \textemdash~\texttt{npm i react-scripts} ou \texttt{yarn add react-scripts}.
+	\end{itemize}
+	\item Após a instalação dos \textit{\glslinkUnder{packages}{packages}} é necessário proceder à criação dos \textit{scripts}, para issó é necessário adicionar o seguinte código no ficheiro \texttt{package.json}:
+
+	\begin{longlisting}
+		\begin{minted}{json}
+			"scripts": {
+				"start": "react-scripts start",
+				"build": "react-scripts build",
+				"test": "react-scripts test",
+				"eject": "react-scripts eject"
+			},
+		\end{minted}
+		\caption{Scripts para a execução do projeto em \textbf{React}}
+	\end{longlisting}
+
+	\item Posto isto é necessário criar todos os ficheiros necessários para a aplicação funcionar. Sendo eles:
+	\begin{itemize}
+		\item \mintinline{bash}{index.html} {\scriptsize (na pasta \mintinline{bash}{public})}
+		\item \mintinline{bash}{index.css} {\scriptsize (na pasta \mintinline{bash}{src})}
+		\item \mintinline{bash}{index.jsx} {\scriptsize (na pasta \mintinline{bash}{src})}
+		\item \mintinline{bash}{App.jsx} {\scriptsize (na pasta \mintinline{bash}{src})}
+		\item \mintinline{bash}{App.css} {\scriptsize (na pasta \mintinline{bash}{src})}
+	\end{itemize}
+
+	\vspace{0.25cm}
+	\begin{mybox}{estg}{Nota}
+		É possível encontrar o código dos ficheiros referidos anteriormente em \underline{\textbf{\hyperref[reactFiles]{anexo}}} no ponto \textbf{``Ficheiros Iniciais''}.
+
+		É ainda importante referir que estes ficheiros são apenas a base para colocar um projeto \textbf{React} em funcionamento.
+	\end{mybox}
+\end{enumerate}
+
+Porém como é possível analisar este processo é um pouco mais trabalhoso e implica que o programador saiba quais as dependências que necessita, para isso é possível usar o \texttt{create-react-app} que é o método recomendado pelo \textbf{React}\footnote{\textbf{Documentação:} \href{https://reactjs.org/docs/create-a-new-react-app.html}{``Create a new React App''}} para criar um projeto.
+
+Os passos para a criação de um projeto seguindo este método são bastante simples e práticos, permitindo ainda ao programador definir se pretende usar ou não algum \textit{template}, como por exemplo \textbf{TypeScript}. Os passos que se seguem demonstram a criação de um projeto \textbf{React} através desta``ferramenta'':
+
+\begin{enumerate}
+	\item Em primeiro lugar é necessário instalar o \mintinline{bash}{create-react-app}, isto pode ser realizado de duas formas de acordo com o \textit{package manager} utilizado:
+	\begin{itemize}
+		\item \textbf{Com Yarn:} ~\mintinline{bash}{yarn global add create-react-app}
+		\item \textbf{Com NPM:} ~\mintinline{bash}{npm install -g create-react-app}
+	\end{itemize}
+	\item Após a instalação é agora possível criar agora o projeto, para tal:
+	\begin{itemize}
+		\item \textbf{Com Yarn:} ~\mintinline{bash}{yarn create react-app <project-name> [<options>]}
+		\item \textbf{Com NPX:} ~\mintinline{bash}{npx create-react-app <project-name> [<options>]}
+		\item \textbf{Com NPM:} ~\mintinline{bash}{npm init react-app <project-name> [<options>]}
+	\end{itemize}
+\end{enumerate}
+
+Com isto é possível aceder à pasta do projeto (sendo a pasta o nome do projeto \textemdash~ \mintinline{bash}{<project-name>}) e verificar que todos os \textit{\underline{\glslink{packages}{packages}}} foram adicionados, bem como os ficheiros base, inclusive o logo do \textbf{React} que irá aparecer como animação ao executar o projeto {\scriptsize (ver figura abaixo)}.
+
+\figureFrame{.75}{react-page.jpeg}{Página inicial do \textbf{React} após a execução do projeto}
+
+\tocSubSubSec{Opções Adicionais}
+
+Na criação de um projeto \textbf{React} através do \mintinline{bash}{create-react-app} é possível especificar o \textit{template} a usar , não sendo de uso obrigatório. A lista que se segue apresenta dois \textit{templates} frequentemente utilizados:
+
+\begin{itemize}
+	\item \mintinline{bash}{--template typescript}: para gerar o projeto com \textbf{TypeScript};
+	\item \mintinline{bash}{--template cra-template-pwa}: para gerar o projeto com a funcionalidade de \glsShortUnder{pwa};
+	\item \mintinline{bash}{--template cra-template-pwa-typescript}: semelhante ao anterior, porém com \textbf{TypeScript}.
+\end{itemize}
+
+Além do \textit{template} é ainda possível especificar o \textit{package manager} utilizado, recorrendo à opção \mintinline{bash}{--use-npm}, isto para usar o \textbf{NPM} como \textit{package manager}\footnote{No caso de possuir o \textbf{Yarn} instalado.}.
+
+\vspace{30pt}
+
+\textbf{Referências adicionais:} \cite{createReactProj,createReactAppSP,cReactAppCli}

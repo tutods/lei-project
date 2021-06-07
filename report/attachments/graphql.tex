@@ -1,0 +1,64 @@
+\tocSec{\textbf{GraphQL}}
+\label{graphqlAttachments}
+
+\tocSubSec{Instalação}
+
+A instalação do \textbf{GraphQL} pode ser realizada através do \textbf{NPM} ou do \textbf{Yarn}, para isso basta recorrer a um dos seguintes comandos:
+
+\begin{itemize}
+	\item \textbf{Com Yarn:} ~\texttt{yarn add graphql}
+	\item \textbf{Com NPM:} ~\texttt{npm install graphql}
+\end{itemize}
+
+Desta forma o \textbf{GraphQL} está disponível para utilizar ao longo do projeto recorrendo a uma das seguintes formas apresentadas abaixo.
+
+\begin{longlisting}
+	\begin{minted}{js}
+		const { graphql, buildSchema } = require('graphql');
+	\end{minted}
+
+	\caption{Importação do \textbf{GraphQL} em \textbf{JavaScript}}
+\end{longlisting}
+
+\begin{longlisting}
+	\begin{minted}{js}
+		import { graphql, buildSchema } from 'graphql';
+	\end{minted}
+
+	\caption{Importação do \textbf{GraphQL} em \textbf{TypeScript}}
+\end{longlisting}
+
+\tocSubSec{Apollo Client}
+
+O \textbf{Apollo Client} permite realizar \textit{queries} no lado do servidor (\textit{back-end}), mas sendo estas executadas no lado do cliente, o \textit{front-end}.
+
+Em primeiro lugar é necessário realizar a instalação do \textbf{Apollo Client}, para isso:
+
+\begin{itemize}
+	\item \textbf{Com Yarn:} \verb|yarn add @apollo/client|;
+	\item \textbf{Com NPM:} \verb|npm i @apollo/client|
+\end{itemize}
+
+Nos tópcios que se seguem é possível analisar em mais detalhe a criação de um cliente, bem como a realização de uma \textit{query}.
+
+\tocSubSubSec{Criação de um \textit{client}}
+
+A criação do \textit{client} do \textbf{Apollo Client} tem como princípio definir a que \textit{url} serão realizadas as \textit{queries}, no caso o \textit{url} da \glsShortUnder{api}.
+
+O exemplo que se segue foi retirado da \href{https://www.apollographql.com/docs/react/get-started/}{documentação oficial do \textbf{Apollo Client}}.
+
+\begin{longlisting}
+	\inputminted[highlightlines={3-6},highlightcolor=yellow!25]{js}{code/graphql/create-apollo-client.ts}
+	\caption{Criação de um client recorrendo ao \textbf{Apollo Client} no \textbf{React}}
+\end{longlisting}
+
+\tocSubSubSec{Execução de \textit{queries}}
+
+A execução de uma \textit{query} no \textbf{Apollo Client} implica que já exista um \textit{client} criado, tal como foi apresentado no tópico anterior. Desta forma, é utilizada a variavél criada (\texttt{const client}) e o método \texttt{query}. Novamente este exemplo pode ser encontrado na \href{https://www.apollographql.com/docs/react/get-started/}{documentação oficial do \textbf{Apollo Client}}.
+
+\begin{longlisting}
+	\inputminted[highlightlines={7-13},highlightcolor=yellow!25]{js}{code/graphql/use-apollo-client.ts}
+	\caption{Execução de uma query recorrendo ao \textbf{Apollo Client} no \textbf{React}}
+\end{longlisting}
+
+\input{attachments/graphql/rest-vs-graphql.tex}

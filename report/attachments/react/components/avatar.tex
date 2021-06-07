@@ -1,0 +1,53 @@
+\tocSubSubSec{\textit{Avatar}}
+\label{avatarComp}
+
+O componente \textbf{\textit{Avatar}} é encontrado nos mais diversos ecrãs do projeto, contando com várias possiblidades de apresentação, tal como é possível analisar nas figuras que se seguem.
+
+\begin{minipage}{0.55\textwidth}
+	\figureFrame{1}{avatar-athlete-profile.jpeg}{Componente \textbf{Avatar} na página de perfil do atleta}
+\end{minipage}
+\begin{minipage}{0.35\textwidth}
+	\figureFrame{1}{avatar-athletes-mosaic.jpeg}{Componente \textbf{Avatar} na vista em mosaico na lista de atletas}
+\end{minipage}
+
+\figureFrame{1}{avatar-athletes-list.jpeg}{Componente \textbf{Avatar} na lista de atletas}
+
+De uma forma resumida, o componente \textbf{Avatar} pode ser apenas a imagem do atleta, a imagem do atleta com o número de notificações, a imagem de atleta e nome do alteta, imagem do atleta e identificador, ou então, a junção de todas estas possibilidades.
+
+\begin{longlisting}
+	\begin{minted}[]{jsx}
+		const Avatar = ({
+			className,
+			avatar,
+			notifications,
+			label,
+			...attributes
+		}: IAvatarProps) => {
+			return (
+				<div
+					className={`${styles["root"] || ""} ${className || ""}`}
+					{...attributes}
+				>
+					<div
+						className={styles["avatar"]}
+						style={{
+							backgroundImage: avatar ? `url(${avatar})` : undefined
+						}}
+					>
+						{label && <span className={styles["label"]}>{label}</span>}
+
+						{notifications && (
+							<span className={styles["badge"]}>{notifications}</span>
+						)}
+					</div>
+				</div>
+			);
+		};
+
+		export default Avatar;
+	\end{minted}
+
+	\caption{Código desenvolvido para o componente \textbf{Avatar}}
+\end{longlisting}
+
+Como é possível analisar pelo excerto de código anterior, o componente \textbf{Avatar} recebe determinadas propriedades, podendo algumas ser ou não recebidas, permitindo assim criar as várias vertentes apresentadas nas figuras.

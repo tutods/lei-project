@@ -1,0 +1,24 @@
+\subsection{Sass}
+
+\begin{minipage}{.3\textwidth}
+	\figureFrame{.45}{sass}{\textbf{Sass} \textemdash~logo}
+\end{minipage}
+\begin{minipage}{.7\textwidth}
+	\minipagerestore
+	O \textbf{\glsShortUnder{sass}}, ou \underline{\glsxtrlong{sass}} é um \textit{preprocessor} de \textbf{\glsShortUnder{css}}, possuíndo duas variantes:
+
+	\begin{itemize}
+		\item \texttt{.sass} \textemdash~não necessita de \texttt{;} nem \verb|{}|, apenas que o código esteja corretamente indentado;
+		\item \texttt{.scss} \textemdash~esta variante necessita de \texttt{;} e \verb|{}|, bem como a correta indentação do código.
+	\end{itemize}
+\end{minipage}
+
+Durante a realização deste projeto será utilizada a variante sem \texttt{;} e \verb|{}|, sendo apresentados os principais detalhes da mesma.
+
+A figura apresentada de seguida representa a transformação que é realizada após a compilação de um código \textbf{\glsShortUnder{sass}} (\texttt{.sass}) em código \textbf{\glsShortUnder{css}} (\texttt{.css}), onde é possível analisar a declaração de uma variável (\verb|$darkColor|), bem como o seu uso. Sendo ainda possível analisar o suporte a \textit{nesting}, ou seja, \textbf{\glsShortUnder{css}} dentro de \textbf{\glsShortUnder{css}} (de uma forma simplificada), algo que não é suportado em \textbf{\glsShortUnder{css}}.
+
+\clearpage
+
+\figureFrame{1}{sass-to-css.png}{Ficheiro \texttt{.sass} compilado para um ficheiro \texttt{.css}}
+
+Em \hyperrefUnder{sassAttachments}{anexo} é possível encontrar algumas vantagens do uso de \textbf{\glsShortUnder{sass}}, recorrendo para tal a exemplos práticos.

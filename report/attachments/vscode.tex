@@ -1,0 +1,76 @@
+\tocSec{\textbf{Visual Studio Code}}
+\label{vscodeAttachments}
+
+\tocSubSec{Configurações}
+
+\begin{longlisting}
+	\inputminted{json}{code/vscode-settings.json}
+	\caption{Configurações utilizadas no \textbf{Visual Studio Code}}
+\end{longlisting}
+
+\begin{mybox}{estg}{Nota}
+	Para utilizar as Configurações apresentadas devem ser seguidos os passos abaixo:
+
+	\begin{enumerate}
+		\item Aceder às configurações do \textbf{Visual Studio Code} no formato \textbf{JSON}, para isso utilizar a tecla de atalho apresentada abaixo de acordo com o sistema operativo e pesquisar pela opção \textit{``Preferences: Open Settings (JSON)''};
+		\begin{itemize}
+			\item \textbf{No macOS:} \texttt{CMD + SHIFT + P};
+			\item \textbf{No Windows/Linux:} \texttt{CTRL + SHIFT + P}.
+		\end{itemize}
+		\item Copiar as configurações apresentadas e colar no ficheiro \texttt{settings.json} (ficheiro que abriu no passo anterior).
+		\begin{itemize}
+			\item \textbf{Nota:} caso já possua configurações neste ficheiro, basta remover as chavetas inicias (\verb|{}|) no código apresentado e colocar as restantes configurações.
+		\end{itemize}
+	\end{enumerate}
+\end{mybox}
+
+\tocSubSec{Extensões}
+
+Como referido anteriormente, o \textbf{Visual Studio Code} é rico em extensões, tornando-o bastante versátil e capaz de ser utilizado para qualquer linguagem ou finalidade. Abaixo são apresentadas algumas das extensões usadas no desenvolvimento deste projeto.
+
+\begin{minipage}[t]{0.5\textwidth}
+	\centering
+	\figureFrame{1}{es7-react.png}{Extensão \textbf{ES7 React/Redux/GraphQL/React-Native snippets}}
+
+	\href{https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets}{Link}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\centering
+	\figureFrame{1}{auto-import.png}{Extensão \textbf{Auto Import}}
+
+	\href{https://marketplace.visualstudio.com/items?itemName=steoates.autoimport}{Link}
+\end{minipage}
+
+\vspace{0.25cm}
+
+\begin{minipage}[t]{0.5\textwidth}
+	\centering
+	\figureFrame{1}{auto-close-tag.png}{Extensão \textbf{Auto Close Tag}}
+
+	\href{https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag}{Link}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\centering
+	\figureFrame{1}{auto-rename.png}{Extensão \textbf{Auto Rename Tag}}
+
+	\href{https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag}{Link}
+\end{minipage}
+
+\vspace{0.25cm}
+
+\begin{minipage}[t]{0.5\textwidth}
+	\centering
+	\figureFrame{1}{es-lint.png}{Extensão \textbf{ESLint}}
+
+	\href{https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint}{Link}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\centering
+	\figureFrame{1}{sass-extension.png}{Extensão \textbf{Sass}}
+
+	\href{https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented}{Link}
+\end{minipage}
+
+\begin{mybox}{estg}{Nota}
+	As extensões apresentadas têm apenas a finalidade oferecer mais funcionalidades ou \textit{snippets} ao \glsShortUnder{ide} em questão, o \textbf{Visual Studio Code}.
+\end{mybox}

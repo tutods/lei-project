@@ -1,0 +1,19 @@
+% ==> Package <== %
+\usepackage{caption}
+\usepackage{chngcntr}
+
+% ==> Change to sequential number <== %
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+
+% ==> Caption - General Settings <== %
+\captionsetup{justification=centering,font=small,labelfont={bf, it},labelsep=colon,textfont={it},margin=1.5cm}
+
+% ==> Captions <== %
+\captionsetup[figure]{name={Figura}}
+
+\captionsetup[table]{name={Tabela}}
+
+% \captionsetup[listing]{margin=-5cm}
+\renewcommand{\listingscaption}{Excerto de Código}
+\renewcommand{\listoflistingscaption}{Lista de Excertos de Código}

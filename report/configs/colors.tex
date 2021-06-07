@@ -1,0 +1,67 @@
+
+% ==> Packages <== %
+\usepackage{tcolorbox, color, xcolor}
+\tcbuselibrary{breakable,skins, most}
+
+% ==> Colors <== %
+\definecolor{estg}{HTML}{ca4d24}
+\definecolor{lightgray}{rgb}{0.95, 0.95, 0.95}
+\definecolor{darkgray}{rgb}{0.4, 0.4, 0.4}
+
+% ==> Custom Color Box's <== %
+\newtcolorbox{mybox}[3][]
+{
+	colframe = #2!100,
+	colback  = #2!10,
+	coltitle = white!100,
+	title    = {#3},
+	before upper={\parindent20pt},
+	% fontupper= {\fontsize{10}{11}\selectfont},
+	fonttitle= {\fontspec{PortoSans-Bold.otf}[Path=fonts/portosans/]},
+	top=3pt,
+	#1
+}
+
+\newtcolorbox{errorbox}[2][]
+{
+	colframe = red!75!black,
+	colback  = red!15,
+	coltitle = white!100,
+	title    = {\faExclamationTriangle ~#2},
+	before upper={\parindent20pt},
+	% fontupper= {\fontsize{10}{11}\selectfont},
+	% fonttitle= {\fontsize{11}{12}\selectfont},
+	top=3pt,
+	#1
+}
+
+\newtcolorbox{quotebox}[1][]{
+	enhanced jigsaw,
+	boxrule=0pt,
+  	rightrule=2pt,
+	halign=right,
+	halign lower=right,
+	arc = 0pt,
+	outer arc = 0pt,
+	colback  = lightgray!50,
+	colframe = estg!75,
+	fontupper={\fontspec{PortoSans-RegularItalic.otf}[Path=fonts/portosans/]},
+	fontlower={\fontsize{11}{12}\selectfont},
+	#1
+}
+
+\newtcolorbox{quotebox50}[1][]{
+	enhanced jigsaw,
+	boxrule=0pt,
+  	rightrule=2pt,
+	halign=right,
+	halign lower=right,
+	arc = 0pt,
+	outer arc = 0pt,
+	colback  = lightgray!50,
+	colframe = estg!75,
+	width=.50\textwidth,
+	fontupper={\fontspec{PortoSans-RegularItalic.otf}[Path=fonts/portosans/]},
+	fontlower={\fontsize{11}{12}\selectfont},
+	#1
+}

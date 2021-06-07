@@ -1,0 +1,33 @@
+\tocSubSec{Comparação entre \textbf{GraphQL} e \textbf{REST}}
+
+O \textbf{GraphQL} foi desenvolvido em 2021 pelo \textbf{Facebook}, tendo como principal motivação a resolução de problemas que surgiram com o aumento do uso de dispositivos móveis.
+
+As principais diferenças entre \textbf{\glsShortUnder{rest}} e \textbf{GraphQL} são verificadas na figura\footnote{\textbf{Retirado de:} \cite{restfulVsGraphql}} que segue, uma vez que em \textbf{\glsShortUnder{rest}}, os dados são obtidos através de múltiplos \textit{endpoints}. Já em \textbf{GraphQL} apenas é necessário realizar um único pedido para obter todos os dados, combatendo assim o problema de \textit{over-fetching} e \textit{under-fetching} de dados.
+
+\figureFrame{1}{graphql-vs-rest.jpeg}{Comparação entre \textbf{GraphQL} e \textbf{REST}}
+
+\textit{Over-fetching} consiste na obtenção de dados em excesso, o que é provável acontecer num pedido \textbf{\glsShortUnder{rest}}, uma vez que a informação devolvida por esta possa conter dados que não sejam necessários. Já o \textit{under-fetching} é o inverso, ou seja, a falta de dados.
+
+Em \textbf{GraphQL} estes problemas são combatidos, uma vez que o cliente tem o poder de escolher apenas os dados que necessita que a \textbf{\glsShortUnder{api}} lhe devolva. O excerto de código que se segue apresenta uma \textit{query}\footnote{Retirado da \href{https://graphql.org/learn/queries/}{documentação oficial}} em \textbf{GraphQL} onde é possível analisar a seleção dos campos escolhidos para serem devolvidos.
+
+\begin{longlisting}
+	\inputminted{text}{code/graphql/example-query.graphql}
+	\caption{\textbf{GraphQL} \textemdash~Exemplo de \textit{query} com seleção de campos}
+\end{longlisting}
+
+Como é possível analisar no exemplo apresentado são selecionados os campos \texttt{name} do \textit{schema} \texttt{hero}, bem como ainda o campo \texttt{name} do \textit{schema} \texttt{friends} que se encontram relacionados com o \texttt{hero}. Ou seja, o funcionamento é como um \texttt{JOIN} em base de dados.
+
+Esta é apenas uma das vantagens em comparação a \textbf{\glsShortUnder{rest}} e, importa referir, que os problemas de \textit{over-fetching} e \textit{under-fetching} também podem ser resolvidos, sendo necessário recorrer a outras metodologias.
+
+Porém, o \textbf{GraphQL} também conta com pontos negativos, como por exemplo:
+
+\begin{itemize}
+	\item \textbf{\textit{Error Handling}:} em \textbf{GraphQL} independemente de a \textit{query} ser realizado com sucesso ou não, é sempre devolvido o \textit{HTTP Status Code} 200\footnote{\textbf{HTTP Status Code 200 \textemdash} ~\textit{Ok} (\href{https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status/200}{Mais Informações})};
+
+	\item \textbf{Complexidade:} em \textbf{GraphQL} a complexidade é maior, exigindo logo de inicio o desenvolvimento sobre \textbf{SDL}, ou seja, \textbf{\textit{Schema Definition Language}}. De uma forma geral, a curva de aprendizagem em \textbf{GraphQL} é mais acentuada;
+
+	\item \textbf{\textit{Web Caching}:} realizar \textit{caching} em \textbf{GraphQL} torna-se mais complexo, visto não usar \textit{HTTP Caching}. É possível implementar \textit{caching} recorrendo ao \textbf{Apollo Server}, porém  a persistência de \textit{queries} pode ser um problema.
+\end{itemize}
+
+
+Estes são apenas alguns pontos comparativos em relação a \textbf{\glsShortUnder{rest}} e \textbf{GraphQL}, existindo outros. Como tal, são deixadas algumas referências relativas a este tópico: \cite{graphQLisBest,graphqlVsRestWichIsBetter,difGraphQLvsRest,knowGraphQLvsRest,whatisGraphql,restfulVsGraphql}

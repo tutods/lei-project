@@ -1,0 +1,44 @@
+\tocSubSec{Variáveis}
+
+No \textbf{\glsShortUnder{sass}} é possível declarar variáveis recorrendo ao símbolo \verb|$| seguido do nome pretendido. Nos excertos de código que se seguem é possível analisar a declaração de variáveis, o seu uso e qual o resultado após este ser compilado para \textbf{\glsShortUnder{css}}.
+
+\begin{longlisting}
+	\begin{minted}[highlightlines={5,6},highlightcolor=yellow!25]{sass}
+		$padding: 10px 20px
+		$defaultColor: #ca4d24
+
+		.alert
+			background-color: $defaultColor
+			padding: $padding
+	\end{minted}
+	\caption{Utilização de variáveis em \textbf{Sass}}
+\end{longlisting}
+
+No \textbf{\glsShortUnder{css}} estas variáveis não são visíveis, uma vez que o valor destas serão apresentadas diretamente na linha da sua utilização, ou seja:
+
+\begin{longlisting}
+	\begin{minted}[highlightlines={2,3},highlightcolor=yellow!25]{css}
+		.alert {
+			background-color: #ca4d24;
+			padding: 10px 20px;
+		}
+	\end{minted}
+	\caption{Código \textbf{CSS} resultante do excerto de código com variáveis em \textbf{Sass}}
+\end{longlisting}
+
+Porém em \textbf{\glsShortUnder{css}} também é possível utilizar variáveis, porém estas são definidas recorrendo a \verb|:root {}|. No excerto de código que se segue é apresentado um exemplo de variáveis em \textbf{\glsShortUnder{css}}.
+
+\begin{longlisting}
+	\begin{minted}{css}
+		:root {
+			--padding: 10px 20px;
+			--default-color: #ca4d24
+		}
+
+		.alert {
+			padding: var(--padding);
+			background-color: var(--default-color);
+		}
+	\end{minted}
+	\caption{Declaração e uso de variáveis em \textbf{CSS}}
+\end{longlisting}

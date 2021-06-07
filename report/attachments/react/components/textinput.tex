@@ -1,0 +1,99 @@
+\tocSubSubSec{\textit{TextInput}}
+
+O Componente \textbf{\textit{TextInput}} é um componente destinado a ser utilizado nos diversos ecrãs do projeto. Por exemplo nos \textit{mockups} apresentados no \hyperrefUnder{loginSequenceDiagram}{diagrama de sequência de inicio de sessão}, onde este é utilizado para o campo de \textit{email} e \textit{password}.
+
+Para isto ser possível o componente recebe as propriedades apresentadas no excerto de código que se segue.
+
+\begin{longlisting}
+	\begin{minted}{jsx}
+	const TextInput = ({
+		className,
+		disabled,
+		noValidate,
+		onChange,
+		type,
+		name,
+		placeholder,
+		multiline,
+		modifier,
+		rounded,
+		rows,
+		...attributes
+	}: ITextInput) => {
+		// ...
+	}
+	\end{minted}
+
+	\caption{Propriedades recebidas no componente \textbf{TextInput}}
+\end{longlisting}
+
+Assim sendo e, apesar de algumas das propriedades não serem obrigatórias, as que tem mais impacto no aspeto visual do \textit{input} são a propriedade \mintinline{js}{rounded}, \mintinline{js}{multiline} and \mintinline{js}{modifier}.
+
+A propriedade \mintinline{js}{rounded} tem como objetivo definir se o \textit{input} conta com bordas redondas ou não. No caso desta propriedade ser aplicada, o \textit{input} recebe uma \textit{class} de \textbf{\glsShortUnder{css}} adicional (de forma a ser estilizada posteriormente), o excerto de código que segue apresenta a aplicabilidade desta propriedade, bem como o estilo adicionado.
+
+\begin{longlisting}
+	\begin{minted}{jsx}
+	// ...
+	<Tag
+		className={`${styles[`${modifier}-style`] || ''} ${
+			rounded && styles['rounded']
+		}`}
+		{...attributes}
+		type={type}
+		name={name}
+		disabled={disabled}
+		placeholder='&nbsp;'
+		rows={rows ? Number(rows) : 0}
+		onChange={onChange}
+	>
+	// ...
+	</Tag>
+
+	// ...
+	\end{minted}
+
+	\caption{Propriedade \mintinline{js}{rounded} aplicada ao input}
+\end{longlisting}
+
+\begin{longlisting}
+	\begin{minted}[]{sass}
+	.rounded
+		border-radius: $inputBorderRadius // 25px
+	\end{minted}
+
+	\caption{Estilo adicionado na class da propriedade \mintinline{js}{rounded}}
+\end{longlisting}
+
+Já no caso da propriedade \mintinline{js}{multiline}, esta destina-se a dizer se será apresentado um \textit{input} ou \textit{textarea}, para isso é utilizado o código abaixo:
+
+\begin{longlisting}
+	\begin{minted}[highlightlines={3},highlightcolor=yellow!25]{js}
+		// ...
+
+		const Tag: ElementType = multiline ? 'textarea' : 'input';
+
+		// ...
+	\end{minted}
+
+	\caption{Utilização da propriedade \texttt{multiline} no componente \textbf{TextInput}}
+\end{longlisting}
+
+Por fim, a propriedade \texttt{modifier} tem como objetivo afetar as cores que são aplicadas ao \textit{input}, no momento, para além do estilo padrão, a propriedade \texttt{modifier} pode receber o valor \textit{light}, aplicando assim o seguinte estilo ao \textit{input}.
+
+\begin{longlisting}
+	\begin{minted}[]{sass}
+	&.light-style
+		background-color: $whiteColor // #FFF
+
+		&:hover
+			border: 1px solid $secondaryColor // #b8b7b7
+
+		&:focus
+			outline: none
+			border: 1px solid $secondaryColor  // #b8b7b7
+	\end{minted}
+
+	\caption{Estilo aplicado no uso da propriedade \texttt{modifier} com o valor light}
+\end{longlisting}
+
+Com estas propriedades o componente \textit{\textbf{TextInput}} torna-se bastante versátil, possibilitando o seu uso nos mais diversos formulários do projeto.

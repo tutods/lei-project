@@ -1,0 +1,21 @@
+% ==> Packages <== %
+\usepackage{csquotes}
+
+\usepackage[
+	backend=biber,
+	style=numeric,
+	sorting=nty]{biblatex}
+
+\usepackage[acronym]{glossaries-extra}
+
+% ==> Bibliography <== %
+\bibliography{configs/references/bibliography.bib} % File with bibliography references
+
+\nocite{*} % Print all bibliography references without cite
+
+% ==> Glossary <== %
+\makeglossaries
+
+\glsenablehyper
+
+\loadglsentries{configs/references/glossary.tex}

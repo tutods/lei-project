@@ -1,0 +1,64 @@
+\documentclass[a4paper, twoside, 12pt]{report}
+\PassOptionsToPackage{table}{xcolor}
+
+% ==> Configs: packages, paths, captions, ... <== %
+\input{configs/configs.tex}
+
+\begin{document}
+
+% ==> Cover <== %
+\input{pages/cover.tex}
+
+% ==> Blank Page <== %
+\input{pages/blank-page.tex}
+
+% ==> Back Cover <== %
+\input{pages/back-cover.tex}
+
+% ==> Blank Page <== %
+\input{pages/blank-page.tex}
+
+% ==> Change Page Number to Roman <== %
+\pagenumbering{roman}
+
+% ==> List of Chapters <== %
+\tableofcontents
+\newpage
+
+% ==> List of Images <== %
+\listoffigures
+\addcontentsline{toc}{chapter}{Lista de Figuras}
+\newpage
+
+\listoftables
+\addcontentsline{toc}{chapter}{Lista de Tabelas}
+\newpage
+
+% ==> List of Code Listings <== %
+\listoflistings
+\addcontentsline{toc}{chapter}{Lista de Excertos de Código}
+\newpage
+
+% ==> Acronyms <== %
+\printunsrtglossary[type=\acronymtype,title=Abreviaturas]
+\newpage
+
+% ==> Glossary <== %
+\printunsrtglossary[title=Glossário]
+\newpage
+
+% ==> Change Page Number to Number <== %
+\pagenumbering{arabic}
+
+% ==> Chapters <== %
+\input{pages/chapters.tex}
+\newpage % to break the chapters
+
+% ==> References <==
+\input{pages/references}
+\newpage % to break the references
+
+% ==> Attachments <== %
+\input{pages/attachments.tex}
+
+\end{document}

@@ -1,0 +1,19 @@
+% ==> Packages <== %
+\usepackage{fancyhdr}
+
+% ==> Set to other pages <== %
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{\textbf{\MakeUppercase{\leftmark}}~ | ~Página \textbf{\thepage}~de~\textbf{\pageref{LastPage}}}
+
+% ==> Set to chapters <== %
+\fancypagestyle{plain}{%
+	\fancyhf{}%
+
+	\rfoot{\textbf{\MakeUppercase{\leftmark}}~ | ~Página \textbf{\thepage}~de~\textbf{\pageref{LastPage}}}
+ }
+ 
+ % ==> Remove header line and space <== %
+\setlength{\headheight}{0pt}
+\renewcommand{\headrulewidth}{0pt}

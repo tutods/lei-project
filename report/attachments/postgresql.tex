@@ -1,0 +1,42 @@
+\tocSec{\textbf{PostgreSQL}}
+\label{postgreSQLAttachments}
+
+\tocSubSec{Instalação}
+\tocSubSubSec{\textit{Container} \textbf{Docker}}
+
+Uma das formas de instalar o \textbf{PostgreSQL} é através de um \textit{container} \textbf{\href{https://www.docker.com/}{Docker}}\footnote{\textbf{Referências recomendadas:} \cite{postgresDocker,postgresContainer}}, sendo apenas necessário possuir este instalado na máquina em questão.
+
+Após possuir o \textbf{Docker}, basta executar no terminal o seguinte comando: \mintinline{bash}{docker run --name postgres --network=postgres-network -e "POSTGRES_PASSWORD=<your-password>" -p 5432:5432 -v ~/Documents/containers/postgres:/var/lib/postgresql/data -d postgres}. Importante referir que o caminho \texttt{~/Documents/containers/postgres/} é uma pasta criada para armazenar informações do \textit{container}.
+
+\begin{mybox}{estg}{Nota}
+	A porta pela qual é possível aceder ao \textbf{PostgreSQL} é também definida no comando de criação do container. Caso seja pretendido o uso de uma porta diferente basta alterar a porta depois dos dois pontos (:), por exemplo:
+
+	\begin{itemize}
+		\item \textbf{Porta padrão:} ~\texttt{... -p 5432:5432 ...};
+		\item \textbf{Porta personalizada:} ~\texttt{... -p 5432:1234 ...}.
+	\end{itemize}
+
+	\hspace{15pt}
+
+	\textbf{Garantir que a porta personalizada desejada não se encontra já em uso por outra aplicação.}
+\end{mybox}
+
+\tocSubSubSec{Windows}
+
+A instalação do \textbf{PostgreSQL} no \textbf{Windows} resume-se essencialmente ao \textit{download} do ficheiro \verb|.exe|~ no \href{https://www.postgresql.org/download/}{site oficial}, iniciando o executável posteriormente e seguir todos os passos apresentados {\small~semelhante à instalação do \textbf{NodeJS} neste sistema operativo}.
+
+\tocSubSubSec{macOS}
+
+No \textbf{macOS} o \textbf{PostgreSQL} pode ser instalado através da imagem \verb|.dmg| baixada através do \href{https://www.postgresql.org/download/}{site oficial}, ou então através do \textbf{HomeBrew}. Para instalar através do \textbf{HomeBrew} basta executar o comando: \verb|brew install postgresql|.
+
+\tocSubSubSec{Linux}
+
+Para realizar a instalação do \textbf{PostgreSQL} no \textbf{Linux}\footnote{Os comandos apresentados são para distribuições com base \textbf{Debian}} é necessário executar os seguintes comandos\footnote{Comandos retirados do \href{https://www.postgresql.org/download/linux/debian/}{site oficial}}:
+
+
+\begin{itemize}
+	\item \mintinline{bash}{wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -}
+	\item \mintinline{bash}{sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ 'lsb_release -cs'-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'}
+	\item \mintinline{bash}{sudo apt-get update}
+	\item \mintinline{bash}{sudo apt-get -y install postgresql}
+\end{itemize}

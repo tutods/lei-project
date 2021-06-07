@@ -1,0 +1,59 @@
+\tocSubSec{Estrutura de Pastas}
+
+A estrutura de pastas para um projeto \textbf{React} pode variar de projeto para projeto, ou da forma como o programador prefere organizar os mais diversos ficheiros do projeto. Porém e, tal como é possível analisar na figura que se segue, é comum encontrar a seguinte estrutura de pastas.
+
+\begin{figure}[ht!]
+\centering
+\begin{forest}
+	for tree={
+	  folder,
+	  font=\ttfamily,
+	  grow'=0
+	}
+	[{Raíz do Projeto}
+	   [{public}]
+	   [src
+		  [assets]
+		  [components]
+		  [controllers]
+		  [hooks]
+	   ]
+	]
+\end{forest}
+\caption{\textbf{React} \textemdash~possível estrutura de pastas}
+\end{figure}
+
+Importante referir que a pasta \mintinline{bash}{src/} será a pasta principal, sendo esta que irá conter todos os componentes, \textit{assets} e outros ficheiros importantes para o projeto.
+
+É importante referir que seguindo o método de criação do projeto \textbf{React} com o \mintinline{bash}{create-react-app}, a estrutura de pastas e os ficheiros criados inicialmente será a seguinte:
+
+\begin{figure}[h!]
+\centering
+\begin{forest}
+	for tree={
+		folder,
+		font=\ttfamily,
+		grow'=0
+	}
+	[{Raíz do Projeto}
+		[public
+			[index.html]
+			[favicon.ico]
+		]
+		[src
+			[App.css]
+			[App.js]
+			[App.test.js]
+			[index.css]
+			[index.js]
+			[logo.svg]
+		]
+	]
+\end{forest}
+\caption{\textbf{React} \textemdash~estrutura de pastas e ficheiros gerados pelo \mintinline{bash}{create-react-app}}
+\end{figure}
+
+\vspace{0.1cm}
+\begin{mybox}{estg}{Nota}
+	É importante relembrar que consoante o uso de \textbf{TypeScript} ou \textbf{JavaScript} será possível encontrar ficheiros \mintinline{bash}{.tsx} ou \mintinline{bash}{.ts}, \mintinline{bash}{.jsx} ou \mintinline{bash}{js}.
+\end{mybox}

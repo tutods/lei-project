@@ -1,0 +1,33 @@
+\tocSec{\textbf{Prettier}}
+\label{prettierAttachments}
+
+\tocSubSec{Configuração}
+
+\begin{longlisting}
+	\inputminted{json}{code/prettier/config.json}
+	\caption{Configurações utilizadas no \textbf{Prettier}}
+\end{longlisting}
+
+O código apresentado acima é do ficheiro \verb|.prettierrcc|, onde é possível definir várias configurações para o \textbf{Prettier}. Além destas configurações é possível ainda definir um ficheiro parecido com o \verb|.gitignore|, no caso \verb|.prettierignore|, onde tal como no \verb|.gitignore| são definidos os ficheiros ou pastas nas quais não será executado o \textbf{Prettier}.
+
+\begin{longlisting}
+	\begin{minted}{bash}
+		package.json
+		dist/
+	\end{minted}
+	\caption{Exemplo do conteúdo do ficheiro \texttt{.prettierignore}}
+\end{longlisting}
+
+
+\tocSubSec{\textbf{Husky} e \textbf{Git} \textit{hooks}}
+
+Juntamente com o \textbf{Prettier} pode ser utilizado o \textbf{Husky} e o \textbf{Lint Staged} para formatar todo o código produzido ao realizar um \textit{commit}.
+
+\begin{longlisting}
+	\inputminted{json}{code/prettier/husky.json}
+	\caption{Configurações utilizadas no \textbf{Husky}, \textbf{Lint Staged} e \textbf{Prettier}}
+\end{longlisting}
+
+Como é possível analisar, ao realizar um \textit{commit} será executado o \textbf{Lint Staged}, que por sua vez apenas aplica os comandos aos ficheiros que terminem com as extensões definidas.
+
+Desta forma todo o código é formatado seguindo as regras definidas no ficheiro \verb|.prettier|.

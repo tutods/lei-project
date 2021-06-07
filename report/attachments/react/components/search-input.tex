@@ -1,0 +1,25 @@
+\tocSubSubSec{\textit{SearchInput}}
+
+\figureFrame{1}{search-input.jpeg}{Aparência do componente \textbf{SearchInput}}
+
+O componente \textbf{\textit{SearchInput}} é outro dos componentes que é visível nos demais ecrãs do projeto, sendo este um \textit{input} de \textbf{\glsShortUnder{html}} normal, com um estilo adicional e o uso de um icone no formato \textbf{SVG}.
+
+De seguida é possível analisar o código produzido para este componente e, é possível notar que, em comparação aos componentes anteriores, este recebe menos propriedades, sendo a propriedade \mintinline{jsx}{onChange} responsável por executar a pesquisa sempre que existe uma alteração no valor do mesmo.
+
+\begin{longlisting}
+	\inputminted[]{jsx}{code/components/search-input.tsx}
+
+	\caption{Código do componente \textbf{SearchInput}}
+\end{longlisting}
+
+Para facilitiar a realização da pesquisa foi utilizado um \textit{\glslinkUnder{packages}{package}} adicional, o \textbf{\href{https://fusejs.io/}{Fuse.js}}. A utilização deste \textit{\glslinkUnder{packages}{package}} é bastante simples e pode ser analisada no excerto de código que se segue.
+
+\begin{longlisting}
+	\inputminted[]{jsx}{code/components/use-search-input.tsx}
+
+	\caption{Uso do componente \textbf{SearchInput} em conjunto com o \textit{package} \textbf{Fuse.js}}
+\end{longlisting}
+
+Como é possível analisar, o \textit{\glslinkUnder{packages}{package}} \textbf{Fuse.js} recebe inicialmente uma lista de valores e um objeto com as opções. Neste objeto de opções são definidas as ``keys'' (chaves) nas quais serão realizada a pesquisa.
+
+É ainda possível encontrar a função que realiza a pesquisa sempre que o valor do \textbf{SearchInput} muda, execuntando o método \mintinline{jsx}{setData} (do \mintinline{jsx}{useState()} do \textbf{React}), mas com os valores filtrados pelo \textbf{Fuse.js}.

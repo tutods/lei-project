@@ -346,3 +346,12 @@ __latexindent_temp.tex
 __latexindent_temp.pdf
 *.ist
 .ist
+
+# Sli.dev
+node_modules
+.DS_Store
+dist
+*.local
+index.html
+.remote-assets
+components.d.ts

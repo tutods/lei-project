@@ -1,0 +1,52 @@
+\section{Estrutura de Pastas}
+
+A estrutura de pastas em ambas as componentes do projeto (\textit{frontoffice} e \textit{backoffice}), existindo apenas ficheiros diferentes. A figura que se segue representa a estrutura geral utilizada.
+
+\clearpage
+
+\begin{figure}[H]
+	\centering
+	\begin{forest}
+		for tree={
+			folder,
+			font=\ttfamily,
+			grow'=0
+		}
+		[{Raíz do Projeto}
+			[...]
+			[src
+				[assets
+					[media]
+					[styles]
+				]
+				[components
+					[inputs
+						[TextInput
+							[TextInput.tsx]
+							[TextInput.module.sass]
+						]
+					]
+				]
+				[controllers
+					[App
+						[App.tsx]
+						[App.module.sass]
+					]
+					[...]
+				]
+				[hooks]
+				[interfaces]
+				[utils]
+				[index.tsx]
+				[index.sass]
+			]
+		]
+	\end{forest}
+
+	\caption{\textbf{React} \textemdash~estrutura de pastas utilizada}
+\end{figure}
+
+
+Como é possível analisar a pasta principal do projeto é a para \verb|src/|, sendo esta que contêm desde os componentes, estilos, rotas, etc.. Cada componente ou \textit{controller} é constituído (na maioria dos casos) por um ficheiro \verb|tsx| e outro \verb|sass|, sendo o ficheiro com extensão \verb|module.sass| reponsável pelo estilo de determinado componente ou \textit{controller}.
+
+No caso dos componentes, sempre que existe mais do que um componente de uma mesma ``categoria'' (como por exemplo os \textit{inputs}) é criada uma pasta principal para todos os componentes dessa ``categoria''.

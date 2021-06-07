@@ -1,0 +1,35 @@
+\subsection{Lista de Atletas}
+\label{athletesSequenceDiagram}
+
+A lista de atletas encontra-se presente na vertente de \textit{backoffice} do projeto, sendo esta destinada aos treinadores e administrador da plataforma. Assim sendo, o diagrama de sequência que se segue apresenta o fluxo que acontece ao aceder a esta página.
+
+\figureFrame{1}{sequence/athlete-list.jpeg}{Diagram de Sequência para a consulta da lista de atletas}
+
+Importante referir que para ter acesso a esta página é necessário possuir sessão iniciada e um \textit{token} válido (que ainda não tenho expirado). No caso de um \textit{token} expirado, tal como é possível encontrar no diagrama referente à \hyperrefUnder{sessionSequenceDiagram}{gestão da sessão}, o utilizador será redirecionado para a página de inicio de sessão. Caso não tenha permissões para realizar este pedido, a \textbf{\glsShortUnder{api}} devolve me um \textit{HTTP Status Code} 403\footnote{\textbf{HTTP Status Code 403 \textemdash} ~\textit{Forbidden} (\href{https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status/403}{Mais Informações})}.
+
+\figureFrame{.75}{athletes-mosaic-backoffice.jpeg}{Lista em mosaico dos atletas \textemdash ~\textbf{\textit{backoffice}}}
+
+\figureFrame{.75}{athletes-list-backoffice.jpeg}{Lista dos atletas \textemdash ~\textbf{\textit{backoffice}}}
+
+Como é possível analisar pelas figuras anteriores, a lista de atletas encontra-se disponível em duas vistas, a vista em mosaico e lista. Apesar de serem formas de visualização com estilos diferentes apenas é realizado um pedido à \textbf{\glsShortUnder{api}}, sendo estes dados utilizados em cada uma destas vistas.
+
+No que toca a componentes, a vista em mosaico utiliza essencialmente o componente \textbf{Avatar} apresentado em \hyperrefUnder{avatarComp}{anexo}, sendo este apenas repetido para cada atleta recebido no pedido à \textbf{\glsShortUnder{api}}. Já a vista em lista utiliza um componente criado especificamente para esta página, o \textbf{AthleteRow}, onde consiste numa linha (como o nome indica), one é novamente utilizado o componente \textbf{Avatar}.
+
+Para a criação destes 2 modos apenas foi necessário reccorer a criação de um estado (\mintinline{jsx}{useState()} do \textbf{React}), onde ao clicar num dos icons é chamada uma função, tal como é possível analisar nos excertos de código que se seguem.
+
+\begin{longlisting}
+	\inputminted[]{jsx}{code/components/athletes-list.tsx}
+	\caption{Função para renderizar a lista de atletas}
+\end{longlisting}
+
+\begin{longlisting}
+	\inputminted[]{jsx}{code/components/athletes-mosaic.tsx}
+	\caption{Função para renderizar o mosaico de atletas}
+\end{longlisting}
+
+Com as funções criadas, basta apenas realizar o código com as restantes informações da página.
+
+\begin{longlisting}
+	\inputminted[]{jsx}{code/components/athletes.tsx}
+	\caption{Cóidgo da página de listagem dos atletas existentes}
+\end{longlisting}

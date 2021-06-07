@@ -1,0 +1,117 @@
+\tocSubSubSec{\textit{Button}}
+
+O componente \textit{Button} é outros dos componentes presente em diversos ecrãs da aplicação, porém com diferentes estilos. Assim este componente recebe,tal como no componente anterior, proprieades que permitem tornar este componente mais versátil.
+
+\begin{longlisting}
+	\begin{minted}[]{jsx}
+	const Button: React.FC<Props> = ({
+		icon,
+		className,
+		rounded,
+		to,
+		type,
+		modifier,
+		children,
+		onClick,
+		...attributes
+	}) => {
+		// ..
+	}
+	\end{minted}
+	\caption{Propriedades recebidas no componente \textbf{Button}}
+\end{longlisting}
+
+Neste ponto serão apenas apresentadas as proprieades \texttt{rounded} e \texttt{modifier}, visto serem as que causa maior impacto na aparência do componente. De referir que caso este receba a propriedade \texttt{to}, este utiliza um \verb|<Link>| em vez de \verb|<button>|, para isso:
+
+\begin{longlisting}
+	\begin{minted}[]{js}
+		const Tag: ElementType = to ? Link : 'button';
+		const tagAttributes = to ? { to } : { type };
+	\end{minted}
+	\caption{Uso de \texttt{Link} ou \texttt{button} no componente \textbf{Button}}
+\end{longlisting}
+
+De referir que para a propriedade \texttt{modifier} (que pode receber os valores: \texttt{'alt-primary'}, \texttt{'info'}, \texttt{'danger'}) ou da propriedade \texttt{rounded} ter impacto, é definida uma \textit{class} \textbf{\glsShortUnder{css}} adicional, no excerto de código que segue é possível analisar a aplicação dessa(s) \textit{class(es)}.
+
+\begin{longlisting}
+	\begin{minted}{jsx}
+		<Tag
+			{...tagAttributes}
+			{...attributes}
+			onClick={onClick}
+			className={`
+				${styles['root'] || ''}
+				${styles[`${modifier}-modifier`] || ''}
+				${(rounded && styles['rounded']) || ''}
+				${className || ''}`}
+		></Tag>
+	\end{minted}
+	\caption{Aplicação de classes adicionais para as proprieades \texttt{rounded} e \textit{modifier}}
+\end{longlisting}
+
+Por sua vez, no estilo do componente é possível encontrar o seguinte estilo:
+
+\begin{longlisting}
+	\begin{minted}[]{sass}
+	.alt-primary
+		background-color: $whiteColor
+		color: $buttonHighlightColor
+
+		&:disabled
+			color: $whiteColor
+			background-color: $secondaryColor
+			box-shadow: 0px 1px 2px #00000029
+
+		&:enabled
+			&:hover
+				box-shadow: 0px 5px 6px #00000029
+
+			&:focus
+				background-color: $whiteColor
+				color: $buttonHighlightColor
+				box-shadow: 0px 0px 7px #13ACCC
+
+			&:active
+				background-color: $whiteColor
+				color: $buttonHighlightColor
+				border: 1px solid #D3D3D3
+				box-shadow: none
+
+
+	.info-modifier
+		background: $appBackgroundColor
+		color: $primaryColor
+
+		&:disabled
+			background-color: $secondaryColor
+			color: $whiteColor
+
+		&:enabled
+			&:hover
+				background-color: $appBackgroundColor
+				color: #707070
+				box-shadow: 0px 5px 6px #00000029
+
+			&:focus
+				background-color: $appBackgroundColor
+				color: $primaryColor
+				box-shadow: 0px 0px 7px #13ACCC
+
+			&:active
+				color: $primaryColor
+				background-color: $appBackgroundColor
+				box-shadow: none
+
+	.danger-modifier
+		background: $dangerColor
+		color: $appForegroundColor
+
+	.rounded
+		border-radius: calc(#{$buttonHeight} / 2)
+		padding: 0 1em
+	\end{minted}
+
+	\caption{Estilo aplicado para as propriedades \texttt{modifier} e \texttt{rounded}}
+\end{longlisting}
+
+Importante referir que no caso da propriedade ~\texttt{modifier}~ não ser aplicada, o componente \textbf{\textit{Button}} conta com um estilo de cores e sombras padrão.

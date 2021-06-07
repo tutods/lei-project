@@ -3,7 +3,7 @@
 
 A criação da conta de um atleta encontra-se presente na vertente de \textit{frontoffice}, sendo este não só executado num passo. Assim sendo, ao longo deste tópico serão apresentados os diagramas de sequência para cada um destes passos.
 
-\figureFrame{1}{sequence/register.png}{Diagrama de Sequência para a criação de conta de um atleta}
+\figureFrame{1}{sequence/register.jpeg}{Diagrama de Sequência para a criação de conta de um atleta}
 
 O primeiro passo é a criação de conta básica, onde o atleta necessita de preencher os campos:
 
@@ -16,25 +16,25 @@ O primeiro passo é a criação de conta básica, onde o atleta necessita de pre
 
 Após o preenchimento destes campos e, a aceitação dos \textbf{Termos \& Condições}, é enviado um pedido à \textbf{\glsShortUnder{api}}, onde por sua vez realiza determinadas validações.
 
-\figureFrame{.75}{register-frontoffice.png}{Mockup do ecrã de criação de conta \textemdash~frontoffice}
+\figureFrame{.75}{register-frontoffice.jpeg}{Mockup do ecrã de criação de conta \textemdash~frontoffice}
 
 No caso, a \textbf{\glsShortUnder{api}} realiza uma consulta à base de dados para verificar se os dados enviados já existem, se existirem é devolvida uma mensagem ao cliente a informar que ocorreu um erro. No figura que se segue são apresentados dois erros, um deles informando que o e-mail já se encontra registado.
 
-\figureFrame{.75}{error-on-register-frontoffice.png}{Mockup do ecrã de criação de conta com dados inválidos \textemdash~frontoffice}
+\figureFrame{.75}{error-on-register-frontoffice.jpeg}{Mockup do ecrã de criação de conta com dados inválidos \textemdash~frontoffice}
 
 No caso de não ocorrer nenhum erro e, a \textbf{\glsShortUnder{api}} devolver uma mensagem de sucesso, o atleta é redirecionado para o último passo do registo. Neste último passo são pedidos ao atleta outros dados pessoais como data de nascimento, contacto telefónico, morada, dados biométricos (altura, peso, frequência cardíaca máxima registada e frequência cardíaca em repouso) e o objetivo pessoal pretendido.
 
-\figureFrame{.75}{complete-register-frontoffice.png}{Mockup de informações de registo \textemdash~frontoffice}
+\figureFrame{.75}{complete-register-frontoffice.jpeg}{Mockup de informações de registo \textemdash~frontoffice}
 
 Neste último ecrã de criação de conta é possível encontrar alguns componentes criados, sendo encontrados essencialmente neste ecrã, são os \textit{inputs} de carregamento de foto de perfil e imagem de fundo, bem como a \textit{tooltip} que aparece ao colocar o rato no icone de questão.
 
 \begin{minipage}{0.45\textwidth}
-	\figureFrame{1}{file-inputs.png}{Inputs de carregamento de imagens}
+	\figureFrame{1}{file-inputs.jpeg}{Inputs de carregamento de imagens}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
-	\figureFrame{1}{tooltip.png}{Componente \textbf{Tooltip}}
+	\figureFrame{1}{tooltip.jpeg}{Componente \textbf{Tooltip}}
 \end{minipage}
 
 O componente \textbf{Tooltip} tem como objetivo apresentar informação adicional que não esteja presente no ecrã, no caso da imagem apresentada anteriormente, indica como preencher os dados biométricos do atleta. Já os \textit{inputs} destinados ao carregamento da imagem de perfil e imagem de fundo estes são posteriormente utilizadas na página do atleta, tal como é apresentado de seguida.
 
-\figureFrame{1}{athlete-profile-images.png}{Imagens carregadas para o perfil do atleta \textemdash~frontoffice}
+\figureFrame{1}{athlete-profile-images.jpeg}{Imagens carregadas para o perfil do atleta \textemdash~frontoffice}

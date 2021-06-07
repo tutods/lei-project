@@ -3,13 +3,13 @@
 
 A lista de atletas encontra-se presente na vertente de \textit{backoffice} do projeto, sendo esta destinada aos treinadores e administrador da plataforma. Assim sendo, o diagrama de sequência que se segue apresenta o fluxo que acontece ao aceder a esta página.
 
-\figureFrame{1}{sequence/athlete-list.png}{Diagram de Sequência para a consulta da lista de atletas}
+\figureFrame{1}{sequence/athlete-list.jpeg}{Diagram de Sequência para a consulta da lista de atletas}
 
 Importante referir que para ter acesso a esta página é necessário possuir sessão iniciada e um \textit{token} válido (que ainda não tenho expirado). No caso de um \textit{token} expirado, tal como é possível encontrar no diagrama referente à \hyperrefUnder{sessionSequenceDiagram}{gestão da sessão}, o utilizador será redirecionado para a página de inicio de sessão. Caso não tenha permissões para realizar este pedido, a \textbf{\glsShortUnder{api}} devolve me um \textit{HTTP Status Code} 403\footnote{\textbf{HTTP Status Code 403 \textemdash} ~\textit{Forbidden} (\href{https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status/403}{Mais Informações})}.
 
-\figureFrame{.75}{athletes-mosaic-backoffice.png}{Lista em mosaico dos atletas \textemdash ~\textbf{\textit{backoffice}}}
+\figureFrame{.75}{athletes-mosaic-backoffice.jpeg}{Lista em mosaico dos atletas \textemdash ~\textbf{\textit{backoffice}}}
 
-\figureFrame{.75}{athletes-list-backoffice.png}{Lista dos atletas \textemdash ~\textbf{\textit{backoffice}}}
+\figureFrame{.75}{athletes-list-backoffice.jpeg}{Lista dos atletas \textemdash ~\textbf{\textit{backoffice}}}
 
 Como é possível analisar pelas figuras anteriores, a lista de atletas encontra-se disponível em duas vistas, a vista em mosaico e lista. Apesar de serem formas de visualização com estilos diferentes apenas é realizado um pedido à \textbf{\glsShortUnder{api}}, sendo estes dados utilizados em cada uma destas vistas.
 

@@ -38,10 +38,12 @@ layout: center
 
 ```mermaid
 graph LR
-  id1[Curso Profissional - 12º]:::text-orange-500-->id2[CTeSP Informática de Gestão]-->idc[Licenciatura Eng. Informática]
+  id1[Curso Profissional]:::text-orange-500-->id2[CTeSP Inf. de Gestão]-->idc[Licenciatura Eng. Informática]
 
   classDef styleNode fill:#ea580c,color: #fff,stroke:#333,stroke-width:0px;
-  class id1,id2,idc styleNode;
+  classDef currentNode fill:#003049,color: #fff, stroke-width: 0px;
+  class id1,id2 styleNode;
+  class idc currentNode;
 ```
 
 <!-- <div class="my-10 grid grid-cols-[40px,1fr] w-max gap-y-4">

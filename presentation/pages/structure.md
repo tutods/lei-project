@@ -25,3 +25,11 @@ image: '/media/backgrounds/road-bike.jpg'
     </div>
   </div>
 </div>
+
+
+<div class="abs-tr mr-4 mt-4">
+  <a href="https://gitlab.com" class="flex gap-2 items-center text-white !hover:text-beapt">
+    <jam-gitlab />
+    Repositório
+  </a>
+</div>

@@ -10,6 +10,7 @@ export default defineWindiSetup(() => ({
 		extend: {
 			colors: {
 				beapt: '#F26522',
+				altBlue: '#003049',
 				logos: {
 					chakra: '#319795',
 				},

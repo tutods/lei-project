@@ -1,6 +1,6 @@
 <template>
-	<div class="slidev-layout intro">
-		<div class="abs-tl top-5 left-5">
+	<div class="h-full w-full">
+		<div class="abs-tl top-5 left-5 mb-4">
 			<a
 				href="https://www.estg.ipp.pt"
 				target="_blank"
@@ -18,6 +18,18 @@
 				/>
 			</a>
 		</div>
-		<slot />
+		<div class="slidev-layout intro h-auto">
+			<slot />
+		</div>
+
+		<div class="abs-br mx-14 my-12">
+			<span
+				@click="$slidev.nav.next"
+				class="px-2 py-1 rounded cursor-pointer text-altBlue"
+				hover="bg-beapt text-white"
+			>
+				<carbon:arrow-right class="inline" />
+			</span>
+		</div>
 	</div>
 </template>

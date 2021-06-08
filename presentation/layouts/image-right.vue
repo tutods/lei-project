@@ -43,8 +43,8 @@ const style = computed(() => handleBackground(props.image));
 		<div class="abs-br mx-14 my-12">
 			<span
 				@click="$slidev.nav.next"
-				class="px-2 p-1 rounded cursor-pointer text-white"
-				hover="bg-white bg-opacity-10 text-beapt"
+				class="px-2 py-1 rounded cursor-pointer text-white"
+				hover="bg-beapt bg-opacity-50 text-white"
 			>
 				<carbon:arrow-right class="inline" />
 			</span>

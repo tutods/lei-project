@@ -1,6 +1,6 @@
 ---
 layout: image-right-overlay
-image: '/media/backgrounds/road-bike.jpeg'
+image: '/media/backgrounds/road-bike.jpg'
 ---
 
 <h1 class="font-extrabold">Estrutura</h1>

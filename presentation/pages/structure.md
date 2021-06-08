@@ -20,8 +20,8 @@ image: '/media/backgrounds/road-bike.jpeg'
       <div class="circle-txt">2</div>
     </div>
     <div>
-      <h3 class="no-m no-p text-beapt-force font-bold-force">Jimmy Boys</h3>
-      <h4 class="text-xs">Entidade de Acolhimento</h4>
+      <h3 class="no-m no-p text-beapt-force font-bold-force">Projeto</h3>
+      <h4 class="text-xs">Apresentação & Desenvolvimento</h4>
     </div>
   </div>
 </div>

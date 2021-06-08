@@ -36,7 +36,7 @@ const style = computed(() => handleBackground(props.image));
 		</div>
 
 		<div class="grid grid-cols-2 w-full h-full">
-			<div class="slidev-layout default mt-4" :class="props.class">
+			<div class="slidev-layout default mt-4 h-auto" :class="props.class">
 				<slot />
 			</div>
 			<div

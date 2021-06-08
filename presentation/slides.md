@@ -59,10 +59,13 @@ info: |
 
 ---
 src: ./pages/structure.md
+
 ---
 src: ./pages/about-me.md
----
 
+---
+layout: full
+___
 # What is Slidev?
 
 Slidev is a slides maker and presenter designed for developers, consist of the following features

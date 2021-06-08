@@ -16,7 +16,7 @@ const style = computed(() => handleBackground(props.image));
 
 <template>
 	<div class="h-full w-full">
-		<div class="abs-tl top-5 left-5">
+		<div class="abs-tl top-5 left-5 mb-4">
 			<a
 				href="https://www.estg.ipp.pt"
 				target="_blank"
@@ -34,12 +34,17 @@ const style = computed(() => handleBackground(props.image));
 				/>
 			</a>
 		</div>
+
 		<div class="grid grid-cols-2 w-full h-full">
 			<div class="slidev-layout default mt-4" :class="props.class">
 				<slot />
 			</div>
-			<div class="w-full h-full" :style="style"></div>
+			<div
+				class="w-full h-full bg-blend-overlay bg-color-overlay"
+				:style="style"
+			></div>
 		</div>
+
 		<div class="abs-br mx-14 my-12">
 			<span
 				@click="$slidev.nav.next"

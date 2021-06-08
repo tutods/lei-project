@@ -9,6 +9,7 @@ export default defineWindiSetup(() => ({
 	theme: {
 		extend: {
 			colors: {
+				beapt: '#F26522',
 				logos: {
 					chakra: '#319795',
 				},

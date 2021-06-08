@@ -58,6 +58,8 @@ info: |
 </div>
 
 ---
+src: ./pages/structure.md
+---
 src: ./pages/about-me.md
 ---
 

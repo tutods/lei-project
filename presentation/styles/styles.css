@@ -23,3 +23,52 @@
 .no-mb {
 	margin-bottom: 0 !important;
 }
+
+.no-mt {
+	margin-top: 0 !important;
+}
+
+.no-m {
+	margin: 0 !important;
+}
+
+.no-pb {
+	padding-bottom: 0 !important;
+}
+
+.no-pt {
+	padding-top: 0 !important;
+}
+
+.no-p {
+	padding: 0 !important;
+}
+
+.circle {
+	width: 50px;
+	border-radius: 50%;
+	line-height: 0;
+	position: relative;
+}
+
+.circle::after {
+	content: "";
+	display: block;
+	padding-bottom: 100%;
+}
+
+.circle>* {
+	position: absolute;
+	bottom: 50%;
+	width: 100%;
+	text-align: center;
+}
+
+h3 {
+	/* color: unset !important; */
+	opacity: 1 !important;
+}
+
+.font-bold-force {
+	font-weight: bold !important;
+}

@@ -1,0 +1,25 @@
+#slide-container {
+	height: 100vh !important;
+}
+
+.about-me-img {
+	width: 200px;
+	height: 200px;
+}
+
+.br-50p {
+	border-radius: 50%;
+}
+
+.object-cover-top {
+	object-fit: cover;
+	object-position: top;
+}
+
+.no-decoration {
+	text-decoration: none !important;
+}
+
+.no-mb {
+	margin-bottom: 0 !important;
+}

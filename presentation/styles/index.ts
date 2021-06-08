@@ -1,3 +1,4 @@
 import './colors.css';
-import './custom-classes.css';
+import './fonts.css';
 import './sizes.css';
+import './styles.css';

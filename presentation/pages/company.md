@@ -1,7 +1,5 @@
 ---
-layout: image-right
-image: '/media/header.png'
-class: 'center flex flex-col justify-center'
+layout: center
 ---
 
 <div class="p-2 mb-2 dark:bg-transparent bg-black inline-flex w-auto">

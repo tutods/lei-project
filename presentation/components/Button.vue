@@ -1,11 +1,7 @@
-<script setup lang="js">
+<script lang="js">
 
 export default {
     props: {
-        text: {
-            type:String,
-            required: true
-        },
         modifier: {
             type: String,
             validator: (value) => (['alt-primary', 'info', 'danger'].indexOf(value) !== -1),
@@ -20,7 +16,7 @@ export default {
 </script>
 
 <template>
-	<button id="root" v-bind:class="[this.modifier, this.rounded && 'rounded']">
+	<button id="root" v-bind:class="[modifier, rounded && 'rounded']">
 		<slot />
 	</button>
 </template>

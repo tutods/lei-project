@@ -11,6 +11,10 @@
 	border-radius: 50%;
 }
 
+.br-100p {
+	border-radius: 100%;
+}
+
 .object-cover-top {
 	object-fit: cover;
 	object-position: top;
@@ -18,6 +22,10 @@
 
 .no-decoration {
 	text-decoration: none !important;
+}
+
+.no-border {
+	border: 0 !important;
 }
 
 .no-mb {
@@ -65,7 +73,7 @@
 }
 
 h3 {
-	/* color: unset !important; */
+	color: currentColor !important;
 	opacity: 1 !important;
 }
 
@@ -94,4 +102,8 @@ h3 {
 
 .bg-404 {
 	background-image: url('/media/backgrounds/running.jpeg')
+}
+
+.no-list {
+	list-style: none;
 }

@@ -47,7 +47,8 @@ graph LR
   class idc currentNode;
 ```
 
-<!-- <div class="my-10 grid grid-cols-[40px,1fr] w-max gap-y-4">
+<!--
+<div class="my-10 grid grid-cols-[40px,1fr] w-max gap-y-4">
   <ri-github-line class="opacity-50"/>
   <div><a href="https://github.com/TutoDS" target="_blank">TutoDS</a></div>
 </div> -->

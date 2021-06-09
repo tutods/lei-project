@@ -1,7 +1,7 @@
 ---
 #==> Theme
 theme: 'default'
-colorSchema: light
+# colorSchema: light
 
 #==> Layout
 layout: cover
@@ -73,11 +73,15 @@ info: |
 </div>
 
 ---
+src: ./pages/about-me.md
+---
+
+---
 src: ./pages/structure.md
 ---
 
 ---
-src: ./pages/about-me.md
+src: ./pages/company.md
 ---
 
 ---

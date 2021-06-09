@@ -30,12 +30,23 @@ info: |
 
   Learn more at [Sli.dev](https://sli.dev)
 ---
-
-<div class="absolute top-10">
-	<a href="https://www.estg.ipp.pt" target="_blank"
-	class="opacity-50 !hover:opacity-100 no-border no-decoration shadow-none">
-		<img src="/media/logos/pporto.png" class="w-75px"  alt="P.Porto"/>
-	</a>
+<div class="abs-tl top-5 left-5 mb-4">
+  <a
+    href="https://www.estg.ipp.pt"
+    target="_blank"
+    class="
+      opacity-50
+      !hover:opacity-100
+      no-border no-decoration
+      shadow-none
+    "
+  >
+    <img
+      src="/media/logos/pporto.png"
+      class="w-75px"
+      alt="P.Porto"
+    />
+  </a>
 </div>
 
 <div class="center">
@@ -43,7 +54,7 @@ info: |
   	<p class="font-300" style="opacity: 1;font-size: 12px">Plataforma de gestão de treinos para atletas de alta competição</p>
 </div>
 
-<div class="abs-bl mx-14 my-12 flex items-center" >
+<div class="abs-bl ml-14 mb-12 flex items-center" >
 	<img src="/media/daniel-sousa.jpg" class="size-40px br-50p  object-cover-top no-decoration">
 	<div class="ml-3 flex flex-col text-left">
 		<span class="font-300">Daniel Sousa</span>
@@ -51,10 +62,14 @@ info: |
 	</div>
 </div>
 
-<div class="abs-br mx-14 my-12">
-  <span @click="$slidev.nav.next" class="px-2 p-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    <carbon:arrow-right class="inline"/>
-  </span>
+<div class="abs-br mr-6 mb-12">
+    <span
+      @click="$slidev.nav.next"
+      class="arrow-container cursor-pointer text-white"
+      hover="bg-altBlue bg-opacity-75 text-white"
+    >
+      <carbon:chevron-right class="inline" />
+    </span>
 </div>
 
 ---

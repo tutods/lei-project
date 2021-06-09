@@ -23,6 +23,16 @@
 			Obrigado
 		</h1>
 		<h3 class="mt-1">pelo tempo disponibilizado!</h3>
+
+		<div class="abs-br mx-6 my-6">
+			<span
+				@click="$slidev.nav.prev"
+				class="arrow-container cursor-pointer text-white"
+				hover="bg-altBlue bg-opacity-75 text-white"
+			>
+				<carbon:chevron-left class="inline" />
+			</span>
+		</div>
 	</div>
 </template>
 

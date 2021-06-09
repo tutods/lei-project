@@ -1,13 +1,9 @@
 # Componente `Button`
 
+<p class="text-black">Componente Genérico</p>
 
-<div class="mt-1" />
-<div class="grid grid-cols-2 gap-y-4 gap-x-2">
-<v-clicks>
+<Button modifier="alt-primary" rounded>Button with Modifier</Button>
 
-<Button rounded>Confirmar</Button>
+<br />
 
-Teste
-
-</v-cicks>
-</div>
+<Button rounded>Button without Modifier</Button>

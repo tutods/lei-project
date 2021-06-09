@@ -72,3 +72,26 @@ h3 {
 .font-bold-force {
 	font-weight: bold !important;
 }
+
+.arrow-container {
+	width: 35px;
+	height: 35px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	padding: 10px;
+	box-sizing: border-box;
+	border-radius: 5px;
+
+	text-align: center;
+}
+
+.arrow-container>* {
+	text-align: center;
+}
+
+.bg-404 {
+	background-image: url('/media/backgrounds/running.jpeg')
+}

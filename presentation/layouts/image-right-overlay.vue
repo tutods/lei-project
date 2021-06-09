@@ -39,19 +39,20 @@ const style = computed(() => handleBackground(props.image));
 			<div class="slidev-layout default mt-4 h-auto" :class="props.class">
 				<slot />
 			</div>
+
 			<div
 				class="w-full h-full bg-blend-overlay bg-color-overlay"
 				:style="style"
 			></div>
 		</div>
 
-		<div class="abs-br mx-14 my-12">
+		<div class="abs-br mx-6 my-6">
 			<span
 				@click="$slidev.nav.next"
-				class="px-2 py-1 rounded cursor-pointer text-white"
-				hover="bg-beapt bg-opacity-50 text-white"
+				class="arrow-container cursor-pointer text-white"
+				hover="bg-altBlue bg-opacity-75 text-white"
 			>
-				<carbon:arrow-right class="inline" />
+				<carbon:chevron-right class="inline" />
 			</span>
 		</div>
 	</div>

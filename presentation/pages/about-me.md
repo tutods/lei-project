@@ -34,6 +34,7 @@ layout: center
   </div>
 </div>
 
+
 <p class="font-bold mt-2 no-mb">Percurso Académico</p>
 
 ```mermaid

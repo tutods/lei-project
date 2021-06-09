@@ -45,8 +45,8 @@
 	background-color: rgba(0, 0, 0, 0.85);
 }
 
-h3 {
-	color: #fff !important;
-	opacity: 1 !important;
+.slidev-layout.end h3 {
+	color: #fff;
+	opacity: 1;
 }
 </style>

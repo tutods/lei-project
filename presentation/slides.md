@@ -1,11 +1,12 @@
 ---
 #==> Theme
-theme: 'default'
+theme: ./theme
+# theme: 'default'
 # colorSchema: light
 
 #==> Layout
 layout: cover
-class: bg-blend-overlay bg-color-overlay
+class: bg-blend-overlay bg-black75
 background: '/media/backgrounds/athlete.jpeg'
 
 #==> Fonts

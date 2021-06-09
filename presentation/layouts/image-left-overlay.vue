@@ -36,7 +36,7 @@ const style = computed(() => handleBackground(props.image));
 
 		<div class="grid grid-cols-2 w-full h-full">
 			<div
-				class="w-full h-full bg-blend-overlay bg-color-overlay"
+				class="w-full h-full bg-blend-overlay bg-black75"
 				:style="style"
 			></div>
 			<div class="slidev-layout default" :class="props.class">

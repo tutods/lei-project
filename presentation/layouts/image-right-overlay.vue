@@ -39,10 +39,7 @@ const style = computed(() => handleBackground(props.image));
 				<slot />
 			</div>
 
-			<div
-				class="w-full h-full bg-blend-overlay bg-color-overlay"
-				:style="style"
-			></div>
+			<div class="bg-blend-overlay bg-black75" :style="style"></div>
 		</div>
 
 		<div class="abs-br mx-6 my-6">

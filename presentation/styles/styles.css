@@ -72,10 +72,10 @@
 	text-align: center;
 }
 
-h3 {
+/* h3 {
 	color: currentColor !important;
 	opacity: 1 !important;
-}
+} */
 
 .font-bold-force {
 	font-weight: bold !important;

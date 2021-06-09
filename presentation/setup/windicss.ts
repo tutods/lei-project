@@ -9,6 +9,7 @@ export default defineWindiSetup(() => ({
 	theme: {
 		extend: {
 			colors: {
+				black75: 'rgba(0,0,0,.75)',
 				beapt: '#F26522',
 				altBlue: '#003049',
 				logos: {

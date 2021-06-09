@@ -69,7 +69,15 @@ const props = defineProps({
 		<div class="abs-br mx-6 my-6">
 			<span
 				@click="$slidev.nav.next"
-				class="arrow-container cursor-pointer text-white"
+				class="
+					arrow-container
+					cursor-pointer
+					text-altBlue
+					dark:text-white
+					transition-all
+					duration-150
+					ease-in
+				"
 				hover="bg-altBlue bg-opacity-75 text-white"
 			>
 				<carbon:chevron-right class="inline" />

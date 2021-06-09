@@ -22,11 +22,19 @@
 			<slot />
 		</div>
 
-		<div class="abs-br mx-14 my-12">
+		<div class="abs-br mx-6 my-6">
 			<span
 				@click="$slidev.nav.next"
-				class="px-2 py-1 rounded-sm cursor-pointer text-altBlue"
-				hover="bg-beapt text-white"
+				class="
+					arrow-container
+					cursor-pointer
+					text-altBlue
+					dark:text-white
+					transition-all
+					duration-150
+					ease-in
+				"
+				hover="bg-altBlue bg-opacity-75 text-white"
 			>
 				<carbon:chevron-right class="inline" />
 			</span>

@@ -2,9 +2,13 @@
 layout: center
 ---
 
-<h1 class="font-600">Daniel Sousa</h1>
+<h1 class="font-600 no-mb">Daniel Sousa</h1>
+<h3><em>Front-end</em></h3>
 
-<p><b>Área de Preferência:</b> <span class="italic">Front-end</span></p>
+<br />
+
+
+<v-clicks :every="2">
 <p class="font-bold">Competências</p>
 
 <div class="grid grid-cols-6 gap-2 w-3/5">
@@ -37,15 +41,9 @@ layout: center
 
 <p class="font-bold mt-2 no-mb">Percurso Académico</p>
 
-```mermaid
-graph LR
-  id1[Curso Profissional]:::text-orange-500-->id2[CTeSP Inf. de Gestão]-->idc[Licenciatura Eng. Informática]
+<img src="/media/formation.png" class="w-1/2" alt="Percurso Académico" />
 
-  classDef styleNode fill:#ea580c,color: #fff,stroke:#333,stroke-width:0px;
-  classDef currentNode fill:#003049,color: #fff, stroke-width: 0px;
-  class id1,id2 styleNode;
-  class idc currentNode;
-```
+</v-clicks>
 
 <!--
 <div class="my-10 grid grid-cols-[40px,1fr] w-max gap-y-4">

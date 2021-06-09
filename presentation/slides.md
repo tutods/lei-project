@@ -6,7 +6,7 @@ theme: ./theme
 
 #==> Layout
 layout: cover
-class: bg-blend-overlay bg-black75
+class: bg-blend-overlay bg-black65
 background: '/media/backgrounds/athlete.jpeg'
 
 #==> Fonts

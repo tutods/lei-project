@@ -1,12 +1,10 @@
 <script setup lang="ts">
-import { defineProps, ref } from "vue";
-
-const props = defineProps({
-	number: { type: Number, required: true },
-	title: { type: String, required: true },
-});
-
-// const number =
+export default {
+	props: {
+		number: { type: Number, required: true },
+		title: { type: String, required: true },
+	},
+};
 </script>
 
 <template>

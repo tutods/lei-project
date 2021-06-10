@@ -1,6 +1,6 @@
 ---
 layout: image-left-overlay
-image: '/media/backgrounds/running.jpeg'
+image: '/media/backgrounds/bike.jpeg'
 ---
 <div class="justify-center h-full flex-col flex">
 
@@ -10,11 +10,11 @@ image: '/media/backgrounds/running.jpeg'
   <h3 class="font-bold-force text-altBlue dark:text-current no-mb">
     BeAPT
   </h3>
-  <p class="font-300 text-gray-400 no-m" style="font-size: 10px">Plataforma de gestão de treinos para atletas de alta competição</p>
+  <p class="font-300 text-gray-400 no-m" style="font-size: 0.7rem;">Plataforma de gestão de treinos para atletas de alta competição</p>
 
 
 
   <div class="mt-6">
-    <a href="https://beapt-endurance.com" target="_blank" class="inline-flex items-center gap-1 w-auto" style="font-size: 12px;"><akar-icons:link-on class="inline" /> Website</a>
+    <a href="https://beapt-endurance.com" target="_blank" class="inline-flex items-center gap-1 w-auto" style="font-size: 0.8rem;"><akar-icons:link-on class="inline" /> Website</a>
   </div>
 </div>

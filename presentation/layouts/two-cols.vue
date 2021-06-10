@@ -54,7 +54,7 @@ const props = defineProps({
 				two-columns
 				w-full
 				h-auto
-				mt-4
+				mt-6
 				grid grid-cols-2
 			"
 		>

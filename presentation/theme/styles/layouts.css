@@ -3,6 +3,10 @@
 		@apply -mt-2 opacity-50 mb-4;
 	}
 
+	h1.abs-bl {
+		@apply mb-6 ml-6;
+	}
+
 	p+h2,
 	ul+h2,
 	table+h2 {

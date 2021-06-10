@@ -1,30 +1,54 @@
 ---
-layout: image-right-overlay
-image: '/media/backgrounds/road-bike.jpg'
+layout: two-cols
 ---
 
-<h1 class="font-extrabold">Estrutura</h1>
+<template v-slot:default>
+<h1 class="abs-bl font-extrabold">Estrutura</h1>
 
-<div class="flex flex-col gap-2 justify-between h-85">
+<div class="flex flex-col gap-2 justify-between">
   <div class="flex flex-col gap-4">
-    <div class="flex items-center gap-2">
-      <div class="circle bg-beapt text-white">
-        <div class="circle-txt">1</div>
-      </div>
-      <div>
-        <h3 class="no-m no-p text-beapt">Entidade de Acolhimento</h3>
-        <h4 class="text-xs">Jimmy Boys</h4>
-      </div>
-    </div>
     <StructurePoint number="1" title="Entidade de Acolhimento">
-        <strong>Jimmy Boys</strong></StructurePoint>
+        <b>Jimmy Boys</b>
+    </StructurePoint>
+    <StructurePoint number="2" title="Projeto">
+        <b>BeAPT</b>
+    </StructurePoint>
+    <StructurePoint number="3" title="Arquitetura">
+        Arquitetura Conceptual
+    </StructurePoint>
+    <StructurePoint number="4" title="Tecnologias">
+        <strong>React</strong> & Componentes
+    </StructurePoint>
+    <StructurePoint number="4" title="Resultado">
+        Tecnologias
+    </StructurePoint>
   </div>
-  <div class="">
+  <div class="mt-5">
     <a href="https://gitlab.com" class="inline-flex gap-2 items-center !hover:text-beapt text-sm">
       <jam-gitlab />
       Repositório
     </a>
   </div>
-
-
 </div>
+
+</template>
+<template v-slot:right>
+
+<div class="flex flex-col gap-4">
+    <StructurePoint number="1" title="Entidade de Acolhimento">
+        <b>Jimmy Boys</b>
+    </StructurePoint>
+    <StructurePoint number="2" title="Projeto">
+        <b>BeAPT</b>
+    </StructurePoint>
+    <StructurePoint number="3" title="Arquitetura">
+        Arquitetura Conceptual
+    </StructurePoint>
+    <StructurePoint number="4" title="Tecnologias">
+        <strong>React</strong> & Componentes
+    </StructurePoint>
+    <StructurePoint number="4" title="Resultado">
+        Tecnologias
+    </StructurePoint>
+</div>
+</template>

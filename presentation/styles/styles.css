@@ -107,3 +107,11 @@
 .no-list {
 	list-style: none;
 }
+
+.dark .light-image {
+	display: none;
+}
+
+.light .dark-image {
+	display: none;
+}

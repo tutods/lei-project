@@ -90,5 +90,9 @@ src: ./pages/project.md
 ---
 
 ---
+src: ./pages/architecture.md
+---
+
+---
 src: ./pages/button.md
 ---

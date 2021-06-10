@@ -7,19 +7,19 @@ layout: two-cols
 
 <div class="flex flex-col gap-2 justify-between">
   <div class="flex flex-col gap-4">
-    <StructurePoint _number="1" :title="Entidade de Acolhimento">
+    <StructurePoint number="1" title="Entidade de Acolhimento">
         <b>Jimmy Boys</b>
     </StructurePoint>
-    <StructurePoint _number="2" :title="Projeto">
+    <StructurePoint number="2" title="Projeto">
         <b>BeAPT</b>
     </StructurePoint>
-    <StructurePoint _number="3" :title="Arquitetura">
+    <StructurePoint number="3" title="Arquitetura">
         Arquitetura Conceptual
     </StructurePoint>
-    <StructurePoint _number="4" :title="Tecnologias">
+    <StructurePoint number="4" title="Tecnologias">
         <strong>React</strong> & Componentes
     </StructurePoint>
-    <StructurePoint _number="4" :title="Resultado">
+    <StructurePoint number="5" title="Resultado">
         Tecnologias
     </StructurePoint>
   </div>
@@ -35,19 +35,19 @@ layout: two-cols
 <template v-slot:right>
 
 <div class="flex flex-col gap-4">
-    <StructurePoint _number="1" :title="Entidade de Acolhimento">
+    <StructurePoint number="6" title="Entidade de Acolhimento">
         <b>Jimmy Boys</b>
     </StructurePoint>
-    <StructurePoint _number="2" :title="Projeto">
+    <StructurePoint number="7" title="Projeto">
         <b>BeAPT</b>
     </StructurePoint>
-    <StructurePoint _number="3" :title="Arquitetura">
+    <StructurePoint number="8" title="Arquitetura">
         Arquitetura Conceptual
     </StructurePoint>
-    <StructurePoint _number="4" :title="Tecnologias">
+    <StructurePoint number="9" title="Tecnologias">
         <strong>React</strong> & Componentes
     </StructurePoint>
-    <StructurePoint _number="4" :title="Resultado">
+    <StructurePoint number="10" title="Resultado">
         Tecnologias
     </StructurePoint>
 </div>

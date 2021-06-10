@@ -86,5 +86,9 @@ src: ./pages/company.md
 ---
 
 ---
+src: ./pages/project.md
+---
+
+---
 src: ./pages/button.md
 ---

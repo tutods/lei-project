@@ -15,8 +15,9 @@ import { isDark, toggleDark } from '@slidev/client/logic/dark';
 			text-white
 			bg-altBlue
 			dark:text-altBlue dark:bg-white
-			outline-none
 			shadow-none
+			outline-none
+			dark:outline-none
 		"
 		hover="text-white dark:bg-white bg-altBlue bg-opacity-75 dark:text-beapt outline-none"
 		@click="toggleDark"

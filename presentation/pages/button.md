@@ -1,9 +1,76 @@
-# Componente `Button`
+---
+layout: center
+---
 
-<h3 class="p-0">Propriedade <code>modifier</code></h3>
+<h1 class="font-700 mb-2">Componente <code>Button</code></h1>
 
-<Button class="text-sm" modifier="alt-primary" rounded>Button with Modifier</Button>
+<v-clicks>
+<div class="no-mb">
+    <h3 class="p-0 mb-1">Propriedade <code>modifier</code></h3>
+    <ul class="text-sm">
+        <li><b>Valores Possíveis:</b> <code>alt-primary</code>, <code>info</code> e <code>danger</code></li>
+    </ul>
+</div>
 
-<br />
+<div class="grid grid-cols-2 gap-2 mt-4 items-center">
 
-<Button rounded>Button without Modifier</Button>
+<div>
+<VButton class="w-200px text-xs mb-2" modifier="alt-primary" rounded>Button com Modifier</VButton>
+
+<div>
+
+```html
+<Button modifier="alt-primary" rounded>
+    Button com Modifier
+</Button>
+```
+
+</div>
+</div>
+
+<div>
+<VButton class="w-200px text-xs mb-2" modifier="info" rounded>Button com Modifier</VButton>
+
+<div>
+
+```html
+<Button modifier="info" rounded>
+    Button com Modifier
+</Button>
+```
+
+</div>
+</div>
+</div>
+
+<div class="grid grid-cols-2 gap-2 mt-2 items-center">
+<div>
+<VButton class="w-200px text-xs mb-2" modifier="danger" rounded>Button com Modifier</VButton>
+
+<div>
+
+```html
+<Button modifier="danger" rounded>
+    Button com Modifier
+</Button>
+```
+
+</div>
+</div>
+
+<div>
+<VButton class="w-200px text-sm mb-2">Button sem Modifier</VButton>
+
+<div>
+
+```html
+<Button>
+    Button sem Modifier
+</Button>
+```
+
+</div>
+</div>
+</div>
+
+</v-clicks>

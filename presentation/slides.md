@@ -94,5 +94,9 @@ src: ./pages/architecture.md
 ---
 
 ---
+src: ./pages/techs.md
+---
+
+---
 src: ./pages/button.md
 ---

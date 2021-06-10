@@ -99,7 +99,7 @@ $buttonBorderRadius: 15px
     box-shadow: 0px 2px 3px #00000029
     outline: none
 
-    font-size: 14px
+    // font-size: 14px
     text-transform: uppercase
     text-decoration: none
     letter-spacing: 0px

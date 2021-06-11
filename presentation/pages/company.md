@@ -8,15 +8,16 @@ layout: center
 <h3 class="font-bold-force text-altBlue dark:text-current">Jimmy Boys</h3>
 
 <div class="my-10 grid grid-cols-3 gap-2 w-max items-center">
-
+<v-clicks>
 <KuantoKustaLogo class="w-75px" />
 
 <img src="/media/projects/paddypower.png" alt="Paddy Power Betfair" class="w-75px" />
 
 <img src="/media/projects/petapilot.png" alt="Petapilot" class="w-75px" />
 
+</v-clicks>
 </div>
 
-<div class="mt-6">
+<div class="mt-6" v-click={4}>
   <a href="https://jimmyboys.pt" target="_blank" class="inline-flex items-center text-xs gap-1 w-auto"><akar-icons:link-on class="inline" /> Website</a>
 </div>

@@ -7,7 +7,7 @@ theme: ./theme
 #==> Layout
 layout: cover
 class: bg-blend-overlay bg-black65
-background: '/media/backgrounds/athlete.jpeg'
+background: '/media/backgrounds/mountain-bike.jpeg'
 
 #==> Fonts
 fonts:
@@ -52,7 +52,7 @@ info: |
 
 <div class="center">
   	<h1 class="font-extrabold" style="line-height: 2rem !important;">BeAPT</h1>
-  	<p class="font-300" style="opacity: 1;font-size: 12px">Plataforma de gestão de treinos para atletas de alta competição</p>
+  	<h3 class="font-300" style="opacity: 1;font-size: 12px">Plataforma de gestão de treinos para atletas de alta competição</h3>
 </div>
 
 <div class="abs-bl ml-14 mb-12 flex items-center" >

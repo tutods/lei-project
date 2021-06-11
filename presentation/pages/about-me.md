@@ -12,30 +12,54 @@ layout: center
 <p class="font-bold">Competências</p>
 
 <div class="grid grid-cols-6 gap-2 w-3/5">
-  <div class="flex flex-col items-center">
-    <logos-react class="text-2xl" />
-    <span class="font-300 mt-1 text-sm text-center">React</span>
-  </div>
-  <div class="flex flex-col items-center">
-    <logos-angular-icon class="text-2xl" />
-    <span class="font-300 mt-1 text-sm text-center">Angular</span>
-  </div>
-  <div class="flex flex-col items-center">
-    <logos-sass class="text-2xl" />
-    <span class="font-300 mt-1 text-sm text-center">Sass</span>
-  </div>
-  <div class="flex flex-col items-center">
-    <simple-icons-chakraui class="text-logos-chakra text-2xl" />
-    <span class="font-300 mt-1 text-sm text-center">Chakra UI</span>
-  </div>
-  <div class="flex flex-col items-center">
-    <logos-bootstrap class="text-2xl" />
-    <span class="font-300 mt-1 text-sm text-center">Bootstrap</span>
-  </div>
-  <div class="flex flex-col items-center">
-    <logos-material-ui class="text-2xl" />
-    <span class="font-300 mt-1 text-sm text-center">Material UI</span>
-  </div>
+    <IconBox>
+        <template v-slot:default>
+        <logos-react class="w-30px h-30px" />
+        </template>
+        <template v-slot:title>
+        React
+        </template>
+    </IconBox>
+    <IconBox>
+        <template v-slot:default>
+        <logos-angular-icon class="w-30px h-30px" />
+        </template>
+        <template v-slot:title>
+        Angular
+        </template>
+    </IconBox>
+    <IconBox>
+        <template v-slot:default>
+        <logos-sass class="w-30px h-30px" />
+        </template>
+        <template v-slot:title>
+        Sass
+        </template>
+    </IconBox>
+    <IconBox>
+        <template v-slot:default>
+        <simple-icons-chakraui  class="w-30px h-30px text-logos-chakra" />
+        </template>
+        <template v-slot:title>
+        Chakra UI
+        </template>
+    </IconBox>
+    <IconBox>
+        <template v-slot:default>
+        <logos-bootstrap  class="w-30px h-30px" />
+        </template>
+        <template v-slot:title>
+        Bootstrap
+        </template>
+    </IconBox>
+    <IconBox>
+        <template v-slot:default>
+        <logos-nodejs-icon  class="w-30px h-30px" />
+        </template>
+        <template v-slot:title>
+        NodeJS
+        </template>
+    </IconBox>
 </div>
 
 

@@ -11,59 +11,107 @@ layout: center
 
 <p class="font-bold text-sm">Tecnologias</p>
 
-<div class="grid grid-cols-6 gap-2 w-600px">
-  <div class="flex flex-col items-center">
-    <logos-react class="w-30px h-30px" />
-    <span class="font-300 mt-1 text-sm text-center">React</span>
-  </div>
-  <div class="flex flex-col items-center">
-    <logos-sass class="w-30px h-30px" />
-    <span class="font-300 mt-1 text-sm text-center">Sass</span>
-  </div>
-  <div class="flex flex-col items-center">
-    <logos-graphql class="w-30px h-30px" />
-    <span class="font-300 mt-1 text-sm text-center">GraphQL</span>
-  </div>
-  <div class="flex flex-col items-center">
-    <simple-icons:apollographql class="w-30px h-30px" />
-    <span class="font-300 mt-1 text-sm text-center">Apollo <small>Server & Client</small></span>
-  </div>
-  <div class="flex flex-col items-center">
-    <TypeORMLogo class="w-30px h-30px" />
-    <span class="font-300 mt-1 text-sm text-center">TypeORM</span>
-  </div>
-  <div class="flex flex-col items-center">
-    <logos-postgresql class="w-30px h-30px" />
-    <span class="font-300 mt-1 text-sm text-center">PostgreSQL</span>
-  </div>
+<div class="grid grid-cols-7 gap-2 w-600px">
+    <IconBox>
+        <template v-slot:default>
+        <logos-react class="w-30px h-30px" />
+        </template>
+        <template v-slot:title>
+        React
+        </template>
+    </IconBox>
+    <IconBox>
+        <template v-slot:default>
+        <logos-typescript-icon class="w-30px h-30px" />
+        </template>
+        <template v-slot:title>
+        TypeScript
+        </template>
+    </IconBox>
+    <IconBox>
+        <template v-slot:default>
+        <logos-sass class="w-30px h-30px" />
+        </template>
+        <template v-slot:title>
+        Sass
+        </template>
+    </IconBox>
+    <IconBox>
+        <template v-slot:default>
+        <logos-graphql class="w-30px h-30px" />
+        </template>
+        <template v-slot:title>
+        GraphQL
+        </template>
+    </IconBox>
+    <IconBox>
+        <template v-slot:default>
+        <simple-icons:apollographql class="w-30px h-30px" />
+        </template>
+        <template v-slot:title class="items-center">
+        Apollo
+        </template>
+    </IconBox>
+    <IconBox>
+        <template v-slot:default>
+        <TypeORMLogo class="w-30px h-30px" />
+        </template>
+        <template v-slot:title>
+        TypeORM
+        </template>
+    </IconBox>
+    <IconBox>
+        <template v-slot:default>
+        <logos-postgresql class="w-30px h-30px" />
+        </template>
+        <template v-slot:title>
+        PostgreSQL
+        </template>
+    </IconBox>
 </div>
 
 
 <p class="font-bold text-sm">Ferramentas</p>
 
 <div class="grid grid-cols-4 gap-2 w-1/2">
-  <div class="flex flex-col items-center">
-    <logos:visual-studio-code class="w-30px h-30px" />
-    <span class="font-300 mt-1 text-sm text-center">Visual Studio Code</span>
-  </div>
-  <div class="flex flex-col items-center">
-    <logos:yarn class="w-30px h-30px" />
-    <span class="font-300 mt-1 text-sm text-center">Yarn</span>
-  </div>
+    <IconBox>
+        <template v-slot:default>
+        <logos-visual-studio-code class="w-30px h-30px" />
+        </template>
+        <template v-slot:title>
+        Visual Studio Code
+        </template>
+    </IconBox>
+    <IconBox>
+        <template v-slot:default>
+        <logos-yarn class="w-30px h-30px" />
+        </template>
+        <template v-slot:title>
+        Yarn
+        </template>
+    </IconBox>
 </div>
 
 
 <p class="font-bold text-sm pt-4">Dependências</p>
 
 <div class="grid grid-cols-4 gap-2 w-1/2">
-  <div class="flex flex-col items-center">
-    <logos-stripe class="w-30px h-30px" />
-    <span class="font-300 mt-1 text-sm text-center">Stripe</span>
-  </div>
-  <div class="flex flex-col items-center">
-    <simple-icons:strava class="w-30px h-30px text-beapt" />
-    <span class="font-300 mt-1 text-sm text-center">Strava</span>
-  </div>
+    <IconBox>
+        <template v-slot:default>
+        <logos-stripe class="w-30px h-30px" />
+        </template>
+        <template v-slot:title>
+        Stripe
+        </template>
+    </IconBox>
+    <IconBox>
+        <template v-slot:default>
+        <simple-icons:strava class="w-30px h-30px text-beapt" />
+        </template>
+        <template v-slot:title>
+        Strava
+        </template>
+    </IconBox>
 </div>
 
 </v-clicks>

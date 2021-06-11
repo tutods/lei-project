@@ -41,14 +41,8 @@ layout: center
 
 <p class="font-bold mt-2 no-mb">Percurso Académico</p>
 
-<img src="/media/formation.png" class="w-1/2" alt="Percurso Académico" />
+<img src="/media/formation.png" class="w-600px" alt="Percurso Académico" />
 
 </v-clicks>
-
-<!--
-<div class="my-10 grid grid-cols-[40px,1fr] w-max gap-y-4">
-  <ri-github-line class="opacity-50"/>
-  <div><a href="https://github.com/TutoDS" target="_blank">TutoDS</a></div>
-</div> -->
 
 <img src="/media/daniel-sousa.jpg" class="rounded-full size-200px object-cover-top abs-tr mt-16 mr-12"/>

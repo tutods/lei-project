@@ -1,5 +1,10 @@
 <template>
-	<svg viewBox="0 0 365 361" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<svg
+		style="stroke: currentColor"
+		viewBox="0 0 365 361"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+	>
 		<path
 			d="M11.581 192.084C18.467 191.249 23.5793 187.598 26.918 181.129C30.2567 174.452 31.926 165.27 31.926 153.585V99.749C31.926 81.8037 36.0993 69.1793 44.446 61.876C53.0013 54.5727 65.3127 50.921 81.38 50.921V71.892C72.616 71.892 66.4603 74.1873 62.913 78.778C59.3657 83.16 57.592 90.046 57.592 99.436V152.959C57.592 177.373 50.393 193.858 35.995 202.413C50.393 210.968 57.592 227.453 57.592 251.867V305.39C57.592 314.78 59.3657 321.666 62.913 326.048C66.4603 330.639 72.616 332.934 81.38 332.934V353.905C65.3127 353.905 53.0013 350.253 44.446 342.95C36.0993 335.647 31.926 323.022 31.926 305.077V251.241C31.926 239.556 30.2567 230.479 26.918 224.01C23.5793 217.333 18.467 213.577 11.581 212.742V192.084Z"
 			fill="#E93524"
@@ -36,30 +41,30 @@
 		</g>
 		<path
 			d="M202 95.5C202 94.3954 201.105 93.5 200 93.5H121C119.895 93.5 119 94.3954 119 95.5V188.5C119 189.605 119.895 190.5 121 190.5H200C201.105 190.5 202 189.605 202 188.5V95.5Z"
-			stroke="#8F8F8F"
+			stroke="currentColor"
 			stroke-width="4"
 			stroke-linejoin="round"
 		/>
-		<path d="M130 112H192" stroke="#8F8F8F" stroke-width="4" />
-		<path d="M138 132H192" stroke="#8F8F8F" stroke-width="4" />
-		<path d="M130 132H136" stroke="#8F8F8F" stroke-width="4" />
-		<path d="M138 154H192" stroke="#8F8F8F" stroke-width="4" />
-		<path d="M130 154H136" stroke="#8F8F8F" stroke-width="4" />
-		<path d="M138 176H192" stroke="#8F8F8F" stroke-width="4" />
-		<path d="M130 176H136" stroke="#8F8F8F" stroke-width="4" />
+		<path d="M130 112H192" stroke="currentColor" stroke-width="4" />
+		<path d="M138 132H192" stroke="currentColor" stroke-width="4" />
+		<path d="M130 132H136" stroke="currentColor" stroke-width="4" />
+		<path d="M138 154H192" stroke="currentColor" stroke-width="4" />
+		<path d="M130 154H136" stroke="currentColor" stroke-width="4" />
+		<path d="M138 176H192" stroke="currentColor" stroke-width="4" />
+		<path d="M130 176H136" stroke="currentColor" stroke-width="4" />
 		<path
 			d="M202 214.5C202 213.395 201.105 212.5 200 212.5H121C119.895 212.5 119 213.395 119 214.5V307.5C119 308.605 119.895 309.5 121 309.5H200C201.105 309.5 202 308.605 202 307.5V214.5Z"
-			stroke="#8F8F8F"
+			stroke="currentColor"
 			stroke-width="4"
 			stroke-linejoin="round"
 		/>
-		<path d="M130 231H192" stroke="#8F8F8F" stroke-width="4" />
-		<path d="M138 251H192" stroke="#8F8F8F" stroke-width="4" />
-		<path d="M130 251H136" stroke="#8F8F8F" stroke-width="4" />
-		<path d="M138 273H192" stroke="#8F8F8F" stroke-width="4" />
-		<path d="M130 273H136" stroke="#8F8F8F" stroke-width="4" />
-		<path d="M138 295H192" stroke="#8F8F8F" stroke-width="4" />
-		<path d="M130 295H136" stroke="#8F8F8F" stroke-width="4" />
-		<path d="M216 144H243V263H216" stroke="#8F8F8F" stroke-width="4" />
+		<path d="M130 231H192" stroke="currentColor" stroke-width="4" />
+		<path d="M138 251H192" stroke="currentColor" stroke-width="4" />
+		<path d="M130 251H136" stroke="currentColor" stroke-width="4" />
+		<path d="M138 273H192" stroke="currentColor" stroke-width="4" />
+		<path d="M130 273H136" stroke="currentColor" stroke-width="4" />
+		<path d="M138 295H192" stroke="currentColor" stroke-width="4" />
+		<path d="M130 295H136" stroke="currentColor" stroke-width="4" />
+		<path d="M216 144H243V263H216" stroke="currentColor" stroke-width="4" />
 	</svg>
 </template>

@@ -100,3 +100,7 @@ src: ./pages/techs.md
 ---
 src: ./pages/button.md
 ---
+
+---
+src: ./pages/solution.md
+---

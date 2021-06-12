@@ -18,6 +18,6 @@ layout: center
 </v-clicks>
 </div>
 
-<div class="mt-6" v-click={4}>
+<div class="mt-6">
   <a href="https://jimmyboys.pt" target="_blank" class="inline-flex items-center text-xs gap-1 w-auto"><akar-icons:link-on class="inline" /> Website</a>
 </div>

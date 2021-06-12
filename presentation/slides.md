@@ -108,3 +108,7 @@ src: ./pages/button.md
 ---
 src: ./pages/solution.md
 ---
+
+---
+src: ./pages/future-work.md
+---

@@ -64,9 +64,15 @@ layout: center
 
 
 <p class="font-bold mt-2 no-mb">Percurso Académico</p>
-
-<img src="/media/formation.png" class="w-600px" alt="Percurso Académico" />
-
 </v-clicks>
+
+<div class="flex gap-2 mt-2 justify-between w-3/5">
+<v-clicks>
+    <AcademicBox class="text-xs"><small>Curso Profissional</small> Técnico de Gestão de Equip. Informáticos</AcademicBox>
+    <AcademicBox class="text-xs"><small>CTeSP</small> Informática de Gestão</AcademicBox>
+    <AcademicBox class="text-xs" current={true}><small>Licenciatura</small> Engenharia Informática</AcademicBox>
+</v-clicks>
+</div>
+
 
 <img src="/media/daniel-sousa.jpg" class="rounded-full size-200px object-cover-top abs-tr mt-16 mr-12"/>

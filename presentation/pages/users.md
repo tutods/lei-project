@@ -4,7 +4,7 @@ image: '/media/backgrounds/athlete.jpeg'
 class: 'content-center'
 ---
 
-<h2 class="font-300 no-mb">Atores & Funcionalidades</h2>
+<h2 class="font-300 no-mb">Utilizadores</h2>
 <h4 class="mb-4 uppercase text-sm">Quem são? Que funcionalidades podem usufruir?</h4>
 
 <div class="flex flex-col justify-center gap-4">

@@ -47,10 +47,6 @@ O excerto de código que se segue, apresenta um teste onde é realizada a verifi
 	\caption{Teste com preenchimento de \textit{inputs}}
 \end{longlisting}
 
-\begin{mybox}{estg}{Nota}
-	\textbf{Nota:} novamente, é importante não esquecer a adição do \texttt{data-testid} no código do componente a testar, um vez que desta forma o componente possui um identificador específico para aceder através do(s) teste(s).
-\end{mybox}
-
 Seria ainda possível realizar testes com dados falsos, ou chamados de \textit{mock data}, recorrendo para tal ao \textit{\glslinkUnder{packages}{package} \texttt{@testing-library/react}}. Para tal, seria simulado um pedido a \textbf{\glsShortUnder{api}}, no caso do projeto seria através do \textbf{Apollo Client}, onde é esperada uma resposta.
 
 Na documentação do \textbf{Apollo Client}\footnote{\textbf{Documentação oficial e outras referências:} \cite{apolloTestsDocs,mockingApolloTesting,apolloTest,mockingData,mockingGraphql}} é possível encontrar exemplos de como utilizar as ferramentas já incluídas na instalação do mesmo, recorrendo para tal ao \texttt{MockedProvider}, um elemento que recebe uma lista de \texttt{mocks}, ou seja, respostas e dados factícios.

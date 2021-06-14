@@ -13,7 +13,7 @@ Importante referir que para ter acesso a esta página é necessário possuir ses
 
 Como é possível analisar pelas figuras anteriores, a lista de atletas encontra-se disponível em duas vistas, a vista em mosaico e lista. Apesar de serem formas de visualização com estilos diferentes apenas é realizado um pedido à \textbf{\glsShortUnder{api}}, sendo estes dados utilizados em cada uma destas vistas.
 
-No que toca a componentes, a vista em mosaico utiliza essencialmente o componente \textbf{Avatar} apresentado em \hyperrefUnder{avatarComp}{anexo}, sendo este apenas repetido para cada atleta recebido no pedido à \textbf{\glsShortUnder{api}}. Já a vista em lista utiliza um componente criado especificamente para esta página, o \textbf{AthleteRow}, onde consiste numa linha (como o nome indica), onde é novamente utilizado o componente \textbf{Avatar}.
+No que toca a componentes, a vista em mosaico utiliza essencialmente o componente \textbf{Avatar} apresentado em \hyperrefUnder{avatarComp}{anexo {\footnotesize(página 67)}}, sendo este apenas repetido para cada atleta recebido no pedido à \textbf{\glsShortUnder{api}}. Já a vista em lista utiliza um componente criado especificamente para esta página, o \textbf{AthleteRow}, onde consiste numa linha (como o nome indica), onde é novamente utilizado o componente \textbf{Avatar}.
 
 Para a criação destes 2 modos apenas foi necessário recorrer a criação de um estado (\mintinline{jsx}{useState()} do \textbf{React}), onde ao clicar num dos icons é chamada uma função, tal como é possível analisar nos excertos de código que se seguem.
 

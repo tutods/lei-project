@@ -1,0 +1,58 @@
+\tocSec{\textbf{Testes}}
+\label{testsAttachments}
+
+Devido ao tempo limitado não foi possível realizar testes a todo o projeto, porém foi possível testar o seu funcionamento recorrendo ao \textbf{Jest} e o \textit{\glslinkUnder{packages}{package}} incluído no \textbf{React} para testes. Desta forma foi possível realizar alguns testes unitários a dois componentes, realizando algumas validações através das propriedades que estes recebem. Além destes dois testes, foi possível testar como realizar o preenchimento de \textit{inputs}, simulando a interação por parte do utilizador.
+
+\begin{longlisting}
+	\inputminted[]{jsx}{code/tests/button.test.tsx}
+	\caption{Testes realizados ao componente \texttt{Button}}
+\end{longlisting}
+
+\begin{longlisting}
+	\inputminted[highlightlines={17},highlightcolor=yellow!25]{jsx}{code/tests/status-badge.test.tsx}
+	\caption{Testes realizados ao componente \textbf{\texttt{Status Badge}}}
+\end{longlisting}
+
+O resultado dos testes apresentados acima seria:
+
+\figureFrame{.75}{passed-tests.png}{Execução dos testes com sucesso}
+
+Se no caso do teste realizado ao componente \textbf{\texttt{Status Badge}}, na linha 17 (que se encontra sombreada), o valor \texttt{"Ativo"} fosse alterado, o teste iria dar erro, visto este não conter assim a \textit{class} \texttt{active-status}. Para esse erro seria apresentado a mensagem presente na figura que se segue.
+
+\figureFrame{.55}{error-tests.png}{Execução dos testes com erro no componente \textbf{\texttt{Status Badge}}}
+
+Outro ponto que é necessário ter em consideração e, tal como é possível analisar nos testes apresentados, a ``pesquisa'' do elemento é feito pelo \texttt{getByTestId}, sendo que para tal é necessário adicionar no código do componente o \mintinline{html}{data-testid="<id>"}:
+
+\begin{longlisting}
+	\begin{minted}[highlightlines={3},highlightcolor=yellow!25]{jsx}
+	return (
+		<div
+			data-testid="status-badge"
+			{...attributes}
+			className={`${styles["root"] || ""} ${className || ""} ${
+				styles[`${statusColor}-status`]
+			}`}
+		>
+			{status}
+		</div>
+	);
+	\end{minted}
+	\caption{Código com o \texttt{data-testid} definido no componente \textbf{\texttt{Status Badge}}}
+\end{longlisting}
+
+O excerto de código que se segue, apresenta um teste onde é realizada a verificação do valor do componente \textbf{\texttt{TextInput}} no ecrã de inicio de sessão, ou seja, numa primeira fase é inserido o valor no campo de texto (no caso no campo \textit{email}) e posteriormente é validado o seu valor, simulando assim a interação que é realizada pelo utilizador.
+
+\begin{longlisting}
+	\inputminted[]{jsx}{code/tests/insert-text-input.test.tsx}
+	\caption{Teste com preenchimento de \textit{inputs}}
+\end{longlisting}
+
+\begin{mybox}{estg}{Nota}
+	\textbf{Nota:} novamente, é importante não esquecer a adição do \texttt{data-testid} no código do componente a testar, um vez que desta forma o componente possui um identificador específico para aceder através do(s) teste(s).
+\end{mybox}
+
+Seria ainda possível realizar testes com dados falsos, ou chamados de \textit{mock data}, recorrendo para tal ao \textit{\glslinkUnder{packages}{package} \texttt{@testing-library/react}}. Para tal, seria simulado um pedido a \textbf{\glsShortUnder{api}}, no caso do projeto seria através do \textbf{Apollo Client}, onde é esperada uma resposta.
+
+Na documentação do \textbf{Apollo Client}\footnote{\textbf{Documentação oficial e outras referências:} \cite{apolloTestsDocs,mockingApolloTesting,apolloTest,mockingData,mockingGraphql}} é possível encontrar exemplos de como utilizar as ferramentas já incluídas na instalação do mesmo, recorrendo para tal ao \texttt{MockedProvider}, um elemento que recebe uma lista de \texttt{mocks}, ou seja, respostas e dados factícios.
+
+A pergunta pode ser, mas qual a razão pela qual usar dados fictícios? Num caso real de um inicio de sessão onde é utilizado \textit{email} e \textit{password}, basta o utilizador alterar a \textit{password} para os testes falharem, porém a funcionalidade de inicio de sessão continua a funcionar. Com os \textit{mock data} isto não acontece, visto simular um pedido fictício à \textbf{\glsShortUnder{api}}.

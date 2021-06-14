@@ -55,4 +55,6 @@ Seria ainda possível realizar testes com dados falsos, ou chamados de \textit{m
 
 Na documentação do \textbf{Apollo Client}\footnote{\textbf{Documentação oficial e outras referências:} \cite{apolloTestsDocs,mockingApolloTesting,apolloTest,mockingData,mockingGraphql}} é possível encontrar exemplos de como utilizar as ferramentas já incluídas na instalação do mesmo, recorrendo para tal ao \texttt{MockedProvider}, um elemento que recebe uma lista de \texttt{mocks}, ou seja, respostas e dados factícios.
 
+No caso do inicio de sessão existiriam duas possibilidades, o inicio de sessão com sucesso, onde era necessário testar o redirecionamento por parte do \textbf{React Router}, ou então, o inicio de sessão inválido, onde é apresentada uma mensagem de erro ao utilizador.
+
 A pergunta pode ser, mas qual a razão pela qual usar dados fictícios? Num caso real de um inicio de sessão onde é utilizado \textit{email} e \textit{password}, basta o utilizador alterar a \textit{password} para os testes falharem, porém a funcionalidade de inicio de sessão continua a funcionar. Com os \textit{mock data} isto não acontece, visto simular um pedido fictício à \textbf{\glsShortUnder{api}}.

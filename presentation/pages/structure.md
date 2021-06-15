@@ -13,14 +13,14 @@ layout: two-cols
     <StructurePoint number="2" title="Projeto">
         <b>BeAPT</b>
     </StructurePoint>
-    <StructurePoint number="3" title="Arquitetura">
-        Arquitetura Conceptual
+    <StructurePoint number="3" title="Utilizadores">
+        Quem são e quais funcionalidades dispõem?
     </StructurePoint>
-    <StructurePoint number="4" title="Tecnologias">
-        <strong>React</strong> & Componentes
+    <StructurePoint number="4" title="Arquitetura Conceptual">
+        Quais são as "camadas" do projeto?
     </StructurePoint>
-    <StructurePoint number="5" title="Resultado">
-        Tecnologias
+    <StructurePoint number="5" title="Tecnologias & Ferramentas">
+        Tecnologias & Ferramentas utilizadas durante o desenvolvimento
     </StructurePoint>
   </div>
   <div class="mt-5">
@@ -35,20 +35,14 @@ layout: two-cols
 <template v-slot:right>
 
 <div class="flex flex-col gap-4">
-    <StructurePoint number="6" title="Entidade de Acolhimento">
-        <b>Jimmy Boys</b>
+    <StructurePoint number="6" title="Componentes React">
+        Reutilização de componentes e propriedades
     </StructurePoint>
-    <StructurePoint number="7" title="Projeto">
-        <b>BeAPT</b>
+    <StructurePoint number="7" title="Resultados">
+        O que foi desenvolvido?
     </StructurePoint>
-    <StructurePoint number="8" title="Arquitetura">
-        Arquitetura Conceptual
-    </StructurePoint>
-    <StructurePoint number="9" title="Tecnologias">
-        <strong>React</strong> & Componentes
-    </StructurePoint>
-    <StructurePoint number="10" title="Resultado">
-        Tecnologias
+    <StructurePoint number="8" title="Trabalhos Futuros">
+        Pontos a implementar ou a melhorar futuramente
     </StructurePoint>
 </div>
 </template>

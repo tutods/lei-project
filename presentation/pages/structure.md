@@ -7,6 +7,7 @@ layout: two-cols
 
 <div class="flex flex-col gap-2 justify-between">
   <div class="flex flex-col gap-4">
+    <v-clicks>
     <StructurePoint number="1" title="Entidade de Acolhimento">
         <b>Jimmy Boys</b>
     </StructurePoint>
@@ -22,6 +23,7 @@ layout: two-cols
     <StructurePoint number="5" title="Tecnologias & Ferramentas">
         Tecnologias & Ferramentas utilizadas durante o desenvolvimento
     </StructurePoint>
+    </v-clicks>
   </div>
   <div class="mt-5">
     <a href="https://gitlab.com" class="inline-flex gap-2 items-center !hover:text-beapt text-sm">
@@ -35,6 +37,7 @@ layout: two-cols
 <template v-slot:right>
 
 <div class="flex flex-col gap-4">
+    <v-clicks>
     <StructurePoint number="6" title="Componentes React">
         Reutilização de componentes e propriedades
     </StructurePoint>
@@ -44,5 +47,6 @@ layout: two-cols
     <StructurePoint number="8" title="Trabalhos Futuros">
         Pontos a implementar ou a melhorar futuramente
     </StructurePoint>
+    </v-clicks>
 </div>
 </template>

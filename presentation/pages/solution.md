@@ -1,6 +1,6 @@
 ---
 layout: video
-video: https://www.youtube.com/embed/F9Bo89m2f6g
+video: https://www.youtube.com/watch?v=w7ejDZ8SWv8
 ---
 
 <h1 class="font-300">Solução Desenvolvida</h1>

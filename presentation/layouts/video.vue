@@ -1,14 +1,12 @@
 <script setup lang="ts">
-import { computed, defineProps } from "vue";
-import { handleBackground } from "@slidev/theme-default/layoutHelper";
+import { defineProps, computed } from "vue";
 
 const props = defineProps({
     video: {
         type: String,
+        required: true,
     },
 });
-
-// const style = computed(() => handleBackground(props.video));
 </script>
 
 <template>
@@ -32,11 +30,16 @@ const props = defineProps({
         <slot class="mt-4 content" />
 
         <div class="video-container">
-            <embed
-                v-bind:src="video + '?mute=1'"
+            <iframe
+                :src="`${video}?rel=0`"
                 allowfullscreen="false"
                 class="video"
+                v-if="video.includes('http')"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             />
+            <video class="video" controls v-else>
+                <source :src="video" type=video/mp4>
+            </video>
         </div>
 
         <DarkToggle class="abs-tr right-6 top-6" />
@@ -62,7 +65,6 @@ const props = defineProps({
 
 <style lang="sass">
 .video-container
-    // width: 100%
     padding-top: 45%
     height: 0px
     position: relative
@@ -71,9 +73,6 @@ const props = defineProps({
     width: 100%
     height: 100%
     position: absolute
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
+    inset: 0
     margin: 0 auto
 </style>

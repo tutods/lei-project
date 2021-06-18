@@ -1,11 +1,12 @@
-<div align="center" style="text-align: center">
-<h1>LEI Report</h1>
-<h2>"Plataforma de gestão de treinos para atletas de alta competição"</h2>
+<div align="center">
+<a href="#"><img alt="Podcastr" src="/presentation/public/media/logos/beapt.svg" width="100px"></a>
+<h1 style="font-weight: 300; margin-top: 5px; margin-bottom: 0 !important;">Projeto <strong>BeAPT</strong></h1>
+<h2 style="text-transform: uppercase; font-weight: 300; margin-top: 0;">Relatório</h2>
 </div>
 
-<h3>Requirements</h3>
+<h3>Requisitos</h3>
 
-Before build this report you need install the packages bellow on your **Python**:
+Antes de realizar o build do projeto é necessário instalar os seguintes *packages* no **Python**:
 
 ```bash
 pip install Pygments

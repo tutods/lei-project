@@ -1,11 +1,22 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+<div align="center">
+<a href="#"><img alt="Podcastr" src="/presentation/public/media/logos/beapt.svg" width="100px"></a>
+<h1 style="font-weight: 300; margin-top: 5px; margin-bottom: 0 !important;">Projeto <strong>BeAPT</strong></h1>
+<h2 style="text-transform: uppercase; font-weight: 300; margin-top: 0;">Apresentação</h2>
+</div>
 
-To start the slide show:
+<h3>Requisitos</h3>
 
-- `npm install`
-- `npm run dev`
-- visit http://localhost:3030
+Antes de executar a apresentação é necessário instalar todas as dependências, para isso:
 
-Edit the [slides.md](./slides.md) to see the changes.
+```bash
+yarn install
+## ou ##
+npm install
+```
 
-Learn more about Slidev on [documentations](https://sli.dev/).
+<h3>Execução</h3>
+
+Para executar a apresentação basta executar os passos que se seguem:
+
+1. Executar o servidor de desenvolvimento: `yarn dev` ou `npm run dev`;
+2. Aceder no browser ao url [localhost:3030](http://localhost:3030)

@@ -4,6 +4,11 @@
 <h2 style="text-transform: uppercase; font-weight: 300; margin-top: 0;">Apresentação</h2>
 </div>
 
+<a href="https://beapt-presentation.netlify.app/">
+  <img src="https://img.shields.io/badge/netlify%20-%23000000.svg?&style=for-the-badge&logo=netlify&logoColor=white" alt='Deploy'/>
+</a>
+
+
 <h3>Requisitos</h3>
 
 Antes de executar a apresentação é necessário instalar todas as dependências, para isso:

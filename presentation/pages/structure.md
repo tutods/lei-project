@@ -26,7 +26,7 @@ layout: two-cols
     </v-clicks>
   </div>
   <div class="mt-5">
-    <a href="https://gitlab.com" class="inline-flex gap-2 items-center !hover:text-beapt text-sm">
+    <a href="https://gitlab.estg.ipp.pt/DSousa/lei_pf2021_8160334" class="inline-flex gap-2 items-center !hover:text-beapt text-sm">
       <jam-gitlab />
       Repositório
     </a>

@@ -1,5 +1,5 @@
 <div align="center">
-<a href="#"><img alt="Podcastr" src="/presentation/public/media/logos/beapt.svg" width="100px"></a>
+<a href="#"><img alt="BeAPT" src="/presentation/public/media/logos/beapt.svg" width="100px"></a>
 <h1 style="font-weight: 300; margin-top: 5px">Projeto <strong>BeAPT</strong></h1>
 </div>
 

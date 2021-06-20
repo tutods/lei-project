@@ -12,3 +12,12 @@ Antes de realizar o build do projeto é necessário instalar os seguintes *packa
 pip install Pygments
 pip install jsx-lexer
 ```
+
+
+<h3>Delete <code>__latexindent_temp</code> files</h3>
+
+On terminal (works for Linux and macOS) run the command:
+
+```bash
+find . -name "__latexindent_temp.*" -delete
+```

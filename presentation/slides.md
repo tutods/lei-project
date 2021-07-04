@@ -102,6 +102,10 @@ src: ./pages/techs.md
 ---
 
 ---
+src: ./pages/graphql.md
+---
+
+---
 src: ./pages/button.md
 ---
 

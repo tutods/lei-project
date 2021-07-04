@@ -38,13 +38,16 @@ layout: two-cols
 
 <div class="flex flex-col gap-4">
     <v-clicks>
-    <StructurePoint number="6" title="Componentes React">
+    <StructurePoint number="6" title="GraphQL">
+        Uso do <strong>Apollo Client</strong>
+    </StructurePoint>
+    <StructurePoint number="7" title="Componentes React">
         Reutilização de componentes e propriedades
     </StructurePoint>
-    <StructurePoint number="7" title="Resultados">
+    <StructurePoint number="8" title="Resultados">
         O que foi desenvolvido?
     </StructurePoint>
-    <StructurePoint number="8" title="Trabalhos Futuros">
+    <StructurePoint number="9" title="Trabalhos Futuros">
         Pontos a implementar ou a melhorar futuramente
     </StructurePoint>
     </v-clicks>

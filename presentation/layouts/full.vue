@@ -18,7 +18,7 @@
 
 		<DarkToggle class="abs-tr right-6 top-6" />
 
-		<div class="slidev-layout mt-4 full w-full h-full">
+		<div class="slidev-layout full w-full h-full">
 			<slot class="w-full h-full" />
 		</div>
 

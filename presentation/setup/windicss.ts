@@ -1,4 +1,4 @@
-import { defineWindiSetup } from '@slidev/types';
+import { defineWindiSetup } from "@slidev/types";
 
 // extending the builtin windicss configurations
 export default defineWindiSetup(() => ({
@@ -9,13 +9,15 @@ export default defineWindiSetup(() => ({
 	theme: {
 		extend: {
 			colors: {
-				black75: 'rgba(0,0,0,.75)',
-				black65: 'rgba(0,0,0,.65)',
-				beapt: '#F26522',
-				altBlue: '#003049',
+				black75: "rgba(0,0,0,.75)",
+				black65: "rgba(0,0,0,.65)",
+				beapt: "#F26522",
+				altBlue: "#003049",
 				logos: {
-					chakra: '#319795',
+					chakra: "#319795",
 				},
+				danger: "#d32f2f",
+				success: "#00695c",
 			},
 		},
 	},
